@@ -45,7 +45,13 @@
     <Compile Include="KhenThuong_DTO.cs" />
     <Compile Include="KyLuat_DTO.cs" />
     <Compile Include="NhanVien_DTO.cs" />
+    <Compile Include="NhanVien_PhuCap_DTO.cs" />
+    <Compile Include="PhongBan_DTO.cs" />
+    <Compile Include="PhuCap_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuyetDinhKhenThuong_DTO.cs" />
+    <Compile Include="QuyetDinhKyLuat_DTO.cs" />
+    <Compile Include="ThamGia_DTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
