@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using System.Data.SqlClient;
 
 namespace GUI
 {
@@ -14,6 +16,12 @@ namespace GUI
     {
         public FormMain()
         {
+            
+            string a;
+           a= Application.StartupPath.ToString();
+           a= a.Substring( 0,a.Length - 13);
+            a += "data\\NhanSu.mdf";
+            DataProvider tam = new DataProvider(a);
             InitializeComponent();
         }
     }
