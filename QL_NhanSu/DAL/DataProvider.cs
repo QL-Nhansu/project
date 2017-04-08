@@ -5,20 +5,25 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows;
 namespace DAL
 {
-    class DataProvider
+   public class DataProvider
     {
         private static SqlConnection conn;
-
+        private static string cnt;
+        public DataProvider(string ct)
+        {
+            cnt = ct;
+        }
 
         //tao ket noi vs sql
         public static SqlConnection Connect()
         {
             try
             {
-                string sql = @"server=BB\SQLEXPRESS;Initial Catalog=ThuVien;Integrated Security=True";
+                
+                string sql = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+cnt+";Integrated Security=True;Connect Timeout=30";
                 SqlConnection conn = new SqlConnection(sql);
                 conn.Open();
 
