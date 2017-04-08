@@ -46,6 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\btnImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Class\btnSimple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Class\Enum.cs" />
+    <Compile Include="Class\pnlLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\pnlRoundRectangle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\txtboxSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\User32.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UC\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
