@@ -1,19 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{B6F48C02-62B8-41FB-8E22-43236BD346ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{00367AE9-CA4C-492E-8B69-DBDE7DEC889A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{E20177D3-8A8D-4AED-979A-F4F7325C98DA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{6F1E0FE7-55A2-40FE-B1A9-CDA1FB3E4173}"
-	ProjectSection(SolutionItems) = preProject
-		..\Project\data\NhanSu .mdf = ..\Project\data\NhanSu .mdf
-		..\Project\data\NhanSu _log.ldf = ..\Project\data\NhanSu _log.ldf
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

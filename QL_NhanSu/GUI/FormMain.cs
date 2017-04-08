@@ -20,9 +20,14 @@ namespace GUI
             string a;
            a= Application.StartupPath.ToString();
            a= a.Substring( 0,a.Length - 13);
-            a += "data\\NhanSu.mdf";
+            a += "DAL\\DATA\\NhanSu.mdf";
             DataProvider tam = new DataProvider(a);
             InitializeComponent();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
