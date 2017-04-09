@@ -72,7 +72,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUS\DTO.csproj">
+    <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{e20177d3-8a8d-4aed-979a-f4f7325c98da}</Project>
       <Name>DTO</Name>
     </ProjectReference>
