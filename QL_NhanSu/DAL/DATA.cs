@@ -15,37 +15,37 @@ namespace DAL
         {
             return DBConnect.GetData("ChamCong");
         }
-        public static int ADD_ChamCong(ChamCong a)
+        public static int ADD_ChamCong(DateTime dateend, decimal luongcoban, int songaylam, int songaynghicoluong, string nhanvienma, string ngaydilam)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@dateend",a.Dateend),
-                new SqlParameter("@luongcoban",a.Luongcoban),
-                new SqlParameter("@songaylam",a.Songaylam),
-                new SqlParameter("@songaynghicoluong",a.Songaynghicoluong),
-                new SqlParameter("@nhanvienma",a.Nhanvienma),
-                new SqlParameter("@ngaydilam",a.Ngaydilam),
+                new SqlParameter("@dateend",dateend),
+                new SqlParameter("@luongcoban",luongcoban),
+                new SqlParameter("@songaylam",songaylam),
+                new SqlParameter("@songaynghicoluong",songaynghicoluong),
+                new SqlParameter("@nhanvienma",nhanvienma),
+                new SqlParameter("@ngaydilam",ngaydilam),
             };
             return DBConnect.ExecuteNonQuery("ADD_ChamCong", para);
         }
-        public static int Change_ChamCong(ChamCong a)
+        public static int Change_ChamCong(DateTime dateend, decimal luongcoban, int songaylam, int songaynghicoluong, string nhanvienma, string ngaydilam)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@dateend",a.Dateend),
-                new SqlParameter("@luongcoban",a.Luongcoban),
-                new SqlParameter("@songaylam",a.Songaylam),
-                new SqlParameter("@songaynghicoluong",a.Songaynghicoluong),
-                new SqlParameter("@nhanvienma",a.Nhanvienma),
-                new SqlParameter("@ngaydilam",a.Ngaydilam),
+                new SqlParameter("@dateend",dateend),
+                new SqlParameter("@luongcoban",luongcoban),
+                new SqlParameter("@songaylam",songaylam),
+                new SqlParameter("@songaynghicoluong",songaynghicoluong),
+                new SqlParameter("@nhanvienma",nhanvienma),
+                new SqlParameter("@ngaydilam",ngaydilam),
             };
             return DBConnect.ExecuteNonQuery("Change_ChamCong", para);
         }
-        public static int DELETE_ChamCong(string Dateend)
+        public static int DELETE_ChamCong(string dateend)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@dateend",Dateend),
+                new SqlParameter("@dateend",dateend),
             };
             return DBConnect.ExecuteNonQuery("DELETE_ChamCong", para);
         }
@@ -57,31 +57,31 @@ namespace DAL
         {
             return DBConnect.GetData("KyLuat");
         }
-        public static int ADD_Kyluat(KyLuat a)
+        public static int ADD_Kyluat(string ma, string ten, decimal sotien)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",a.Ma),
-                new SqlParameter("@ten",a.Ten),
-                new SqlParameter("@sotien",a.Sotien),
+                new SqlParameter("@ma",ma),
+                new SqlParameter("@ten",ten),
+                new SqlParameter("@sotien",sotien),
             };
             return DBConnect.ExecuteNonQuery("ADD_Kyluat", para);
         }
-        public static int Change_Kyluat(KyLuat a)
+        public static int Change_Kyluat(string ma, string ten, decimal sotien)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",a.Ma),
-                new SqlParameter("@ten",a.Ten),
-                new SqlParameter("@sotien",a.Sotien),
+                new SqlParameter("@ma",ma),
+                new SqlParameter("@ten",ten),
+                new SqlParameter("@sotien",sotien),
             };
             return DBConnect.ExecuteNonQuery("Change_Kyluat", para);
         }
-        public static int DELETE_Kyluat(string Ma)
+        public static int DELETE_Kyluat(string ma)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",Ma),
+                new SqlParameter("@ma",ma),
             };
             return DBConnect.ExecuteNonQuery("DELETE_Kyluat", para);
         }
@@ -92,31 +92,31 @@ namespace DAL
         {
             return DBConnect.GetData("KhenThuong");
         }
-        public static int ADD_KhenThuong(KhenThuong a)
+        public static int ADD_KhenThuong(string ma, string ten, decimal sotien)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",a.Ma),
-                new SqlParameter("@ten",a.Ten),
-                new SqlParameter("@sotien",a.Sotien),
+                new SqlParameter("@ma",ma),
+                new SqlParameter("@ten",ten),
+                new SqlParameter("@sotien",sotien),
             };
             return DBConnect.ExecuteNonQuery("ADD_KhenThuong", para);
         }
-        public static int Change_KhenThuong(KhenThuong a)
+        public static int Change_KhenThuong(string ma, string ten, decimal sotien)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",a.Ma),
-                new SqlParameter("@ten",a.Ten),
-                new SqlParameter("@sotien",a.Sotien),
+                new SqlParameter("@ma",ma),
+                new SqlParameter("@ten",ten),
+                new SqlParameter("@sotien",sotien),
             };
             return DBConnect.ExecuteNonQuery("Change_KhenThuong", para);
         }
-        public static int DELETE_KhenThuong(string Ma)
+        public static int DELETE_KhenThuong(string ma)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",Ma),
+                new SqlParameter("@ma",ma),
             };
             return DBConnect.ExecuteNonQuery("DELETE_KhenThuong", para);
         }
@@ -127,50 +127,50 @@ namespace DAL
         {
             return DBConnect.GetData("NhanVien");
         }
-        public static int ADD_Nhanvien(NhanVien a)
+        public static int ADD_Nhanvien(string ma, string ten, DateTime ngaysinh, string gioitinh, int cmnd, object anh, string dantoc, string tongiao, string trinhdongoainguma, string chucdanhma, string trinhdohocvanma, DateTime ngaykihopdong, DateTime ngayhethanhopdong, string matkhau)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",a.Ma),
-                new SqlParameter("@ten",a.Ten),
-                new SqlParameter("@ngaysinh",a.Ngaysinh),
-                new SqlParameter("@gioitinh",a.Gioitinh),
-                new SqlParameter("@dantoc",a.Dantoc),
-                new SqlParameter("@cmnd",a.Cmnd),
-                new SqlParameter("@anh",a.Anh),
-                new SqlParameter("@tongiao",a.Tongiao),
-                new SqlParameter("@trinhdongoainguma",a.Trinhdongoainguma),
-                new SqlParameter("@trinhdohocvanma",a.Trinhdohocvanma),
-                new SqlParameter("@chucdanhma",a.Chucdanhma),
-                new SqlParameter("@ngaykihopdong",a.Ngaykihopdong),
-                new SqlParameter("@ngayhethanhopdong",a.Ngayhethanhopdong),
-                new SqlParameter("@matkhau",a.Matkhau),
+                new SqlParameter("@ma",ma),
+                new SqlParameter("@ten",ten),
+                new SqlParameter("@ngaysinh",ngaysinh),
+                new SqlParameter("@gioitinh",gioitinh),
+                new SqlParameter("@dantoc",dantoc),
+                new SqlParameter("@cmnd",cmnd),
+                new SqlParameter("@anh",anh),
+                new SqlParameter("@tongiao",tongiao),
+                new SqlParameter("@trinhdongoainguma",trinhdongoainguma),
+                new SqlParameter("@trinhdohocvanma",trinhdohocvanma),
+                new SqlParameter("@chucdanhma",chucdanhma),
+                new SqlParameter("@ngaykihopdong",ngaykihopdong),
+                new SqlParameter("@ngayhethanhopdong",ngayhethanhopdong),
+                new SqlParameter("@matkhau",matkhau),
             };
             return DBConnect.ExecuteNonQuery("ADD_Nhanvien", para);
         }
-        public static int Change_Nhanvien(NhanVien a)
+        public static int Change_Nhanvien(string ma, string ten, DateTime ngaysinh, string gioitinh, int cmnd, object anh, string dantoc, string tongiao, string trinhdongoainguma, string chucdanhma, string trinhdohocvanma)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",a.Ma),
-                new SqlParameter("@ten",a.Ten),
-                new SqlParameter("@ngaysinh",a.Ngaysinh),
-                new SqlParameter("@gioitinh",a.Gioitinh),
-                new SqlParameter("@dantoc",a.Dantoc),
-                new SqlParameter("@cmnd",a.Cmnd),
-                new SqlParameter("@anh",a.Anh),
-                new SqlParameter("@tongiao",a.Tongiao),
-                new SqlParameter("@trinhdongoainguma",a.Trinhdongoainguma),
-                new SqlParameter("@trinhdohocvanma",a.Trinhdohocvanma),
-                new SqlParameter("@chucdanhma",a.Chucdanhma),
+                new SqlParameter("@ma",ma),
+                new SqlParameter("@ten",ten),
+                new SqlParameter("@ngaysinh",ngaysinh),
+                new SqlParameter("@gioitinh",gioitinh),
+                new SqlParameter("@dantoc",dantoc),
+                new SqlParameter("@cmnd",cmnd),
+                new SqlParameter("@anh",anh),
+                new SqlParameter("@tongiao",tongiao),
+                new SqlParameter("@trinhdongoainguma",trinhdongoainguma),
+                new SqlParameter("@trinhdohocvanma",trinhdohocvanma),
+                new SqlParameter("@chucdanhma",chucdanhma),
             };
             return DBConnect.ExecuteNonQuery("Change_Nhanvien", para);
         }
-        public static int DELETE_Nhanvien(string Ma)
+        public static int DELETE_Nhanvien(string ma)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",Ma),
+                new SqlParameter("@ma",ma),
             };
             return DBConnect.ExecuteNonQuery("DELETE_Nhanvien", para);
         }
@@ -181,33 +181,33 @@ namespace DAL
         {
             return DBConnect.GetData("QuyetDinhKyLuat");
         }
-        public static int ADD_QuyetDinhKyLuat(QuyetDinhKyLuat a)
+        public static int ADD_QuyetDinhKyLuat(string nhanvienma, string kyluatma, DateTime ngay, decimal sotien)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@nhanvienma",a.Nhanvienma),
-                new SqlParameter("@kyluatma",a.Kyluatma),
-                new SqlParameter("@ngay",a.Ngay),
-                new SqlParameter("@sotien",a.Sotien),
+                new SqlParameter("@nhanvienma",nhanvienma),
+                new SqlParameter("@kyluatma",kyluatma),
+                new SqlParameter("@ngay",ngay),
+                new SqlParameter("@sotien",sotien),
             };
             return DBConnect.ExecuteNonQuery("ADD_QuyetDinhKyLuat", para);
         }
-        public static int Change_QuyetDinhKyLuat(QuyetDinhKyLuat a)
+        public static int Change_QuyetDinhKyLuat(string nhanvienma, string kyluatma, DateTime ngay, decimal sotien)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@nhanvienma",a.Nhanvienma),
-                new SqlParameter("@kyluatma",a.Kyluatma),
-                new SqlParameter("@ngay",a.Ngay),
-                new SqlParameter("@sotien",a.Sotien),
+                new SqlParameter("@nhanvienma",nhanvienma),
+                new SqlParameter("@kyluatma",kyluatma),
+                new SqlParameter("@ngay",ngay),
+                new SqlParameter("@sotien",sotien),
             };
             return DBConnect.ExecuteNonQuery("Change_QuyetDinhKyLuat", para);
         }
-        public static int DELETE_QuyetDinhKyLuat(string Nhanvienma)
+        public static int DELETE_QuyetDinhKyLuat(string nhanvienma)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@nhanvienma",Nhanvienma),
+                new SqlParameter("@nhanvienma",nhanvienma),
             };
             return DBConnect.ExecuteNonQuery("DELETE_QuyetDinhKyLuat", para);
         }
@@ -218,30 +218,30 @@ namespace DAL
         {
             return DBConnect.GetData("QuyetDinhKhenThuong");
         }
-        public static int ADD_QuyetDinhKhenThuong(QuyetDinhKhenThuong a)
+        public static int ADD_QuyetDinhKhenThuong(string nhanvienma, string khenthuongma, DateTime ngay, decimal sotien)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@nhanvienma",a.Nhanvienma),
-                new SqlParameter("@khenthuongma",a.Khenthuongma),
-                new SqlParameter("@ngay",a.Ngay),
-                new SqlParameter("@sotien",a.Sotien),
+                new SqlParameter("@nhanvienma",nhanvienma),
+                new SqlParameter("@khenthuongma",khenthuongma),
+                new SqlParameter("@ngay",ngay),
+                new SqlParameter("@sotien",sotien),
             };
             return DBConnect.ExecuteNonQuery("ADD_QuyetDinhKhenThuong", para);
         }
-        public static int Change_QuyetDinhKhenThuong(QuyetDinhKhenThuong a)
+        public static int Change_QuyetDinhKhenThuong( decimal sotien)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@sotien",a.Sotien),
+                new SqlParameter("@sotien",sotien),
             };
             return DBConnect.ExecuteNonQuery("Change_QuyetDinhKhenThuong", para);
         }
-        public static int DELETE_QuyetDinhKhenThuong(string Nhanvienma)
+        public static int DELETE_QuyetDinhKhenThuong(string nhanvienma)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@nhanvienma",Nhanvienma),
+                new SqlParameter("@nhanvienma",nhanvienma),
             };
             return DBConnect.ExecuteNonQuery("DELETE_QuyetDinhKhenThuong", para);
         }
@@ -252,35 +252,35 @@ namespace DAL
         {
             return DBConnect.GetData("PhongBan");
         }
-        public static int them_phongban(PhongBan a)
+        public static int them_phongban(string ma, string ten, string diachi, string sodienthoai, string email)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",a.Ma),
-                new SqlParameter("@ten",a.Ten),
-                new SqlParameter("@diachi",a.Diachi),
-                new SqlParameter("@sodienthoai",a.Sodienthoai),
-                new SqlParameter("@email",a.Email),
+                new SqlParameter("@ma",ma),
+                new SqlParameter("@ten",ten),
+                new SqlParameter("@diachi",diachi),
+                new SqlParameter("@sodienthoai",sodienthoai),
+                new SqlParameter("@email",email),
             };
             return DBConnect.ExecuteNonQuery("them_phongban", para);
         }
-        public static int capnhap_phongban(PhongBan a)
+        public static int capnhap_phongban(string ma, string ten, string diachi, string sodienthoai, string email)
         {
             SqlParameter[] para = new SqlParameter[]
             {
 
-                new SqlParameter("@ten",a.Ten),
-                new SqlParameter("@diachi",a.Diachi),
-                new SqlParameter("@sodienthoai",a.Sodienthoai),
-                new SqlParameter("@email",a.Email),
+                new SqlParameter("@ten",ten),
+                new SqlParameter("@diachi",diachi),
+                new SqlParameter("@sodienthoai",sodienthoai),
+                new SqlParameter("@email",email),
             };
             return DBConnect.ExecuteNonQuery("capnhat_phongban", para);
         }
-        public static int xoa_phongban(string Ma)
+        public static int xoa_phongban(string ma)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                new SqlParameter("@ma",Ma),
+                new SqlParameter("@ma",ma),
             };
             return DBConnect.ExecuteNonQuery("xoa_phongban", para);
         }
@@ -291,36 +291,36 @@ namespace DAL
         {
             return DBConnect.GetData("TrinhDoHocVan");
         }
-        public static int them_trinhdohocvan(TrinhDoHocVan a)
+        public static int them_trinhdohocvan(string ma, string ten, string chuthich)
         {
             {
                 SqlParameter[] para = new SqlParameter[]
                 {
-                    new SqlParameter("@ma",a.Ma),
-                    new SqlParameter("@ten",a.Ten),
-                    new SqlParameter("@chuthich",a.Chuthich),
+                    new SqlParameter("@ma",ma),
+                    new SqlParameter("@ten",ten),
+                    new SqlParameter("@chuthich",chuthich),
                 };
                 return DBConnect.ExecuteNonQuery("them_trinhdohocvan", para);
             }
         }
-        public static int capnhat_trinhdohocvan(TrinhDoHocVan a)
+        public static int capnhat_trinhdohocvan(string ma, string ten, string chuthich)
         {
             {
                 SqlParameter[] para = new SqlParameter[]
                 {
-                    new SqlParameter("@ma",a.Ma),
-                    new SqlParameter("@ten",a.Ten),
-                    new SqlParameter("@chuthich",a.Chuthich),
+                    new SqlParameter("@ma",ma),
+                    new SqlParameter("@ten",ten),
+                    new SqlParameter("@chuthich",chuthich),
                 };
                 return DBConnect.ExecuteNonQuery("capnhat_trinhdohocvan", para);
             }
         }
-        public static int xoa_trinhdohocvan(string Ma)
+        public static int xoa_trinhdohocvan(string ma)
         {
             {
                 SqlParameter[] para = new SqlParameter[]
                 {
-                    new SqlParameter("@ma",Ma)
+                    new SqlParameter("@ma",ma)
                 };
                 return DBConnect.ExecuteNonQuery("xoa_trinhdohocvan", para);
             }
@@ -332,33 +332,33 @@ namespace DAL
         {
             return DBConnect.GetData("TrinhDoNgoaiNgu");
         }
-        public static int them_trinhdongoaingu(TrinhDoNgoaiNgu a)
+        public static int them_trinhdongoaingu(string ma, string ten, string ngonngu, string chuthich)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                    new SqlParameter("@ma",a.Ma),
-                    new SqlParameter("@ten",a.Ten),
-                    new SqlParameter("@ngonngu",a.Ngonngu),
-                    new SqlParameter("@chuthich",a.Chuthich),
+                    new SqlParameter("@ma",ma),
+                    new SqlParameter("@ten",ten),
+                    new SqlParameter("@ngonngu",ngonngu),
+                    new SqlParameter("@chuthich",chuthich),
             };
             return DBConnect.ExecuteNonQuery("them_trinhdongoaingu", para);
         }
-        public static int capnhat_trinhdongoaingu(TrinhDoNgoaiNgu a)
+        public static int capnhat_trinhdongoaingu(string ma, string ten, string ngonngu, string chuthich)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                    new SqlParameter("@ma",a.Ma),
-                    new SqlParameter("@ten",a.Ten),
-                    new SqlParameter("@ngonngu",a.Ngonngu),
-                    new SqlParameter("@chuthich",a.Chuthich),
+                    new SqlParameter("@ma",ma),
+                    new SqlParameter("@ten",ten),
+                    new SqlParameter("@ngonngu",ngonngu),
+                    new SqlParameter("@chuthich",chuthich),
             };
             return DBConnect.ExecuteNonQuery("capnhat_trinhdongoaingu", para);
         }
-        public static int xoa_trinhdongoaingu(string Ma)
+        public static int xoa_trinhdongoaingu(string ma)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                    new SqlParameter("@ma",Ma)
+                    new SqlParameter("@ma",ma)
             };
             return DBConnect.ExecuteNonQuery("xoa_trinhdongoaingu", para);
         }
@@ -369,31 +369,31 @@ namespace DAL
         {
             return DBConnect.GetData("ChucDanh");
         }
-        public static int them_chucdanh(ChucDanh a)
+        public static int them_chucdanh(string ma, string ten, string chuthich)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                    new SqlParameter("@ma",a.Ma),
-                    new SqlParameter("@ten",a.Ten),
-                    new SqlParameter("@chuthich",a.Chuthich),
+                    new SqlParameter("@ma",ma),
+                    new SqlParameter("@ten",ten),
+                    new SqlParameter("@chuthich",chuthich),
             };
             return DBConnect.ExecuteNonQuery("them_chucdanh", para);
         }
-        public static int capnhat_chucdanh(ChucDanh a)
+        public static int capnhat_chucdanh(string ma, string ten, string chuthich)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                    new SqlParameter("@ma",a.Ma),
-                    new SqlParameter("@ten",a.Ten),
-                    new SqlParameter("@chuthich",a.Chuthich),
+                    new SqlParameter("@ma",ma),
+                    new SqlParameter("@ten",ten),
+                    new SqlParameter("@chuthich",chuthich),
             };
             return DBConnect.ExecuteNonQuery("capnhat_chucdanh", para);
         }
-        public static int xoa_chucdanh(string Ma)
+        public static int xoa_chucdanh(string ma)
         {
             SqlParameter[] para = new SqlParameter[]
             {
-                    new SqlParameter("@ma",Ma)
+                    new SqlParameter("@ma",ma)
             };
             return DBConnect.ExecuteNonQuery("xoa_chucdanh", para);
         }
