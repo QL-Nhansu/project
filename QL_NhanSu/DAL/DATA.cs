@@ -17,7 +17,6 @@ namespace DAL
         }
         public static int ADD_ChamCong(ChamCong a)
         {
-            int vidu;
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@dateend",a.Dateend),
