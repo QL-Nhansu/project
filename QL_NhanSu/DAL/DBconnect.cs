@@ -12,7 +12,7 @@ namespace DAL
     {
         private static SqlConnection conn;
         private static string strconn;
-        public static string DirectoryConnect { set { strconn = value; } }
+        public static string DirectoryConnect { get { return strconn; }  set { strconn = value; } }
 
         //tao ket noi vs sql
         public static SqlConnection Connect()

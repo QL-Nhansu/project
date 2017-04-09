@@ -14,8 +14,8 @@ namespace GUI
         public FormMain()
         {
             DBConnect.DirectoryConnect = Application.StartupPath.Replace(@"bin\Debug", @"data\NhanSu .mdf");
-            MessageBox.Show(Application.StartupPath);
-            if (DBConnect.GetData("select * from NhanVien") == null) MessageBox.Show("Test");
+            //MessageBox.Show(DBConnect.DirectoryConnect);
+            while (DBConnect.Connect() == null && MessageBox.Show("Can not connect DataBase", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry) ;
             InitializeComponent();
         }
 
