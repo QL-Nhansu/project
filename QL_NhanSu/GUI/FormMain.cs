@@ -13,9 +13,9 @@ namespace GUI
 
         public FormMain()
         {
-            DataProvider.DirectoryConnect = Application.StartupPath.Replace(@"bin\Debug", @"data\NhanSu .mdf");
+            DBConnect.DirectoryConnect = Application.StartupPath.Replace(@"bin\Debug", @"data\NhanSu .mdf");
             MessageBox.Show(Application.StartupPath);
-            if (DataProvider.GetData("select * from NhanVien") == null) MessageBox.Show("Test");
+            if (DBConnect.GetData("select * from NhanVien") == null) MessageBox.Show("Test");
             InitializeComponent();
         }
 
