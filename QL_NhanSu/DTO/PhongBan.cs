@@ -11,7 +11,7 @@ namespace DTO
         private string ma;
         private string ten;
         private string diachi;
-        private int sodienthoai;
+        private string sodienthoai;
         private string email;
 
         public string Ma
@@ -53,7 +53,7 @@ namespace DTO
             }
         }
 
-        public int Sodienthoai
+        public string Sodienthoai
         {
             get
             {
