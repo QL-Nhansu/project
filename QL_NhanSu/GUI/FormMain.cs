@@ -13,9 +13,9 @@ namespace GUI
 
         public FormMain()
         {
-            DBConnect.DirectoryConnect = Application.StartupPath.Replace(@"bin\Debug", @"data\NhanSu .mdf");
+            //DBConnect.DirectoryConnect = Application.StartupPath.Replace(@"bin\Debug", @"data\NhanSu .mdf");
             //MessageBox.Show(DBConnect.DirectoryConnect);
-            while (DBConnect.Connect() == null && MessageBox.Show("Can not connect DataBase", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry) ;
+            //while (DBConnect.Connect() == null && MessageBox.Show("Can not connect DataBase", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry) ;
             InitializeComponent();
         }
 
@@ -103,7 +103,7 @@ namespace GUI
         private void RefreshBtn(Control ctrlNoneRefresh)
         {
             btnSimple btn;
-            foreach(Control ctrl in pnlQLNhanSu.Controls)
+            foreach (Control ctrl in pnlQLNhanSu.Controls)
             {
                 btn = ctrl as btnSimple;
                 if (btn != null && btn != ctrlNoneRefresh && btn.UseActived) btn.Actived = false;
@@ -147,9 +147,9 @@ namespace GUI
 
         private void btnQLNhanSu_MouseClick(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
-                if(!pnlQLNhanSu.Visible) { pnlQLNhanSu.Visible = true; btnQLNhanSu.Text = "   ◢   Quản lý nhân sự"; }
+                if (!pnlQLNhanSu.Visible) { pnlQLNhanSu.Visible = true; btnQLNhanSu.Text = "   ◢   Quản lý nhân sự"; }
                 else { pnlQLNhanSu.Visible = false; btnQLNhanSu.Text = "   ▶   Quản lý nhân sự"; }
             }
         }
@@ -207,7 +207,7 @@ namespace GUI
                 btnBangCongClick();
             }
         }
-        
+
         private void btnNgoaiNgu_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -272,6 +272,14 @@ namespace GUI
         #endregion
 
         #region Function Execute Event
+        private void ClearChildrenControl(Control CtrlParent)
+        {
+            foreach(Control ctrl in CtrlParent.Controls)
+            {
+                ctrl.Dispose();
+            }
+        }
+
         private void btnLoginClick()
         {
 
@@ -284,7 +292,14 @@ namespace GUI
 
         private void btnDSNVClick()
         {
-
+            ClearChildrenControl(RenderBody);
+            RenderBody.Controls.Add(new UC.QLNhanSu.UC_DSNhanVien()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
 
         private void btnChamCongClick()
