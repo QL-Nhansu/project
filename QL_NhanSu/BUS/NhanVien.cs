@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUS
+namespace DTO
 {
-    public class NhanVien_DTO
+    public class NhanVien
     {
         private string ma;
         private string ten;

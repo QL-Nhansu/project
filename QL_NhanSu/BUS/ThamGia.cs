@@ -4,50 +4,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUS
+namespace DTO
 {
-    public class KhenThuong_DTO
+    public class ThamGia
     {
-        private string ma;
-        private string ten;
-        private decimal sotien;
+        private string manv;
+        private string maqb;
+        private DateTime date;
 
-        public string Ma
+
+
+        public string Manv
         {
             get
             {
-                return ma;
+                return manv;
             }
 
             set
             {
-                ma = value;
+                manv = value;
             }
         }
 
-        public string Ten
+        public string Maqb
         {
             get
             {
-                return ten;
+                return maqb;
             }
 
             set
             {
-                ten = value;
+                maqb = value;
             }
         }
 
-        public decimal Sotien
+        public DateTime Date
         {
             get
             {
-                return sotien;
+                return date;
             }
 
             set
             {
-                sotien = value;
+                date = value;
             }
         }
     }

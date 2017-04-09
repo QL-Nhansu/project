@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUS
+namespace DTO
 {
-    public class KyLuat_DTO
+    public class KyLuat
     {
         private string ma;
         private string ten;

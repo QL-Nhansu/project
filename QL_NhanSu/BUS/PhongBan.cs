@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUS
+namespace DTO
 {
-    public class ChucDanh_DTO
+    public class PhongBan
     {
         private string ma;
         private string ten;
-        private string chuthich;
+        private string diachi;
+        private int sodienthoai;
+        private string email;
 
         public string Ma
         {
@@ -38,16 +40,42 @@ namespace BUS
             }
         }
 
-        public string Chuthich
+        public string Diachi
         {
             get
             {
-                return chuthich;
+                return diachi;
             }
 
             set
             {
-                chuthich = value;
+                diachi = value;
+            }
+        }
+
+        public int Sodienthoai
+        {
+            get
+            {
+                return sodienthoai;
+            }
+
+            set
+            {
+                sodienthoai = value;
+            }
+        }
+
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                email = value;
             }
         }
     }

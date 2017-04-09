@@ -4,64 +4,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUS
+namespace DTO
 {
-    public class NhanVien_PhuCap_DTO
+    public class QuyetDinhKyLuat
     {
-        private string manv;
-        private string mapc;
-        private DateTime ngaynhan;
-        private DateTime ngayhethan;
+        private string nhanvienma;
+        private string kyluatma;
+        private DateTime ngay;
+        private decimal sotien;
 
-        public string Manv
+        public decimal Sotien
         {
             get
             {
-                return manv;
+                return sotien;
             }
 
             set
             {
-                manv = value;
+                sotien = value;
             }
         }
 
-        public string Mapc
+        public string Nhanvienma
         {
             get
             {
-                return mapc;
+                return nhanvienma;
             }
 
             set
             {
-                mapc = value;
+                nhanvienma = value;
             }
         }
 
-        public DateTime Ngaynhan
+        public string Kyluatma
         {
             get
             {
-                return ngaynhan;
+                return kyluatma;
             }
 
             set
             {
-                ngaynhan = value;
+                kyluatma = value;
             }
         }
 
-        public DateTime Ngayhethan
+        public DateTime Ngay
         {
             get
             {
-                return ngayhethan;
+                return ngay;
             }
 
             set
             {
-                ngayhethan = value;
+                ngay = value;
             }
         }
     }

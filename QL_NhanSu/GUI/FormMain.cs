@@ -21,7 +21,7 @@ namespace GUI
            a= Application.StartupPath.ToString();
            a= a.Substring( 0,a.Length - 13);
             a += "DAL\\DATA\\NhanSu.mdf";
-            DataProvider tam = new DataProvider(a);
+            DBConnect tam = new DBConnect(a);
             InitializeComponent();
         }
 

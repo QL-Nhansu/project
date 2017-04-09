@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUS
+namespace DTO
+
 {
-   public  class TruongPhong_DTO
+    public class NhanVien_PhuCap
     {
         private string manv;
-        private string mapb;
-        private DateTime ngaybatdau;
-        private string ngayketthuc;
+        private string mapc;
+        private DateTime ngaynhan;
+        private DateTime ngayhethan;
 
         public string Manv
         {
@@ -26,43 +27,44 @@ namespace BUS
             }
         }
 
-        public string Mapb
+        public string Mapc
         {
             get
             {
-                return mapb;
+                return mapc;
             }
 
             set
             {
-                mapb = value;
+                mapc = value;
             }
         }
 
-        public DateTime Ngaybatdau
+        public DateTime Ngaynhan
         {
             get
             {
-                return ngaybatdau;
+                return ngaynhan;
             }
 
             set
             {
-                ngaybatdau = value;
+                ngaynhan = value;
             }
         }
 
-        public string Ngayketthuc
+        public DateTime Ngayhethan
         {
             get
             {
-                return ngayketthuc;
+                return ngayhethan;
             }
 
             set
             {
-                ngayketthuc = value;
+                ngayhethan = value;
             }
         }
     }
 }
+

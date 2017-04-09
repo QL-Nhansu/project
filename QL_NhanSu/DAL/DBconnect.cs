@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 using System.Windows;
 namespace DAL
 {
-   public class DataProvider
+   public class DBConnect
     {
         private static SqlConnection conn;
         private static string cnt;
-        public DataProvider(string ct)
+        public DBConnect(string ct)
         {
             cnt = ct;
         }

@@ -40,21 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChamCong_DTO.cs" />
-    <Compile Include="ChucDanh_DTO.cs" />
-    <Compile Include="KhenThuong_DTO.cs" />
-    <Compile Include="KyLuat_DTO.cs" />
-    <Compile Include="NhanVien_DTO.cs" />
-    <Compile Include="NhanVien_PhuCap_DTO.cs" />
-    <Compile Include="PhongBan_DTO.cs" />
-    <Compile Include="PhuCap_DTO.cs" />
+    <Compile Include="ChamCong.cs" />
+    <Compile Include="ChucDanh.cs" />
+    <Compile Include="KhenThuong.cs" />
+    <Compile Include="KyLuat.cs" />
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="NhanVien_PhuCap.cs" />
+    <Compile Include="PhongBan.cs" />
+    <Compile Include="PhuCap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuyetDinhKhenThuong_DTO.cs" />
-    <Compile Include="QuyetDinhKyLuat_DTO.cs" />
-    <Compile Include="ThamGia_DTO.cs" />
-    <Compile Include="TrinhDoHocVan_DTO.cs" />
-    <Compile Include="TrinhDoNgoaiNgu_DTO.cs" />
-    <Compile Include="TruongPhong_DTO.cs" />
+    <Compile Include="QuyetDinhKhenThuong.cs" />
+    <Compile Include="QuyetDinhKyLuat.cs" />
+    <Compile Include="ThamGia.cs" />
+    <Compile Include="TrinhDoHocVan.cs" />
+    <Compile Include="TrinhDoNgoaiNgu.cs" />
+    <Compile Include="TruongPhong.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

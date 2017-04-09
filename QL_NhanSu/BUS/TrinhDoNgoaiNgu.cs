@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BUS
+namespace DTO
 {
-    public class TrinhDoHocVan_DTO
+    public  class TrinhDoNgoaiNgu
     {
         private string ma;
         private string ten;
+        private string ngonngu;
         private string chuthich;
 
         public string Ma
@@ -35,6 +36,19 @@ namespace BUS
             set
             {
                 ten = value;
+            }
+        }
+
+        public string Ngonngu
+        {
+            get
+            {
+                return ngonngu;
+            }
+
+            set
+            {
+                ngonngu = value;
             }
         }
 

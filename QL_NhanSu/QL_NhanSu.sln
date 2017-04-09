@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{00367AE9-CA4C-492E-8B69-DBDE7DEC889A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{E20177D3-8A8D-4AED-979A-F4F7325C98DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "BUS\DTO.csproj", "{E20177D3-8A8D-4AED-979A-F4F7325C98DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "DTOa\BUS.csproj", "{924C00FA-6BC2-4B11-B468-FF73E628C973}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E20177D3-8A8D-4AED-979A-F4F7325C98DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E20177D3-8A8D-4AED-979A-F4F7325C98DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E20177D3-8A8D-4AED-979A-F4F7325C98DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924C00FA-6BC2-4B11-B468-FF73E628C973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924C00FA-6BC2-4B11-B468-FF73E628C973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924C00FA-6BC2-4B11-B468-FF73E628C973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924C00FA-6BC2-4B11-B468-FF73E628C973}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
