@@ -46,6 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\btnImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Class\btnSimple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Class\Enum.cs" />
+    <Compile Include="Class\pnlLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\pnlRoundRectangle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\txtboxSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\User32.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,13 +97,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUS\DTO.csproj">
-      <Project>{e20177d3-8a8d-4aed-979a-f4f7325c98da}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
+    <Folder Include="UC\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{00367ae9-ca4c-492e-8b69-dbde7dec889a}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{e20177d3-8a8d-4aed-979a-f4f7325c98da}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

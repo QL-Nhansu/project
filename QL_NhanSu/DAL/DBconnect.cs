@@ -11,19 +11,15 @@ namespace DAL
    public class DBConnect
     {
         private static SqlConnection conn;
-        private static string cnt;
-        public DBConnect(string ct)
-        {
-            cnt = ct;
-        }
+        private static string strconn;
+        public static string DirectoryConnect { get { return strconn; }  set { strconn = value; } }
 
         //tao ket noi vs sql
         public static SqlConnection Connect()
         {
             try
             {
-                
-                string sql = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+cnt+";Integrated Security=True;Connect Timeout=30";
+                string sql = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+ strconn + ";Integrated Security=True;Connect Timeout=30";
                 SqlConnection conn = new SqlConnection(sql);
                 conn.Open();
 
@@ -44,6 +40,7 @@ namespace DAL
             try
             {
                 conn = Connect();
+                if (conn == null) return null;
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(proc, conn);
                 da.Fill(dt);
