@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
-using System.Data.SqlClient;
 using GUI.Class;
 
 namespace GUI
@@ -19,12 +13,9 @@ namespace GUI
 
         public FormMain()
         {
-            
-            string a;
-           a= Application.StartupPath.ToString();
-           a= a.Substring( 0,a.Length - 13);
-            a += "DAL\\DATA\\NhanSu.mdf";
-            DataProvider tam = new DataProvider(a);
+            DataProvider.DirectoryConnect = Application.StartupPath.Replace(@"bin\Debug", @"data\NhanSu .mdf");
+            MessageBox.Show(Application.StartupPath);
+            if (DataProvider.GetData("select * from NhanVien") == null) MessageBox.Show("Test");
             InitializeComponent();
         }
 
