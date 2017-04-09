@@ -68,12 +68,12 @@
             this.pnlLine1 = new GUI.Class.pnlLine();
             this.btnMenu = new GUI.Class.btnImage();
             this.pnlSearch = new GUI.Class.pnlRoundRectangle();
+            this.txtSearch = new GUI.Class.txtboxSearch();
             this.btnSearch = new GUI.Class.btnImage();
             this.btnLogin = new GUI.Class.btnImage();
             this.btnMinimize = new GUI.Class.btnSimple();
             this.btnMaximize = new GUI.Class.btnSimple();
             this.btnClose = new GUI.Class.btnSimple();
-            this.txtSearch = new GUI.Class.txtboxSearch();
             this.ToolBar.SuspendLayout();
             this.Body.SuspendLayout();
             this.MainMenu.SuspendLayout();
@@ -638,6 +638,18 @@
             this.pnlSearch.Size = new System.Drawing.Size(389, 30);
             this.pnlSearch.TabIndex = 7;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSearch.Location = new System.Drawing.Point(13, 9);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(344, 13);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TabStop = false;
+            this.txtSearch.Text = "Search...";
+            // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -741,18 +753,6 @@
             this.btnClose.Text = "r";
             this.btnClose.UseActived = false;
             this.btnClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseClick);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSearch.Location = new System.Drawing.Point(13, 9);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(344, 13);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.TabStop = false;
-            this.txtSearch.Text = "Search...";
             // 
             // FormMain
             // 
