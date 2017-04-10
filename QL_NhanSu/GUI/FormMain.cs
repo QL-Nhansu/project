@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Windows.Forms;
-using DAL;
+﻿using System.Windows.Forms;
 using GUI.Class;
 
 namespace GUI
@@ -13,9 +9,10 @@ namespace GUI
 
         public FormMain()
         {
-            //DBConnect.DirectoryConnect = Application.StartupPath.Replace(@"bin\Debug", @"data\NhanSu .mdf");
-            //MessageBox.Show(DBConnect.DirectoryConnect);
-            //while (DBConnect.Connect() == null && MessageBox.Show("Can not connect DataBase", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry) ;
+            //DTO.Connect.SetConnectString(Application.StartupPath.Replace(@"bin\Debug", @"data\NhanSu .mdf"));
+            //MessageBox.Show(DTO.Connect.GetConnectString());
+            //while (!DTO.Connect.Open() && MessageBox.Show("Can not connect DataBase", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error) == DialogResult.Retry) ;
+            //MessageBox.Show(DTO.Connect.GetSqlConnection().State.ToString());
             InitializeComponent();
         }
 
@@ -274,7 +271,7 @@ namespace GUI
         #region Function Execute Event
         private void ClearChildrenControl(Control CtrlParent)
         {
-            foreach(Control ctrl in CtrlParent.Controls)
+            foreach (Control ctrl in CtrlParent.Controls)
             {
                 ctrl.Dispose();
             }

@@ -13,17 +13,19 @@ namespace DAL
         private static SqlConnection conn;
         private static string strconn;
         public static string DirectoryConnect { get { return strconn; }  set { strconn = value; } }
+        public static SqlConnection SqlConnect { get { return conn; } }
 
         //tao ket noi vs sql
         public static SqlConnection Connect()
         {
             try
             {
+                conn = null;
                 string sql = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="+ strconn + ";Integrated Security=True;Connect Timeout=30";
-                SqlConnection conn = new SqlConnection(sql);
-                conn.Open();
-
-                return conn;
+                SqlConnection con = new SqlConnection(sql);
+                con.Open();
+                conn = con;
+                return con;
             }
             catch (SqlException)
             {
@@ -31,25 +33,20 @@ namespace DAL
             }
         }
 
-
-
-
         //Dua du lieu vao bang
         public static DataTable GetData(string proc)
         {
             try
             {
-                conn = Connect();
+                if (conn == null || conn.State == ConnectionState.Closed) Connect();
                 if (conn == null) return null;
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(proc, conn);
                 da.Fill(dt);
-                conn.Close();
                 return dt;
             }
             catch (SqlException)
             {
-                conn.Close();
                 return null;
             }
         }
@@ -59,7 +56,9 @@ namespace DAL
         {
             try
             {
-                conn = Connect();
+                if (conn == null || conn.State == ConnectionState.Closed) Connect();
+                if (conn == null) return 0;
+
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = proc;

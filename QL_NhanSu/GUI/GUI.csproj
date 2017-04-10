@@ -74,6 +74,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC\MoRong\UCNgoaiNgu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\MoRong\UCNgoaiNgu.Designer.cs">
+      <DependentUpon>UCNgoaiNgu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\QLNhanSu\UCThemSuaNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +110,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UC\MoRong\UCNgoaiNgu.resx">
+      <DependentUpon>UCNgoaiNgu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\QLNhanSu\UCThemSuaNV.resx">
       <DependentUpon>UCThemSuaNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,10 +137,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
-      <Project>{00367ae9-ca4c-492e-8b69-dbde7dec889a}</Project>
-      <Name>DAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{e20177d3-8a8d-4aed-979a-f4f7325c98da}</Project>
       <Name>DTO</Name>
