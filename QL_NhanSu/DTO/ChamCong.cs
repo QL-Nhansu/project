@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DAL;
 namespace DTO
 {
     public class ChamCong
@@ -93,5 +93,14 @@ namespace DTO
                 ngaydilam = value;
             }
         }
+        public int ADD_CC(DateTime dateend, decimal luongcoban, int songaylam, int songaynghicoluong, string nhanvienma, string ngaydilam)
+        {
+            return DATA.ADD_ChamCong(dateend,luongcoban,songaylam,songaynghicoluong,nhanvienma,ngaydilam);
+        }
+        public static int Xem_CC(DateTime dateend)
+        {
+            return DATA.VIEW_ChamCong(dateend);
+        }
+
     }
 }

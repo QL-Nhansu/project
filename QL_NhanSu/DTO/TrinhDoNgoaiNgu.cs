@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DAL;
+using System.Data;
 namespace DTO
 {
     public  class TrinhDoNgoaiNgu
@@ -63,6 +64,23 @@ namespace DTO
             {
                 chuthich = value;
             }
+        }
+        public static DataTable Xem_NN()
+        {
+            return DATA.xuat_TrinhDoNgoaiNgu();
+        }
+        public int Them_NN(string ma, string ten, string ngonngu, string chuthich)
+        {
+
+            return DATA.them_trinhdongoaingu(ma, ten, ngonngu, chuthich);
+                }
+        public  int Sua_NN(string ma, string ten, string ngonngu, string chuthich)
+        {
+            return DATA.capnhat_trinhdongoaingu(ma, ten, ngonngu, chuthich);
+        }
+        public static int Xoa_NN(string ma)
+        {
+            return DATA.xoa_trinhdongoaingu(ma);
         }
     }
 }

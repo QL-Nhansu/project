@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DAL;
 namespace DTO
 {
     public class NhanVien
@@ -203,6 +203,23 @@ namespace DTO
             {
                 anh = value;
             }
+        }
+        public int Them_NV(string ma, string ten, DateTime ngaysinh, string gioitinh, int cmnd, object anh, string dantoc, string tongiao, string trinhdongoainguma, string chucdanhma, string trinhdohocvanma, DateTime ngaykihopdong, DateTime ngayhethanhopdong, string matkhau)
+        {
+           return DAL.DATA.ADD_Nhanvien(ma,ten,ngaysinh,gioitinh,cmnd,anh,dantoc,tongiao,trinhdongoainguma,chucdanhma,trinhdohocvanma,ngaykihopdong,ngayhethanhopdong,matkhau);
+        }
+        public int Sua_NV(string ma, string ten, DateTime ngaysinh, string gioitinh, int cmnd, object anh, string dantoc, string tongiao, string trinhdongoainguma, string chucdanhma, string trinhdohocvanma)
+        {
+            return DAL.DATA.Change_Nhanvien(ma,ten,ngaysinh,gioitinh,cmnd,anh,dantoc,tongiao,trinhdongoainguma,chucdanhma,trinhdohocvanma);
+
+        }
+        public static int Xoa_NV(string ma)
+        {
+            return DATA.DELETE_Nhanvien(ma);
+        }
+        public static int Xem_NV(string ma)
+        {
+            return DATA.View_nv(ma);
         }
     }
 }

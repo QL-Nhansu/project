@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    class DATA
+   public class DATA
     {
         #region ChamCong
         public static DataTable xuat_chamcong()
@@ -46,6 +46,14 @@ namespace DAL
                 new SqlParameter("@dateend",dateend),
             };
             return DBConnect.ExecuteNonQuery("DELETE_ChamCong", para);
+        }
+        public static int VIEW_ChamCong(DateTime dateend)
+        {
+            SqlParameter[] para = new SqlParameter[]
+            {
+                new SqlParameter("@dateend",dateend),
+            };
+            return DBConnect.ExecuteNonQuery("VIEW_chamCong", para);
         }
 
         #endregion
@@ -124,6 +132,14 @@ namespace DAL
         public static DataTable xuat_Nhanvien()
         {
             return DBConnect.GetData("NhanVien");
+        }
+        public static int View_nv(string ma)
+        {
+            SqlParameter[] para = new SqlParameter[]
+           {
+                new SqlParameter("@ma",ma),
+           };
+            return DBConnect.ExecuteNonQuery("VIEW_NV", para);
         }
         public static int ADD_Nhanvien(string ma, string ten, DateTime ngaysinh, string gioitinh, int cmnd, object anh, string dantoc, string tongiao, string trinhdongoainguma, string chucdanhma, string trinhdohocvanma, DateTime ngaykihopdong, DateTime ngayhethanhopdong, string matkhau)
         {
@@ -394,6 +410,40 @@ namespace DAL
                     new SqlParameter("@ma",ma)
             };
             return DBConnect.ExecuteNonQuery("xoa_chucdanh", para);
+        }
+        #endregion
+        #region phucap
+        public static DataTable xuat_phucap()
+        {
+            return DBConnect.GetData("phucap");
+        }
+        public static int them_phucap(string ma, string ten, decimal tien)
+        {
+            SqlParameter[] para = new SqlParameter[]
+            {
+                    new SqlParameter("@ma",ma),
+                    new SqlParameter("@ten",ten),
+                    new SqlParameter("@tien",tien),
+            };
+            return DBConnect.ExecuteNonQuery("ADD_phucap", para);
+        }
+        public static int capnhat_phucap(string ma, string ten, decimal tien)
+        {
+            SqlParameter[] para = new SqlParameter[]
+            {
+                    new SqlParameter("@ma",ma),
+                    new SqlParameter("@ten",ten),
+                    new SqlParameter("@tien",tien),
+            };
+            return DBConnect.ExecuteNonQuery("CHANGE_phucap", para);
+        }
+        public static int xoa_phucap(string ma)
+        {
+            SqlParameter[] para = new SqlParameter[]
+            {
+                    new SqlParameter("@ma",ma)
+            };
+            return DBConnect.ExecuteNonQuery("DELETE_phucap", para);
         }
         #endregion
     }
