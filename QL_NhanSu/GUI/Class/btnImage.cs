@@ -17,7 +17,7 @@ namespace GUI.Class
         private Color txtclrML = Color.White;
         private Color bgrclrMD = Color.FromArgb(26, 71, 127);
         private Color bgrclrME = Color.FromArgb(0, 122, 204);
-        private Color bgrclrML;
+        private Color bgrclrML = Color.Transparent;
         private Image img;
         private Image imgMD;
         private Image imgME;
@@ -195,7 +195,7 @@ namespace GUI.Class
             set { img_algn = value; Invalidate(); }
         }
 
-        private bool Actived
+        public bool Actived
         {
             set
             {
@@ -207,12 +207,21 @@ namespace GUI.Class
                         if (bt != null && bt.actived) bt.Actived = false;
                     }
                     this.actived = value;
-                    this.BackColor = bgrclrMD;
+                    if (useActived)
+                    {
+                        if (imgMD != null) img = imgMD;
+                        if (txtclrMD != Color.Empty) txtclr = txtclrMD;
+                        this.BackColor = bgrclrMD;
+                        Invalidate();
+                    }
                 }
                 else
                 {
                     this.actived = value;
+                    img = imgML;
+                    txtclr = txtclrML;
                     this.BackColor = bgrclrML;
+                    Invalidate();
                 }
             }
         }

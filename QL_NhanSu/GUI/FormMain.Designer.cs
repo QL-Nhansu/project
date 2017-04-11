@@ -30,20 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.ToolBar = new System.Windows.Forms.Panel();
-            this.pnlSearch = new GUI.Class.pnlRoundRectangle();
-            this.txtSearch = new GUI.Class.txtboxSearch();
-            this.btnSearch = new GUI.Class.btnImage();
             this.labUser = new System.Windows.Forms.Label();
-            this.btnLogin = new GUI.Class.btnImage();
             this.Logo = new System.Windows.Forms.Label();
             this.labLogo = new System.Windows.Forms.Label();
-            this.btnMinimize = new GUI.Class.btnSimple();
-            this.btnMaximize = new GUI.Class.btnSimple();
-            this.btnClose = new GUI.Class.btnSimple();
             this.Body = new System.Windows.Forms.Panel();
             this.RenderBody = new System.Windows.Forms.Panel();
             this.MainMenu = new System.Windows.Forms.Panel();
             this.pnlMoRong = new System.Windows.Forms.Panel();
+            this.pnlQLCong = new System.Windows.Forms.Panel();
+            this.pnlQLNhanSu = new System.Windows.Forms.Panel();
             this.pnlLine14 = new GUI.Class.pnlLine();
             this.btnPhuCap = new GUI.Class.btnSimple();
             this.pnlLine13 = new GUI.Class.pnlLine();
@@ -58,14 +53,12 @@
             this.btnNgoaiNgu = new GUI.Class.btnSimple();
             this.pnlLine8 = new GUI.Class.pnlLine();
             this.btnMoRong = new GUI.Class.btnSimple();
-            this.pnlQLCong = new System.Windows.Forms.Panel();
             this.pnlLine7 = new GUI.Class.pnlLine();
             this.btnBangCong = new GUI.Class.btnSimple();
             this.pnlLine6 = new GUI.Class.pnlLine();
             this.btnChamCong = new GUI.Class.btnSimple();
             this.pnlLine5 = new GUI.Class.pnlLine();
             this.btnQLCong = new GUI.Class.btnSimple();
-            this.pnlQLNhanSu = new System.Windows.Forms.Panel();
             this.pnlLine4 = new GUI.Class.pnlLine();
             this.btnDSNV = new GUI.Class.btnSimple();
             this.pnlLine3 = new GUI.Class.pnlLine();
@@ -74,13 +67,20 @@
             this.btnQLNhanSu = new GUI.Class.btnSimple();
             this.pnlLine1 = new GUI.Class.pnlLine();
             this.btnMenu = new GUI.Class.btnImage();
+            this.pnlSearch = new GUI.Class.pnlRoundRectangle();
+            this.txtSearch = new GUI.Class.txtboxSearch();
+            this.btnSearch = new GUI.Class.btnImage();
+            this.btnLogin = new GUI.Class.btnImage();
+            this.btnMinimize = new GUI.Class.btnSimple();
+            this.btnMaximize = new GUI.Class.btnSimple();
+            this.btnClose = new GUI.Class.btnSimple();
             this.ToolBar.SuspendLayout();
-            this.pnlSearch.SuspendLayout();
             this.Body.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.pnlMoRong.SuspendLayout();
             this.pnlQLCong.SuspendLayout();
             this.pnlQLNhanSu.SuspendLayout();
+            this.pnlSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // ToolBar
@@ -101,56 +101,6 @@
             this.ToolBar.TabIndex = 0;
             this.ToolBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolbar_MouseDown);
             // 
-            // pnlSearch
-            // 
-            this.pnlSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSearch.BoderColor = System.Drawing.Color.Empty;
-            this.pnlSearch.Controls.Add(this.txtSearch);
-            this.pnlSearch.Controls.Add(this.btnSearch);
-            this.pnlSearch.InnerColor = System.Drawing.Color.White;
-            this.pnlSearch.Location = new System.Drawing.Point(352, 2);
-            this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Radius = 5;
-            this.pnlSearch.Size = new System.Drawing.Size(389, 30);
-            this.pnlSearch.TabIndex = 7;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
-            this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.txtSearch.Location = new System.Drawing.Point(13, 9);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(344, 13);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.TabStop = false;
-            this.txtSearch.Text = "Search...";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BgrColorMouseDown = System.Drawing.Color.Transparent;
-            this.btnSearch.BgrColorMouseEnter = System.Drawing.Color.Transparent;
-            this.btnSearch.BgrColorMouseLeave = System.Drawing.Color.Transparent;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
-            this.btnSearch.ImageMouseDown = null;
-            this.btnSearch.ImageMouseEnter = null;
-            this.btnSearch.ImageMouseLeave = null;
-            this.btnSearch.ImgMargin = 0;
-            this.btnSearch.ImgSize = new System.Drawing.Size(23, 23);
-            this.btnSearch.Location = new System.Drawing.Point(363, 3);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(24, 24);
-            this.btnSearch.TabIndex = 1;
-            this.btnSearch.Text = "";
-            this.btnSearch.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnSearch.TextColorMouseDown = System.Drawing.SystemColors.Highlight;
-            this.btnSearch.TextColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSearch.TextColorMouseLeave = System.Drawing.Color.Black;
-            this.btnSearch.UseActived = false;
-            // 
             // labUser
             // 
             this.labUser.AutoSize = true;
@@ -162,31 +112,6 @@
             this.labUser.TabIndex = 6;
             this.labUser.Text = " User";
             this.labUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolbar_MouseDown);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.BgrColorMouseDown = System.Drawing.Color.Empty;
-            this.btnLogin.BgrColorMouseEnter = System.Drawing.Color.Empty;
-            this.btnLogin.BgrColorMouseLeave = System.Drawing.Color.Transparent;
-            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLogin.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
-            this.btnLogin.ImageMouseDown = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageMouseDown")));
-            this.btnLogin.ImageMouseEnter = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageMouseEnter")));
-            this.btnLogin.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageMouseLeave")));
-            this.btnLogin.ImgMargin = 3;
-            this.btnLogin.ImgSize = new System.Drawing.Size(23, 23);
-            this.btnLogin.Location = new System.Drawing.Point(766, 0);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(87, 35);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnLogin.TextColorMouseDown = System.Drawing.Color.Black;
-            this.btnLogin.TextColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnLogin.TextColorMouseLeave = System.Drawing.Color.White;
-            this.btnLogin.UseActived = false;
-            this.btnLogin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnLogin_MouseClick);
             // 
             // Logo
             // 
@@ -214,60 +139,6 @@
             this.labLogo.Text = "Project";
             this.labLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolbar_MouseDown);
             // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Alignment = System.Drawing.StringAlignment.Center;
-            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
-            this.btnMinimize.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(217)))));
-            this.btnMinimize.ColorMouseLeave = System.Drawing.Color.Transparent;
-            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimize.Font = new System.Drawing.Font("Webdings", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(853, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(35, 35);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.Text = "0";
-            this.btnMinimize.UseActived = false;
-            this.btnMinimize.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnMinimize_MouseClick);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Alignment = System.Drawing.StringAlignment.Center;
-            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
-            this.btnMaximize.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(217)))));
-            this.btnMaximize.ColorMouseLeave = System.Drawing.Color.Transparent;
-            this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMaximize.Font = new System.Drawing.Font("Webdings", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.Location = new System.Drawing.Point(888, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(35, 35);
-            this.btnMaximize.TabIndex = 1;
-            this.btnMaximize.Text = "1";
-            this.btnMaximize.UseActived = false;
-            this.btnMaximize.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnMaximize_MouseClick);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Alignment = System.Drawing.StringAlignment.Center;
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(112)))), ((int)(((byte)(122)))));
-            this.btnClose.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
-            this.btnClose.ColorMouseLeave = System.Drawing.Color.Transparent;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Font = new System.Drawing.Font("Webdings", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(923, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(35, 35);
-            this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "r";
-            this.btnClose.UseActived = false;
-            this.btnClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseClick);
-            // 
             // Body
             // 
             this.Body.BackColor = System.Drawing.SystemColors.Control;
@@ -287,6 +158,7 @@
             this.RenderBody.Name = "RenderBody";
             this.RenderBody.Size = new System.Drawing.Size(758, 503);
             this.RenderBody.TabIndex = 1;
+            this.RenderBody.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.RenderBody_ControlAdded);
             // 
             // MainMenu
             // 
@@ -329,6 +201,31 @@
             this.pnlMoRong.TabIndex = 10;
             this.pnlMoRong.Visible = false;
             // 
+            // pnlQLCong
+            // 
+            this.pnlQLCong.Controls.Add(this.pnlLine7);
+            this.pnlQLCong.Controls.Add(this.btnBangCong);
+            this.pnlQLCong.Controls.Add(this.pnlLine6);
+            this.pnlQLCong.Controls.Add(this.btnChamCong);
+            this.pnlQLCong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlQLCong.Location = new System.Drawing.Point(0, 155);
+            this.pnlQLCong.Name = "pnlQLCong";
+            this.pnlQLCong.Size = new System.Drawing.Size(200, 62);
+            this.pnlQLCong.TabIndex = 7;
+            this.pnlQLCong.Visible = false;
+            // 
+            // pnlQLNhanSu
+            // 
+            this.pnlQLNhanSu.Controls.Add(this.pnlLine4);
+            this.pnlQLNhanSu.Controls.Add(this.btnDSNV);
+            this.pnlQLNhanSu.Controls.Add(this.pnlLine3);
+            this.pnlQLNhanSu.Controls.Add(this.btnChucVu);
+            this.pnlQLNhanSu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlQLNhanSu.Location = new System.Drawing.Point(0, 62);
+            this.pnlQLNhanSu.Name = "pnlQLNhanSu";
+            this.pnlQLNhanSu.Size = new System.Drawing.Size(200, 62);
+            this.pnlQLNhanSu.TabIndex = 4;
+            // 
             // pnlLine14
             // 
             this.pnlLine14.BackColor = System.Drawing.Color.Gainsboro;
@@ -346,7 +243,7 @@
             this.btnPhuCap.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnPhuCap.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnPhuCap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPhuCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhuCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhuCap.ForeColor = System.Drawing.Color.Black;
             this.btnPhuCap.Location = new System.Drawing.Point(0, 155);
             this.btnPhuCap.Name = "btnPhuCap";
@@ -374,7 +271,7 @@
             this.btnKyLuat.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnKyLuat.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnKyLuat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKyLuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKyLuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKyLuat.ForeColor = System.Drawing.Color.Black;
             this.btnKyLuat.Location = new System.Drawing.Point(0, 124);
             this.btnKyLuat.Name = "btnKyLuat";
@@ -402,7 +299,7 @@
             this.btnKhenThuong.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnKhenThuong.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnKhenThuong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKhenThuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhenThuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhenThuong.ForeColor = System.Drawing.Color.Black;
             this.btnKhenThuong.Location = new System.Drawing.Point(0, 93);
             this.btnKhenThuong.Name = "btnKhenThuong";
@@ -430,7 +327,7 @@
             this.btnBHYT.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnBHYT.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnBHYT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBHYT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBHYT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBHYT.ForeColor = System.Drawing.Color.Black;
             this.btnBHYT.Location = new System.Drawing.Point(0, 62);
             this.btnBHYT.Name = "btnBHYT";
@@ -458,7 +355,7 @@
             this.btnHocVan.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnHocVan.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnHocVan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHocVan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHocVan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHocVan.ForeColor = System.Drawing.Color.Black;
             this.btnHocVan.Location = new System.Drawing.Point(0, 31);
             this.btnHocVan.Name = "btnHocVan";
@@ -486,7 +383,7 @@
             this.btnNgoaiNgu.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnNgoaiNgu.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnNgoaiNgu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNgoaiNgu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNgoaiNgu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNgoaiNgu.ForeColor = System.Drawing.Color.Black;
             this.btnNgoaiNgu.Location = new System.Drawing.Point(0, 0);
             this.btnNgoaiNgu.Name = "btnNgoaiNgu";
@@ -514,7 +411,7 @@
             this.btnMoRong.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnMoRong.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnMoRong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMoRong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMoRong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMoRong.ForeColor = System.Drawing.Color.Black;
             this.btnMoRong.Location = new System.Drawing.Point(0, 217);
             this.btnMoRong.Name = "btnMoRong";
@@ -524,19 +421,6 @@
             this.btnMoRong.Text = "   ▶   Mở rộng";
             this.btnMoRong.UseActived = false;
             this.btnMoRong.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnMoRong_MouseClick);
-            // 
-            // pnlQLCong
-            // 
-            this.pnlQLCong.Controls.Add(this.pnlLine7);
-            this.pnlQLCong.Controls.Add(this.btnBangCong);
-            this.pnlQLCong.Controls.Add(this.pnlLine6);
-            this.pnlQLCong.Controls.Add(this.btnChamCong);
-            this.pnlQLCong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlQLCong.Location = new System.Drawing.Point(0, 155);
-            this.pnlQLCong.Name = "pnlQLCong";
-            this.pnlQLCong.Size = new System.Drawing.Size(200, 62);
-            this.pnlQLCong.TabIndex = 7;
-            this.pnlQLCong.Visible = false;
             // 
             // pnlLine7
             // 
@@ -555,7 +439,7 @@
             this.btnBangCong.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnBangCong.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnBangCong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBangCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBangCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBangCong.ForeColor = System.Drawing.Color.Black;
             this.btnBangCong.Location = new System.Drawing.Point(0, 31);
             this.btnBangCong.Name = "btnBangCong";
@@ -583,7 +467,7 @@
             this.btnChamCong.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnChamCong.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnChamCong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChamCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChamCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChamCong.ForeColor = System.Drawing.Color.Black;
             this.btnChamCong.Location = new System.Drawing.Point(0, 0);
             this.btnChamCong.Name = "btnChamCong";
@@ -611,7 +495,7 @@
             this.btnQLCong.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnQLCong.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnQLCong.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLCong.ForeColor = System.Drawing.Color.Black;
             this.btnQLCong.Location = new System.Drawing.Point(0, 124);
             this.btnQLCong.Name = "btnQLCong";
@@ -621,18 +505,6 @@
             this.btnQLCong.Text = "   ▶   Quản lý công";
             this.btnQLCong.UseActived = false;
             this.btnQLCong.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnQLCong_MouseClick);
-            // 
-            // pnlQLNhanSu
-            // 
-            this.pnlQLNhanSu.Controls.Add(this.pnlLine4);
-            this.pnlQLNhanSu.Controls.Add(this.btnDSNV);
-            this.pnlQLNhanSu.Controls.Add(this.pnlLine3);
-            this.pnlQLNhanSu.Controls.Add(this.btnChucVu);
-            this.pnlQLNhanSu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlQLNhanSu.Location = new System.Drawing.Point(0, 62);
-            this.pnlQLNhanSu.Name = "pnlQLNhanSu";
-            this.pnlQLNhanSu.Size = new System.Drawing.Size(200, 62);
-            this.pnlQLNhanSu.TabIndex = 4;
             // 
             // pnlLine4
             // 
@@ -651,7 +523,7 @@
             this.btnDSNV.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnDSNV.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnDSNV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDSNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSNV.ForeColor = System.Drawing.Color.Black;
             this.btnDSNV.Location = new System.Drawing.Point(0, 31);
             this.btnDSNV.Name = "btnDSNV";
@@ -679,7 +551,7 @@
             this.btnChucVu.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnChucVu.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnChucVu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChucVu.ForeColor = System.Drawing.Color.Black;
             this.btnChucVu.Location = new System.Drawing.Point(0, 0);
             this.btnChucVu.Name = "btnChucVu";
@@ -707,7 +579,7 @@
             this.btnQLNhanSu.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
             this.btnQLNhanSu.ColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnQLNhanSu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLNhanSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNhanSu.ForeColor = System.Drawing.Color.Black;
             this.btnQLNhanSu.Location = new System.Drawing.Point(0, 31);
             this.btnQLNhanSu.Name = "btnQLNhanSu";
@@ -754,6 +626,140 @@
             this.btnMenu.UseActived = false;
             this.btnMenu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnMenu_MouseClick);
             // 
+            // pnlSearch
+            // 
+            this.pnlSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSearch.BoderColor = System.Drawing.Color.Empty;
+            this.pnlSearch.Controls.Add(this.txtSearch);
+            this.pnlSearch.Controls.Add(this.btnSearch);
+            this.pnlSearch.InnerColor = System.Drawing.Color.White;
+            this.pnlSearch.Location = new System.Drawing.Point(352, 2);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Radius = 5;
+            this.pnlSearch.Size = new System.Drawing.Size(389, 30);
+            this.pnlSearch.TabIndex = 7;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
+            this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.txtSearch.Location = new System.Drawing.Point(13, 9);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(344, 13);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TabStop = false;
+            this.txtSearch.Text = "Search...";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BgrColorMouseDown = System.Drawing.Color.Transparent;
+            this.btnSearch.BgrColorMouseEnter = System.Drawing.Color.Transparent;
+            this.btnSearch.BgrColorMouseLeave = System.Drawing.Color.Transparent;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
+            this.btnSearch.ImageMouseDown = null;
+            this.btnSearch.ImageMouseEnter = null;
+            this.btnSearch.ImageMouseLeave = null;
+            this.btnSearch.ImgMargin = 0;
+            this.btnSearch.ImgSize = new System.Drawing.Size(23, 23);
+            this.btnSearch.Location = new System.Drawing.Point(363, 3);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(24, 24);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.TabStop = false;
+            this.btnSearch.Text = "";
+            this.btnSearch.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnSearch.TextColorMouseDown = System.Drawing.SystemColors.Highlight;
+            this.btnSearch.TextColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSearch.TextColorMouseLeave = System.Drawing.Color.Black;
+            this.btnSearch.UseActived = false;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BgrColorMouseDown = System.Drawing.Color.Empty;
+            this.btnLogin.BgrColorMouseEnter = System.Drawing.Color.Empty;
+            this.btnLogin.BgrColorMouseLeave = System.Drawing.Color.Transparent;
+            this.btnLogin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLogin.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
+            this.btnLogin.ImageMouseDown = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageMouseDown")));
+            this.btnLogin.ImageMouseEnter = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageMouseEnter")));
+            this.btnLogin.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageMouseLeave")));
+            this.btnLogin.ImgMargin = 3;
+            this.btnLogin.ImgSize = new System.Drawing.Size(23, 23);
+            this.btnLogin.Location = new System.Drawing.Point(766, 0);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(87, 35);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.TabStop = false;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnLogin.TextColorMouseDown = System.Drawing.Color.Black;
+            this.btnLogin.TextColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnLogin.TextColorMouseLeave = System.Drawing.Color.White;
+            this.btnLogin.UseActived = false;
+            this.btnLogin.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnLogin_MouseClick);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnMinimize.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(217)))));
+            this.btnMinimize.ColorMouseLeave = System.Drawing.Color.Transparent;
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimize.Font = new System.Drawing.Font("Webdings", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.Location = new System.Drawing.Point(853, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(35, 35);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Text = "0";
+            this.btnMinimize.UseActived = false;
+            this.btnMinimize.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnMinimize_MouseClick);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximize.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnMaximize.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(161)))), ((int)(((byte)(217)))));
+            this.btnMaximize.ColorMouseLeave = System.Drawing.Color.Transparent;
+            this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximize.Font = new System.Drawing.Font("Webdings", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnMaximize.ForeColor = System.Drawing.Color.White;
+            this.btnMaximize.Location = new System.Drawing.Point(888, 0);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(35, 35);
+            this.btnMaximize.TabIndex = 1;
+            this.btnMaximize.TabStop = false;
+            this.btnMaximize.Text = "1";
+            this.btnMaximize.UseActived = false;
+            this.btnMaximize.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnMaximize_MouseClick);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Alignment = System.Drawing.StringAlignment.Center;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(112)))), ((int)(((byte)(122)))));
+            this.btnClose.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.btnClose.ColorMouseLeave = System.Drawing.Color.Transparent;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.Font = new System.Drawing.Font("Webdings", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(923, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 35);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.TabStop = false;
+            this.btnClose.Text = "r";
+            this.btnClose.UseActived = false;
+            this.btnClose.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnClose_MouseClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -769,13 +775,13 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMain_MouseMove);
             this.ToolBar.ResumeLayout(false);
             this.ToolBar.PerformLayout();
-            this.pnlSearch.ResumeLayout(false);
-            this.pnlSearch.PerformLayout();
             this.Body.ResumeLayout(false);
             this.MainMenu.ResumeLayout(false);
             this.pnlMoRong.ResumeLayout(false);
             this.pnlQLCong.ResumeLayout(false);
             this.pnlQLNhanSu.ResumeLayout(false);
+            this.pnlSearch.ResumeLayout(false);
+            this.pnlSearch.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -1,11 +1,13 @@
 ﻿using System.Windows.Forms;
 using GUI.Class;
+using System.Collections.Generic;
 
 namespace GUI
 {
     public partial class FormMain : Form
     {
         Mouse_Position mouse_point = Mouse_Position.None;
+        public static Stack<Control> stackControl = new Stack<Control>();
 
         public FormMain()
         {
@@ -266,14 +268,21 @@ namespace GUI
                 btnLoginClick();
             }
         }
+
+        private void RenderBody_ControlAdded(object sender, ControlEventArgs e)
+        {
+            stackControl.Push(e.Control);
+        }
         #endregion
 
         #region Function Execute Event
-        private void ClearChildrenControl(Control CtrlParent)
+        private void ClearChildrenControl()
         {
-            foreach (Control ctrl in CtrlParent.Controls)
+            Control ctrl;
+            while(stackControl.Count!=0)
             {
-                ctrl.Dispose();
+                ctrl = stackControl.Pop();
+                if (ctrl != null) ctrl.Dispose();
             }
         }
 
@@ -284,13 +293,20 @@ namespace GUI
 
         private void btnChucVuClick()
         {
-
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.QLNhanSu.UCChucVu()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
 
         private void btnDSNVClick()
         {
-            ClearChildrenControl(RenderBody);
-            RenderBody.Controls.Add(new UC.QLNhanSu.UC_DSNhanVien()
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.QLNhanSu.UCDSNhanVien()
             {
                 Location = new System.Drawing.Point(8, 8),
                 Width = RenderBody.Width - 16,
@@ -301,46 +317,94 @@ namespace GUI
 
         private void btnChamCongClick()
         {
-
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.QLCong.UCChamCong()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
 
         private void btnBangCongClick()
         {
-
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.QLCong.UCBangCong()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
 
         private void btnNgoaiNguClick()
         {
-
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.MoRong.UCNgoaiNgu()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
 
         private void btnHocVanClick()
         {
-
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.MoRong.UCHocVan()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
 
         private void btnBHYTClick()
         {
-
+            ClearChildrenControl();
         }
 
         private void btnKhenThuongClick()
         {
-
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.MoRong.UCKhenThuong()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
 
         private void btnKyLuatClick()
         {
-
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.MoRong.UCKyLuat()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
 
         private void btnPhuCapClick()
         {
-
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.MoRong.UCPhuCap()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
+
         #endregion
-
-
     }
 
 }

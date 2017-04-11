@@ -21,14 +21,9 @@ namespace GUI.UC.QLNhanSu
         {
             if (e.Button == MouseButtons.Left)
             {
-                UCThemSuaNV uc;
-                foreach (Control ctrl in this.Parent.Controls)
-                {
-                    uc = ctrl as UCThemSuaNV;
-                    if (uc == null) ctrl.Visible = true;
-                }
-
-                this.Dispose();
+                Control ctrl = FormMain.stackControl.Pop();
+                ctrl.Dispose();
+                FormMain.stackControl.Pop().Visible = true;
             }
         }
     }
