@@ -60,13 +60,13 @@ namespace DTO
         {
             return DATA.xoa_phucap(ma);
         }
-        public int Them_pc(string ma, string ten, decimal tien)
+        public int Them_pc()
         {
-            return DATA.them_phucap(ma, ten, tien);
+            return DATA.them_phucap(ma, ten, sotien);
         }
-        public int Sua_pc(string ma, string ten, decimal tien)
+        public int Sua_pc()
         {
-            return DATA.capnhat_phucap(ma, ten, tien);
+            return DATA.capnhat_phucap(ma, ten, sotien);
         }
     }
 }

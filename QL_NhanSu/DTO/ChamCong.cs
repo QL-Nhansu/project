@@ -93,7 +93,7 @@ namespace DTO
                 ngaydilam = value;
             }
         }
-        public int ADD_CC(DateTime dateend, decimal luongcoban, int songaylam, int songaynghicoluong, string nhanvienma, string ngaydilam)
+        public int ADD_CC()
         {
             return DATA.ADD_ChamCong(dateend,luongcoban,songaylam,songaynghicoluong,nhanvienma,ngaydilam);
         }

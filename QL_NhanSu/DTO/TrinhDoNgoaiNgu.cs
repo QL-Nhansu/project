@@ -69,12 +69,11 @@ namespace DTO
         {
             return DATA.xuat_TrinhDoNgoaiNgu();
         }
-        public int Them_NN(string ma, string ten, string ngonngu, string chuthich)
+        public int Them_NN()
         {
-
             return DATA.them_trinhdongoaingu(ma, ten, ngonngu, chuthich);
-                }
-        public  int Sua_NN(string ma, string ten, string ngonngu, string chuthich)
+        }
+        public  int Sua_NN()
         {
             return DATA.capnhat_trinhdongoaingu(ma, ten, ngonngu, chuthich);
         }

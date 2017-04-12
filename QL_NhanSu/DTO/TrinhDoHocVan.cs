@@ -56,11 +56,11 @@ namespace DTO
         {
             return DATA.xuat_TrinhDoHocVan();
         }
-        public int Them_HV(string ma, string ten, string chuthich)
+        public int Them_HV()
         {
             return DATA.them_trinhdohocvan(ma, ten, chuthich);
         }
-        public int Sua_HV(string ma, string ten, string chuthich)
+        public int Sua_HV()
         {
             return DATA.capnhat_trinhdohocvan(ma, ten, chuthich);
     }

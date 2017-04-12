@@ -204,13 +204,13 @@ namespace DTO
                 anh = value;
             }
         }
-        public int Them_NV(string ma, string ten, DateTime ngaysinh, string gioitinh, int cmnd, object anh, string dantoc, string tongiao, string trinhdongoainguma, string chucdanhma, string trinhdohocvanma, DateTime ngaykihopdong, DateTime ngayhethanhopdong, string matkhau)
+        public int Them_NV()
         {
-           return DAL.DATA.ADD_Nhanvien(ma,ten,ngaysinh,gioitinh,cmnd,anh,dantoc,tongiao,trinhdongoainguma,chucdanhma,trinhdohocvanma,ngaykihopdong,ngayhethanhopdong,matkhau);
+           return DATA.ADD_Nhanvien(ma,ten,ngaysinh,gioitinh,cmnd,anh,dantoc,tongiao,trinhdongoainguma,chucdanhma,trinhdohocvanma,ngaykihopdong,ngayhethanhopdong,matkhau);
         }
-        public int Sua_NV(string ma, string ten, DateTime ngaysinh, string gioitinh, int cmnd, object anh, string dantoc, string tongiao, string trinhdongoainguma, string chucdanhma, string trinhdohocvanma)
+        public int Sua_NV()
         {
-            return DAL.DATA.Change_Nhanvien(ma,ten,ngaysinh,gioitinh,cmnd,anh,dantoc,tongiao,trinhdongoainguma,chucdanhma,trinhdohocvanma);
+            return DATA.Change_Nhanvien(ma,ten,ngaysinh,gioitinh,cmnd,anh,dantoc,tongiao,trinhdongoainguma,chucdanhma,trinhdohocvanma);
 
         }
         public static int Xoa_NV(string ma)

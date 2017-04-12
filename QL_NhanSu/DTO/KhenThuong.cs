@@ -55,11 +55,11 @@ namespace DTO
         {
             return DATA.xuat_KhenThuong();
         }
-        public int Them_KT(string ma, string ten, decimal sotien)
+        public int Them_KT()
         {
             return DATA.ADD_KhenThuong(ma, ten, sotien);
         }
-        public int Sua_KT(string ma, string ten, decimal sotien)
+        public int Sua_KT()
         {
             return DATA.Change_KhenThuong(ma, ten, sotien);
         }

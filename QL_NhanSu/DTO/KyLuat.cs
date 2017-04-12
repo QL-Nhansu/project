@@ -53,11 +53,11 @@ namespace DTO
             }
         }
 
-        public int Them_KL(string ma, string ten, decimal sotien)
+        public int Them_KL()
         {
             return DATA.ADD_Kyluat(ma, ten, sotien);
         }
-        public int Sua_KL(string ma, string ten, decimal sotien)
+        public int Sua_KL()
         {
             return DATA.Change_Kyluat(ma, ten,sotien);
         }

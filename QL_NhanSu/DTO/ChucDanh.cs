@@ -51,11 +51,11 @@ namespace DTO
                 chuthich = value;
             }
         }
-        public int Them_CD(string ma, string ten, string chuthich)
+        public int Them_CD()
         {
             return DATA.them_chucdanh(ma, ten, chuthich);
         }
-        public int Sua_CD(string ma, string ten, string chuthich)
+        public int Sua_CD()
         {
             return DATA.capnhat_chucdanh(ma, ten, chuthich);
         }
