@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Data;
+
 namespace DTO
 {
     public class ChamCong
@@ -97,9 +99,13 @@ namespace DTO
         {
             return DATA.ADD_ChamCong(dateend,luongcoban,songaylam,songaynghicoluong,nhanvienma,ngaydilam);
         }
-        public static int Xem_CC(DateTime dateend)
+        public static DataTable Xem_BC(DateTime dateend)
         {
-            return DATA.VIEW_ChamCong(dateend);
+            return DATA.VIEW_BangCong(dateend);
+        }
+        public static DataTable Xem_CC(DateTime dateend)
+        {
+            return DATA.xuat_chamcong();
         }
 
     }

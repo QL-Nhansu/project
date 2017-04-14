@@ -11,7 +11,7 @@ namespace DAL
         #region ChamCong
         public static DataTable xuat_chamcong()
         {
-            return DBConnect.GetData("ChamCong");
+            return DBConnect.GetData("select nv.ma , nv.ten , nv.gioitinh , pb.ten from nhanvien nv,thamgia tg,phongban pb where  nv.ma=tg.manv and tg.maqb=pb.ma");
         }
         public static int ADD_ChamCong(DateTime dateend, decimal luongcoban, int songaylam, int songaynghicoluong, string nhanvienma, string ngaydilam)
         {
@@ -47,13 +47,9 @@ namespace DAL
             };
             return DBConnect.ExecuteNonQuery("DELETE_ChamCong", para);
         }
-        public static int VIEW_ChamCong(DateTime dateend)
+        public static DataTable VIEW_BangCong(DateTime dateend)
         {
-            SqlParameter[] para = new SqlParameter[]
-            {
-                new SqlParameter("@dateend",dateend),
-            };
-            return DBConnect.ExecuteNonQuery("VIEW_chamCong", para);
+            return DBConnect.GetData("	exec VIEW_chamcong '"+dateend+"'");
         }
 
         #endregion
@@ -61,7 +57,7 @@ namespace DAL
         #region KyLuat
         public static DataTable xuat_KyLuat()
         {
-            return DBConnect.GetData("KyLuat");
+            return DBConnect.GetData("select * from KyLuat");
         }
         public static int ADD_Kyluat(string ma, string ten, decimal sotien)
         {
@@ -96,7 +92,7 @@ namespace DAL
         #region KhenThuong
         public static DataTable xuat_KhenThuong()
         {
-            return DBConnect.GetData("KhenThuong");
+            return DBConnect.GetData("select * from KhenThuong");
         }
         public static int ADD_KhenThuong(string ma, string ten, decimal sotien)
         {
@@ -129,17 +125,17 @@ namespace DAL
         #endregion
 
         #region Nhanvien
-        public static DataTable xuat_Nhanvien()
+        public static DataTable View_nvma(string ma)
         {
-            return DBConnect.GetData("NhanVien");
+            return DBConnect.GetData("exec  VIEW_NV'"+ ma+"'");
         }
-        public static int View_nv(string ma)
+        public static DataTable View_nvpb(string mapb)
         {
-            SqlParameter[] para = new SqlParameter[]
-           {
-                new SqlParameter("@ma",ma),
-           };
-            return DBConnect.ExecuteNonQuery("VIEW_NV", para);
+            return DBConnect.GetData("exec  VIEW_nvopb'" + mapb + "'");
+        }
+        public static DataTable View_nvcd(string cd)
+        {
+            return DBConnect.GetData("exec  VIEW_cvnv'" + cd + "'");
         }
         public static int ADD_Nhanvien(string ma, string ten, DateTime ngaysinh, string gioitinh, int cmnd, object anh, string dantoc, string tongiao, string trinhdongoainguma, string chucdanhma, string trinhdohocvanma, DateTime ngaykihopdong, DateTime ngayhethanhopdong, string matkhau)
         {
@@ -303,7 +299,7 @@ namespace DAL
         #region TrinhDoHocVan
         public static DataTable xuat_TrinhDoHocVan()
         {
-            return DBConnect.GetData("TrinhDoHocVan");
+            return DBConnect.GetData("select * from TrinhDoHocVan");
         }
         public static int them_trinhdohocvan(string ma, string ten, string chuthich)
         {
@@ -344,7 +340,7 @@ namespace DAL
         #region TrinhDoNgoaiNgu
         public static DataTable xuat_TrinhDoNgoaiNgu()
         {
-            return DBConnect.GetData("TrinhDoNgoaiNgu");
+            return DBConnect.GetData("select * from TrinhDoNgoaiNgu");
         }
         public static int them_trinhdongoaingu(string ma, string ten, string ngonngu, string chuthich)
         {
@@ -381,7 +377,7 @@ namespace DAL
         #region ChucDanh
         public static DataTable xuat_ChucDanh()
         {
-            return DBConnect.GetData("ChucDanh");
+            return DBConnect.GetData("select * from chucdanh");
         }
         public static int them_chucdanh(string ma, string ten, string chuthich)
         {
@@ -415,7 +411,7 @@ namespace DAL
         #region phucap
         public static DataTable xuat_phucap()
         {
-            return DBConnect.GetData("phucap");
+            return DBConnect.GetData("select * from phucap");
         }
         public static int them_phucap(string ma, string ten, decimal tien)
         {

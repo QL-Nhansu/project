@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Data;
+
 namespace DTO
 {
     public class NhanVien
@@ -217,9 +219,17 @@ namespace DTO
         {
             return DATA.DELETE_Nhanvien(ma);
         }
-        public static int Xem_NV(string ma)
+        public static DataTable Xem_NV(string ma)
         {
-            return DATA.View_nv(ma);
+            return DATA.View_nvma(ma);
+        }
+        public static DataTable Xem_NVpb(string pb)
+        {
+            return DATA.View_nvpb(pb);
+        }
+        public static DataTable Xem_NVcd(string cd)
+        {
+            return DATA.View_nvcd(cd);
         }
     }
 }
