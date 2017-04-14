@@ -30,11 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTool = new System.Windows.Forms.Panel();
+            this.labNam = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labThang = new System.Windows.Forms.Label();
             this.cbxView = new GUI.Class.cbxNoneChangeText();
             this.labView = new System.Windows.Forms.Label();
-            this.labNam = new System.Windows.Forms.Label();
             this.line1 = new GUI.Class.pnlLine();
             this.dgvBC = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -87,6 +87,15 @@
             this.pnlTool.Size = new System.Drawing.Size(758, 30);
             this.pnlTool.TabIndex = 2;
             // 
+            // labNam
+            // 
+            this.labNam.AutoSize = true;
+            this.labNam.Location = new System.Drawing.Point(250, 8);
+            this.labNam.Name = "labNam";
+            this.labNam.Size = new System.Drawing.Size(29, 13);
+            this.labNam.TabIndex = 7;
+            this.labNam.Text = "Năm";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -117,6 +126,7 @@
             this.cbxView.Size = new System.Drawing.Size(121, 21);
             this.cbxView.TabIndex = 1;
             this.cbxView.TabStop = false;
+            this.cbxView.SelectedIndexChanged += new System.EventHandler(this.cbxView_SelectedIndexChanged);
             // 
             // labView
             // 
@@ -127,15 +137,6 @@
             this.labView.Size = new System.Drawing.Size(47, 13);
             this.labView.TabIndex = 0;
             this.labView.Text = "ViewTile";
-            // 
-            // labNam
-            // 
-            this.labNam.AutoSize = true;
-            this.labNam.Location = new System.Drawing.Point(250, 8);
-            this.labNam.Name = "labNam";
-            this.labNam.Size = new System.Drawing.Size(29, 13);
-            this.labNam.TabIndex = 7;
-            this.labNam.Text = "Năm";
             // 
             // line1
             // 

@@ -16,5 +16,10 @@ namespace GUI.UC.QLCong
         {
             InitializeComponent();
         }
+
+        private void cbxView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
