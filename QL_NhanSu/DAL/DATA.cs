@@ -8,6 +8,8 @@ namespace DAL
 {
    public class DATA
     {
+       
+        //
         #region ChamCong
         public static DataTable xuat_chamcong()
         {
