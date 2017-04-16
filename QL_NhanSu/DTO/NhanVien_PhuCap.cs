@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,34 +10,34 @@ namespace DTO
 {
     public class NhanVien_PhuCap
     {
-        private string manv;
-        private string mapc;
+        private string manhanvien;
+        private string maphucap;
         private DateTime ngaynhan;
         private DateTime ngayhethan;
 
-        public string Manv
+        public string Manhanvien
         {
             get
             {
-                return manv;
+                return manhanvien;
             }
 
             set
             {
-                manv = value;
+                manhanvien = value;
             }
         }
 
-        public string Mapc
+        public string Maphucap
         {
             get
             {
-                return mapc;
+                return maphucap;
             }
 
             set
             {
-                mapc = value;
+                maphucap = value;
             }
         }
 
@@ -64,6 +65,19 @@ namespace DTO
             {
                 ngayhethan = value;
             }
+        }
+
+        public int Them()
+        {
+            return DATA.them_NVPC(manhanvien, maphucap, ngaynhan, ngayhethan);
+        }
+        public int Sua()
+        {
+            return DATA.sua_NVPC(manhanvien, maphucap, ngaynhan, ngayhethan);
+        }
+        public static int Xoa(string manhanvien, string maphucap, DateTime ngaynhan)
+        {
+            return DATA.xoa_NVPC(manhanvien, maphucap, ngaynhan);
         }
     }
 }

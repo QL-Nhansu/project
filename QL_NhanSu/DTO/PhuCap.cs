@@ -52,21 +52,21 @@ namespace DTO
                 sotien = value;
             }
         }
-        public static DataTable get_PC ()
+        public static DataTable Get_PhuCap()
         {
-            return DATA.xuat_phucap();
+            return DATA.get_phucap();
         }
-        public static int Xoa_pc(string ma)
+        public static int Xoa(string ma)
         {
             return DATA.xoa_phucap(ma);
         }
-        public int Them_pc()
+        public int Them()
         {
             return DATA.them_phucap(ma, ten, sotien);
         }
-        public int Sua_pc()
+        public int Sua()
         {
-            return DATA.capnhat_phucap(ma, ten, sotien);
+            return DATA.sua_phucap(ma, ten, sotien);
         }
     }
 }

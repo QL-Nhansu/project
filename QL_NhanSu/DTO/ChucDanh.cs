@@ -11,6 +11,7 @@ namespace DTO
     {
         private string ma;
         private string ten;
+        private decimal luongcoban;
         private string chuthich;
 
         public string Ma
@@ -39,6 +40,19 @@ namespace DTO
             }
         }
 
+        public decimal Luongcoban
+        {
+            get
+            {
+                return luongcoban;
+            }
+
+            set
+            {
+                luongcoban = value;
+            }
+        }
+
         public string Chuthich
         {
             get
@@ -51,21 +65,23 @@ namespace DTO
                 chuthich = value;
             }
         }
-        public int Them_CD()
+
+        public static DataTable Get_ChucDanh()
         {
-            return DATA.them_chucdanh(ma, ten, chuthich);
+            return DATA.get_chucdanh();
         }
-        public int Sua_CD()
+        
+        public int Them()
         {
-            return DATA.capnhat_chucdanh(ma, ten, chuthich);
+            return DATA.them_chucdanh(ma, ten, luongcoban, chuthich);
         }
-        public static int Xoa_CD(string ma)
+        public int Sua()
+        {
+            return DATA.sua_chucdanh(ma, ten, luongcoban, chuthich);
+        }
+        public static int Xoa(string ma)
         {
             return DATA.xoa_chucdanh(ma);
-        }
-        public static DataTable Xem_CD()
-        {
-            return DATA.xuat_ChucDanh();
         }
     }
 }

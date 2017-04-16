@@ -13,17 +13,19 @@ namespace DTO
         private string ma;
         private string ten;
         private DateTime ngaysinh;
-        private string gioitinh;
-        private int cmnd;
-        private object anh;
+        private int gioitinh;
+        private string cmnd;
+        private DbType anh;
         private string dantoc;
         private string tongiao;
-        private string trinhdongoainguma;
-        private string chucdanhma;
-        private string trinhdohocvanma;
+        private string sdt;
+        private string email;
         private DateTime ngaykihopdong;
         private DateTime ngayhethanhopdong;
         private string matkhau;
+        private string mangoaingu;
+        private string machucdanh;
+        private string mahocvan;
 
         public string Ma
         {
@@ -64,7 +66,7 @@ namespace DTO
             }
         }
 
-        public string Gioitinh
+        public int Gioitinh
         {
             get
             {
@@ -77,7 +79,7 @@ namespace DTO
             }
         }
 
-        public int Cmnd
+        public string Cmnd
         {
             get
             {
@@ -87,6 +89,19 @@ namespace DTO
             set
             {
                 cmnd = value;
+            }
+        }
+
+        public DbType Anh
+        {
+            get
+            {
+                return anh;
+            }
+
+            set
+            {
+                anh = value;
             }
         }
 
@@ -116,42 +131,29 @@ namespace DTO
             }
         }
 
-        public string Trinhdongoainguma
+        public string Sdt
         {
             get
             {
-                return trinhdongoainguma;
+                return sdt;
             }
 
             set
             {
-                trinhdongoainguma = value;
+                sdt = value;
             }
         }
 
-        public string Chucdanhma
+        public string Email
         {
             get
             {
-                return chucdanhma;
+                return email;
             }
 
             set
             {
-                chucdanhma = value;
-            }
-        }
-
-        public string Trinhdohocvanma
-        {
-            get
-            {
-                return trinhdohocvanma;
-            }
-
-            set
-            {
-                trinhdohocvanma = value;
+                email = value;
             }
         }
 
@@ -194,42 +196,84 @@ namespace DTO
             }
         }
 
-        public object Anh
+        public string Mangoaingu
         {
             get
             {
-                return anh;
+                return mangoaingu;
             }
 
             set
             {
-                anh = value;
+                mangoaingu = value;
             }
         }
-        public int Them_NV()
+
+        public string Machucdanh
         {
-           return DATA.ADD_Nhanvien(ma,ten,ngaysinh,gioitinh,cmnd,anh,dantoc,tongiao,trinhdongoainguma,chucdanhma,trinhdohocvanma,ngaykihopdong,ngayhethanhopdong,matkhau);
+            get
+            {
+                return machucdanh;
+            }
+
+            set
+            {
+                machucdanh = value;
+            }
         }
-        public int Sua_NV()
+
+        public string Mahocvan
         {
-            return DATA.Change_Nhanvien(ma,ten,ngaysinh,gioitinh,cmnd,anh,dantoc,tongiao,trinhdongoainguma,chucdanhma,trinhdohocvanma);
+            get
+            {
+                return mahocvan;
+            }
+
+            set
+            {
+                mahocvan = value;
+            }
+        }
+
+        public static DataTable Get_DSNhanVien()
+        {
+            return DATA.get_dsnhanvien();
+        }
+
+        public static DataTable Get_NhanVien(string manv)
+        {
+            return DATA.get_nhanvien(manv);
+        }
+
+        public static DataTable Get_LichSuLV(string manv)
+        {
+            return DATA.get_lichsulv(manv);
+        }
+
+        public static DataTable Get_LichSuKT(string manv)
+        {
+            return DATA.get_lichsukt(manv);
+        }
+
+        public static DataTable Get_LichSuKL(string manv)
+        {
+            return DATA.get_lichsukl(manv);
+        }
+
+        public int Them()
+        {
+            return DATA.them_nhanvien(ma, ten, ngaysinh, gioitinh, cmnd, anh, dantoc, tongiao,
+                sdt, email, Ngaykihopdong, ngayhethanhopdong, matkhau, mangoaingu, machucdanh, mahocvan);
+        }
+        public int Sua()
+        {
+            return DATA.sua_nhanvien(ma, ten, ngaysinh, gioitinh, cmnd, anh, dantoc, tongiao,
+                sdt, email, Ngaykihopdong, ngayhethanhopdong, matkhau, mangoaingu, machucdanh, mahocvan);
 
         }
-        public static int Xoa_NV(string ma)
+        public static int Xoa(string ma)
         {
-            return DATA.DELETE_Nhanvien(ma);
-        }
-        public static DataTable Xem_NV(string ma)
-        {
-            return DATA.View_nvma(ma);
-        }
-        public static DataTable Xem_NVpb(string pb)
-        {
-            return DATA.View_nvpb(pb);
-        }
-        public static DataTable Xem_NVcd(string cd)
-        {
-            return DATA.View_nvcd(cd);
+            return DATA.xoa_nhanvien(ma);
         }
     }
 }

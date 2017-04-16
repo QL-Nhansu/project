@@ -51,21 +51,21 @@ namespace DTO
                 sotien = value;
             }
         }
-        public static DataTable Xem_KT()
+        public static DataTable Get_KhenThuong()
         {
-            return DATA.xuat_KhenThuong();
+            return DATA.get_khenthuong();
         }
-        public int Them_KT()
+        public int Them()
         {
-            return DATA.ADD_KhenThuong(ma, ten, sotien);
+            return DATA.them_khenthuong(ma, ten, sotien);
         }
-        public int Sua_KT()
+        public int Sua()
         {
-            return DATA.Change_KhenThuong(ma, ten, sotien);
+            return DATA.sua_khenthuong(ma, ten, sotien);
         }
-        public static int Xoa_KT(string ma)
+        public static int Xoa(string ma)
         {
-            return DATA.DELETE_KhenThuong(ma);
+            return DATA.xoa_khenthuong(ma);
         }
     }
 }

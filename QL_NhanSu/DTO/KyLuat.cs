@@ -53,21 +53,21 @@ namespace DTO
             }
         }
 
-        public int Them_KL()
+        public static DataTable Get_KyLuat()
         {
-            return DATA.ADD_Kyluat(ma, ten, sotien);
+            return DATA.get_kyluat();
         }
-        public int Sua_KL()
+        public int Them()
         {
-            return DATA.Change_Kyluat(ma, ten,sotien);
+            return DATA.them_kyluat(ma, ten, sotien);
         }
-        public static int Xoa_KL(string ma)
+        public int Sua()
         {
-            return DATA.DELETE_Kyluat(ma);
+            return DATA.sua_kyluat(ma, ten,sotien);
         }
-        public static DataTable Xem_KL()
+        public static int Xoa(string ma)
         {
-            return DATA.xuat_KyLuat();
+            return DATA.xoa_kyluat(ma);
         }
     }
 }

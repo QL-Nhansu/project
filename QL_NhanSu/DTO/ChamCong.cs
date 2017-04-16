@@ -10,63 +10,36 @@ namespace DTO
 {
     public class ChamCong
     {
-
-        private DateTime dateend;
-        private decimal luongcoban;
-        private int songaylam;
-        private int songaynghicoluong;
+        private int thang;
+        private int nam;
         private string nhanvienma;
+        private decimal luongcoban;
         private string ngaydilam;
+        private string ngaynghicoluong;
 
-        public DateTime Dateend
+        public int Thang
         {
             get
             {
-                return dateend;
+                return thang;
             }
 
             set
             {
-                dateend = value;
+                thang = value;
             }
         }
 
-        public decimal Luongcoban
+        public int Nam
         {
             get
             {
-                return luongcoban;
+                return nam;
             }
 
             set
             {
-                luongcoban = value;
-            }
-        }
-
-        public int Songaylam
-        {
-            get
-            {
-                return songaylam;
-            }
-
-            set
-            {
-                songaylam = value;
-            }
-        }
-
-        public int Songaynghicoluong
-        {
-            get
-            {
-                return songaynghicoluong;
-            }
-
-            set
-            {
-                songaynghicoluong = value;
+                nam = value;
             }
         }
 
@@ -83,6 +56,19 @@ namespace DTO
             }
         }
 
+        public decimal Luongcoban
+        {
+            get
+            {
+                return luongcoban;
+            }
+
+            set
+            {
+                luongcoban = value;
+            }
+        }
+
         public string Ngaydilam
         {
             get
@@ -95,18 +81,35 @@ namespace DTO
                 ngaydilam = value;
             }
         }
-        public int ADD_CC()
+
+        public string Ngaynghicoluong
         {
-            return DATA.ADD_ChamCong(dateend,luongcoban,songaylam,songaynghicoluong,nhanvienma,ngaydilam);
-        }
-        public static DataTable Xem_BC(DateTime dateend)
-        {
-            return DATA.VIEW_BangCong(dateend);
-        }
-        public static DataTable Xem_CC(DateTime dateend)
-        {
-            return DATA.xuat_chamcong();
+            get
+            {
+                return ngaynghicoluong;
+            }
+
+            set
+            {
+                ngaynghicoluong = value;
+            }
         }
 
+        public static DataTable Get_BangChamCong(int thang, int nam)
+        {
+            return DATA.get_bangchamcong(thang, nam);
+        }
+        public static DataTable Get_ChamCongNhanVien()
+        {
+            return DATA.get_chamcongnv();
+        }
+        public int Sua()
+        {
+            return DATA.sua_chamcong(thang, nam, nhanvienma, luongcoban, ngaydilam, ngaynghicoluong);
+        }
+        public static int Xoa(int thang, int nam, string nhanvienma)
+        {
+            return DATA.xoa_chamcong(thang, nam, nhanvienma);
+        }
     }
 }
