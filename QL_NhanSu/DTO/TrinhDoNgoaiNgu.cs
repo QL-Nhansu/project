@@ -65,21 +65,21 @@ namespace DTO
                 chuthich = value;
             }
         }
-        public static DataTable Xem_NN()
+        public static DataTable Get_NgoaiNgu()
         {
-            return DATA.xuat_TrinhDoNgoaiNgu();
+            return DATA.get_ngoaingu();
         }
-        public int Them_NN()
+        public int Them()
         {
-            return DATA.them_trinhdongoaingu(ma, ten, ngonngu, chuthich);
+            return DATA.them_ngoaingu(ma, ten, ngonngu, chuthich);
         }
-        public  int Sua_NN()
+        public  int Sua()
         {
-            return DATA.capnhat_trinhdongoaingu(ma, ten, ngonngu, chuthich);
+            return DATA.sua_ngoaingu(ma, ten, ngonngu, chuthich);
         }
-        public static int Xoa_NN(string ma)
+        public static int Xoa(string ma)
         {
-            return DATA.xoa_trinhdongoaingu(ma);
+            return DATA.xoa_ngoaingu(ma);
         }
     }
 }

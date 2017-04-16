@@ -45,7 +45,7 @@ namespace GUI.UC.QLNhanSu
         {
             if (e.Button == MouseButtons.Left)
             {
-
+                
             }
         }
 

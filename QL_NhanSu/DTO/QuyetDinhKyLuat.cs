@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,6 +64,19 @@ namespace DTO
             {
                 ngay = value;
             }
+        }
+
+        public static int Xoa(string nhanvienma, string kyluatma, DateTime ngay)
+        {
+            return DATA.xoa_QDKL(nhanvienma, kyluatma, ngay);
+        }
+        public int Them()
+        {
+            return DATA.them_QDKL(nhanvienma, kyluatma, ngay, sotien);
+        }
+        public int Sua()
+        {
+            return DATA.sua_QDKL(nhanvienma, kyluatma, ngay, sotien);
         }
     }
 }

@@ -293,7 +293,6 @@
             this.RenderBody.Size = new System.Drawing.Size(758, 503);
             this.RenderBody.TabIndex = 1;
             this.RenderBody.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.RenderBody_ControlAdded);
-            this.RenderBody.Paint += new System.Windows.Forms.PaintEventHandler(this.RenderBody_Paint);
             // 
             // MainMenu
             // 

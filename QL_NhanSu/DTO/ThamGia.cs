@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,49 +9,74 @@ namespace DTO
 {
     public class ThamGia
     {
-        private string manv;
-        private string maqb;
-        private DateTime date;
+        private string manhanvien;
+        private string maphongban;
+        private DateTime ngaythamgia;
+        private DateTime ngayroidi;
 
-
-
-        public string Manv
+        public string Manhanvien
         {
             get
             {
-                return manv;
+                return manhanvien;
             }
 
             set
             {
-                manv = value;
+                manhanvien = value;
             }
         }
 
-        public string Maqb
+        public string Maphongban
         {
             get
             {
-                return maqb;
+                return maphongban;
             }
 
             set
             {
-                maqb = value;
+                maphongban = value;
             }
         }
 
-        public DateTime Date
+        public DateTime Ngaythamgia
         {
             get
             {
-                return date;
+                return ngaythamgia;
             }
 
             set
             {
-                date = value;
+                ngaythamgia = value;
             }
+        }
+
+        public DateTime Ngayroidi
+        {
+            get
+            {
+                return ngayroidi;
+            }
+
+            set
+            {
+                ngayroidi = value;
+            }
+        }
+
+        public static int Xoa(string manhanvien, string maphongban, DateTime ngaythamgia)
+        {
+            return DATA.xoa_thamgia(manhanvien, maphongban, ngaythamgia);
+        }
+        public int Them()
+        {
+            return DATA.them_thamgia(manhanvien, maphongban, ngaythamgia, ngayroidi);
+        }
+        public int Sua()
+        {
+            return DATA.sua_thamgia(manhanvien, maphongban, ngaythamgia, ngayroidi);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,34 +9,34 @@ namespace DTO
 {
    public  class TruongPhong
     {
-        private string manv;
-        private string mapb;
+        private string manhanvien;
+        private string maphongban;
         private DateTime ngaybatdau;
-        private string ngayketthuc;
+        private DateTime ngayketthuc;
 
-        public string Manv
+        public string Manhanvien
         {
             get
             {
-                return manv;
+                return manhanvien;
             }
 
             set
             {
-                manv = value;
+                manhanvien = value;
             }
         }
 
-        public string Mapb
+        public string Maphongban
         {
             get
             {
-                return mapb;
+                return maphongban;
             }
 
             set
             {
-                mapb = value;
+                maphongban = value;
             }
         }
 
@@ -52,7 +53,7 @@ namespace DTO
             }
         }
 
-        public string Ngayketthuc
+        public DateTime Ngayketthu
         {
             get
             {
@@ -63,6 +64,19 @@ namespace DTO
             {
                 ngayketthuc = value;
             }
+        }
+
+        public int Them()
+        {
+            return DATA.them_truongphong(manhanvien, maphongban, ngaybatdau, ngayketthuc);
+        }
+        public int Sua()
+        {
+            return DATA.sua_truongphong(manhanvien, maphongban, ngaybatdau, ngayketthuc);
+        }
+        public static int Xoa(string manhanvien, string maphongban, DateTime ngaybatdau)
+        {
+            return DATA.xoa_truongphong(manhanvien, maphongban, ngaybatdau);
         }
     }
 }

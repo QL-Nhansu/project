@@ -52,21 +52,21 @@ namespace DTO
             }
 
         }
-        public static DataTable Xem_HV()
+        public static DataTable Get_HocVan()
         {
-            return DATA.xuat_TrinhDoHocVan();
+            return DATA.get_hocvan();
         }
-        public int Them_HV()
+        public int Them()
         {
-            return DATA.them_trinhdohocvan(ma, ten, chuthich);
+            return DATA.them_hocvan(ma, ten, chuthich);
         }
-        public int Sua_HV()
+        public int Sua()
         {
-            return DATA.capnhat_trinhdohocvan(ma, ten, chuthich);
-    }
-        public static int Xoa_HV(string ma)
+            return DATA.sua_hocvan(ma, ten, chuthich);
+        }
+        public static int Xoa(string ma)
         {
-            return DATA.xoa_trinhdohocvan(ma);
+            return DATA.xoa_hocvan(ma);
         }
     }
 }
