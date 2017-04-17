@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCChucVu));
             this.dgvCV = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlInput = new System.Windows.Forms.Panel();
+            this.txtLuong = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnKT = new GUI.Class.btnSimple();
             this.btnSave = new GUI.Class.btnSimple();
             this.txtCT = new System.Windows.Forms.TextBox();
@@ -57,6 +57,7 @@
             // 
             // dgvCV
             // 
+            this.dgvCV.AllowUserToAddRows = false;
             this.dgvCV.AllowUserToDeleteRows = false;
             this.dgvCV.AllowUserToResizeRows = false;
             this.dgvCV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -70,39 +71,32 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCV.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCV.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvCV.Location = new System.Drawing.Point(0, 182);
             this.dgvCV.MultiSelect = false;
             this.dgvCV.Name = "dgvCV";
+            this.dgvCV.ReadOnly = true;
             this.dgvCV.RowHeadersVisible = false;
             this.dgvCV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCV.Size = new System.Drawing.Size(758, 321);
             this.dgvCV.TabIndex = 7;
             this.dgvCV.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
+            this.dgvCV.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvCV_MouseClick);
             // 
             // pnlInput
             // 
             this.pnlInput.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlInput.Controls.Add(this.txtLuong);
+            this.pnlInput.Controls.Add(this.label5);
             this.pnlInput.Controls.Add(this.btnKT);
             this.pnlInput.Controls.Add(this.btnSave);
             this.pnlInput.Controls.Add(this.txtCT);
@@ -119,6 +113,25 @@
             this.pnlInput.TabIndex = 6;
             this.pnlInput.Visible = false;
             // 
+            // txtLuong
+            // 
+            this.txtLuong.Location = new System.Drawing.Point(332, 40);
+            this.txtLuong.MaximumSize = new System.Drawing.Size(250, 20);
+            this.txtLuong.MaxLength = 12;
+            this.txtLuong.Name = "txtLuong";
+            this.txtLuong.Size = new System.Drawing.Size(233, 20);
+            this.txtLuong.TabIndex = 3;
+            this.txtLuong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLuong_KeyDown);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(329, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Lương cơ bản";
+            // 
             // btnKT
             // 
             this.btnKT.Alignment = System.Drawing.StringAlignment.Center;
@@ -127,7 +140,7 @@
             this.btnKT.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnKT.ColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
             this.btnKT.ForeColor = System.Drawing.Color.White;
-            this.btnKT.Location = new System.Drawing.Point(518, 98);
+            this.btnKT.Location = new System.Drawing.Point(628, 98);
             this.btnKT.Name = "btnKT";
             this.btnKT.Size = new System.Drawing.Size(75, 23);
             this.btnKT.TabIndex = 0;
@@ -144,26 +157,28 @@
             this.btnSave.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnSave.ColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(360, 98);
+            this.btnSave.Location = new System.Drawing.Point(628, 40);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 0;
             this.btnSave.TabStop = false;
             this.btnSave.Text = "Thêm";
             this.btnSave.UseActived = false;
+            this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseClick);
             // 
             // txtCT
             // 
-            this.txtCT.Location = new System.Drawing.Point(360, 40);
+            this.txtCT.Location = new System.Drawing.Point(332, 101);
             this.txtCT.MaximumSize = new System.Drawing.Size(250, 20);
+            this.txtCT.MaxLength = 100;
             this.txtCT.Name = "txtCT";
             this.txtCT.Size = new System.Drawing.Size(233, 20);
-            this.txtCT.TabIndex = 3;
+            this.txtCT.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(357, 24);
+            this.label4.Location = new System.Drawing.Point(329, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 8;
@@ -173,6 +188,7 @@
             // 
             this.txtTen.Location = new System.Drawing.Point(24, 101);
             this.txtTen.MaximumSize = new System.Drawing.Size(250, 20);
+            this.txtTen.MaxLength = 20;
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(233, 20);
             this.txtTen.TabIndex = 2;
@@ -188,8 +204,10 @@
             // 
             // txtMa
             // 
+            this.txtMa.Enabled = false;
             this.txtMa.Location = new System.Drawing.Point(24, 40);
             this.txtMa.MaximumSize = new System.Drawing.Size(250, 20);
+            this.txtMa.MaxLength = 10;
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(233, 20);
             this.txtMa.TabIndex = 1;
@@ -238,8 +256,8 @@
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoa.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnXoa.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnXoa.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnXoa.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnXoa.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnXoa.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnXoa.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -264,8 +282,8 @@
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
-            this.btnSua.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnSua.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSua.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnSua.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnSua.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnSua.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSua.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -290,8 +308,8 @@
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
-            this.btnThem.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnThem.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnThem.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnThem.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnThem.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnThem.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -332,6 +350,7 @@
             this.Controls.Add(this.pnlTool);
             this.Name = "UCChucVu";
             this.Size = new System.Drawing.Size(758, 503);
+            this.Load += new System.EventHandler(this.UCChucVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCV)).EndInit();
             this.pnlInput.ResumeLayout(false);
             this.pnlInput.PerformLayout();
@@ -344,9 +363,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvCV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Panel pnlInput;
         private Class.btnSimple btnKT;
         private Class.btnSimple btnSave;
@@ -363,5 +379,7 @@
         private Class.btnImage btnSua;
         private Class.btnImage btnThem;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtLuong;
+        private System.Windows.Forms.Label label5;
     }
 }

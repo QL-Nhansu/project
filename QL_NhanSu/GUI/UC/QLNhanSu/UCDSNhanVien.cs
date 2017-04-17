@@ -31,9 +31,12 @@ namespace GUI.UC.QLNhanSu
                 FormMain.stackControl.Push(this);
                 this.Visible = false;
                 UCThemSuaNV.chucnang = UCThemSuaNV.ChucNang.Them;
-                if (dataview != null && dataview.Table.Rows.Count > 0) UCThemSuaNV.manv = (string)dataview.Table.Select("Mã is not null", "Mã DESC")[0].ItemArray[0];
+                if (dataview != null && dataview.Table.Rows.Count > 0)
+                {
+                    UCThemSuaNV.manv = (string)dataview.Table.Select("Mã is not null", "Mã DESC")[0].ItemArray[0];
+                    UCThemSuaNV.manv = "nv" + string.Format("{0:d3}", int.Parse(UCThemSuaNV.manv.Replace("nv", "00")) + 1);
+                }
                 else UCThemSuaNV.manv = "nv001";
-                UCThemSuaNV.manv = "nv" + string.Format("{0:d3}", int.Parse(UCThemSuaNV.manv.Replace("nv", "00")) + 1);
                 this.Parent.Controls.Add(new UCThemSuaNV()
                 {
                     Location = new Point(8, 8),

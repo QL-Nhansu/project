@@ -1,4 +1,5 @@
-﻿--chamcong
+﻿
+--chamcong
 create proc them_chamcong
 as
 begin
@@ -6,7 +7,13 @@ begin
 	set @date = GETDATE()
 	insert into chamcong 
 	select	DATEPART(mm,@date), DATEPART(yyyy,@date), nhanvien.ma, chucdanh.luongcoban, null, null
-	from	nhanvien join chucdanh on nhanvien.ma = chucdanh.ma
+	from	nhanvien left join chucdanh on nhanvien.ma = chucdanh.ma
+	where not exists 
+	(	select * from chamcong 
+		where	chamcong.nhanvienma = nhanvien.ma and
+				chamcong.thang = DATEPART(mm,@date) and
+				chamcong.nam = DATEPART(yyyy,@date)
+	)
 end
 go
 
@@ -533,7 +540,7 @@ go
 create proc get_bangchamcong(@thang int, @nam int)
 as
 begin
-	select thang, nam, nhanvien.ten, ngaydilam, ngaynghicoluong
+	select thang, nam, nhanvien.ma, nhanvien.ten, ngaydilam, ngaynghicoluong
 	from chamcong join nhanvien on chamcong.nhanvienma = nhanvien.ma
 	where thang = @thang and nam = @nam
 end
@@ -542,15 +549,12 @@ go
 create proc get_chamcongnv
 as
 begin
-	declare @date date
-	set @date = GETDATE()
-	if not exists 
-	(select * from chamcong 
-	where	thang = DATEPART(mm,@date) and 
-			nam = DATEPART(yyyy, @date)) execute them_chamcong
+	execute them_chamcong
+	
 	select	nhanvien.ma as N'Mã nhân viên', nhanvien.ten as N'Tên nhân viên',
-			gioitinh as N'Giới tính', phongban.ten as N'Tên phòng ban', 
-			chucdanh.ten as N'Chức vụ' 
+			case when gioitinh=1 then N'Nam' else N'Nữ' end as N'Giới tính',
+			phongban.ten as N'Tên phòng ban', chucdanh.ten as N'Chức vụ',
+			ngaydilam, ngaynghicoluong, chamcong.luongcoban
 	from	nhanvien join chamcong on nhanvien.ma = chamcong.nhanvienma
 			left join thamgia on nhanvien.ma = thamgia.nhanvienma and thamgia.ngayroidi is null
 			left join phongban on thamgia.phongbanma = phongban.ma 
@@ -565,7 +569,7 @@ as begin
 			ngaysinh as N'Ngày sinh', nhanvien.email as 'Email', nhanvien.sdt as N'SDT',
 			ngayhethanhopdong as N'Hạn hợp đồng', phongban.ten as N'Phòng ban',
 			chucdanh.ten as N'Chức danh'
-	from	nhanvien join chucdanh on nhanvien.chucdanhma = chucdanh.ma
+	from	nhanvien left join chucdanh on nhanvien.chucdanhma = chucdanh.ma
 			left join  thamgia on nhanvien.ma = thamgia.nhanvienma and ngayroidi is null
 			left join phongban on thamgia.phongbanma = phongban.ma
 	order by chucdanh.ten

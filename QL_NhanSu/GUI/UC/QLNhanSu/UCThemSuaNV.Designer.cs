@@ -30,10 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCThemSuaNV));
             this.pnlTool = new System.Windows.Forms.Panel();
-            this.btnBack = new GUI.Class.btnImage();
             this.layout = new System.Windows.Forms.TableLayoutPanel();
             this.pnlBody = new System.Windows.Forms.Panel();
-            this.cbxChucVu = new GUI.Class.cbxNoneChangeText();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtNamHHD = new System.Windows.Forms.TextBox();
@@ -45,15 +43,11 @@
             this.txtThangKHD = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtNgayKHD = new System.Windows.Forms.TextBox();
-            this.cbxHocVan = new GUI.Class.cbxNoneChangeText();
-            this.cbxNgoaiNgu = new GUI.Class.cbxNoneChangeText();
             this.label15 = new System.Windows.Forms.Label();
             this.txtNam = new System.Windows.Forms.TextBox();
             this.txtThang = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtNgay = new System.Windows.Forms.TextBox();
-            this.btnSave = new GUI.Class.btnImage();
-            this.btnAnh = new GUI.Class.btnImage();
             this.ptrAnh = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -78,6 +72,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbxChucVu = new GUI.Class.cbxNoneChangeText();
+            this.cbxHocVan = new GUI.Class.cbxNoneChangeText();
+            this.cbxNgoaiNgu = new GUI.Class.cbxNoneChangeText();
+            this.btnSave = new GUI.Class.btnImage();
+            this.btnAnh = new GUI.Class.btnImage();
+            this.btnBack = new GUI.Class.btnImage();
             this.pnlTool.SuspendLayout();
             this.layout.SuspendLayout();
             this.pnlBody.SuspendLayout();
@@ -94,31 +94,6 @@
             this.pnlTool.Size = new System.Drawing.Size(758, 30);
             this.pnlTool.TabIndex = 0;
             // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
-            this.btnBack.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
-            this.btnBack.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnBack.BgrColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBack.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
-            this.btnBack.ImageMouseDown = null;
-            this.btnBack.ImageMouseEnter = null;
-            this.btnBack.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnBack.ImageMouseLeave")));
-            this.btnBack.ImgMargin = 0;
-            this.btnBack.ImgSize = new System.Drawing.Size(23, 23);
-            this.btnBack.Location = new System.Drawing.Point(0, 0);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(61, 30);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.btnBack.TextColorMouseDown = System.Drawing.Color.Empty;
-            this.btnBack.TextColorMouseEnter = System.Drawing.Color.Empty;
-            this.btnBack.TextColorMouseLeave = System.Drawing.Color.White;
-            this.btnBack.UseActived = false;
-            this.btnBack.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBack_MouseClick);
-            // 
             // layout
             // 
             this.layout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -134,7 +109,7 @@
             this.layout.Name = "layout";
             this.layout.RowCount = 1;
             this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 473F));
             this.layout.Size = new System.Drawing.Size(758, 473);
             this.layout.TabIndex = 1;
             // 
@@ -191,14 +166,6 @@
             this.pnlBody.Name = "pnlBody";
             this.pnlBody.Size = new System.Drawing.Size(694, 467);
             this.pnlBody.TabIndex = 3;
-            // 
-            // cbxChucVu
-            // 
-            this.cbxChucVu.FormattingEnabled = true;
-            this.cbxChucVu.Location = new System.Drawing.Point(297, 137);
-            this.cbxChucVu.Name = "cbxChucVu";
-            this.cbxChucVu.Size = new System.Drawing.Size(220, 21);
-            this.cbxChucVu.TabIndex = 11;
             // 
             // label20
             // 
@@ -305,22 +272,6 @@
             this.txtNgayKHD.TabIndex = 12;
             this.txtNgayKHD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
             // 
-            // cbxHocVan
-            // 
-            this.cbxHocVan.FormattingEnabled = true;
-            this.cbxHocVan.Location = new System.Drawing.Point(297, 364);
-            this.cbxHocVan.Name = "cbxHocVan";
-            this.cbxHocVan.Size = new System.Drawing.Size(220, 21);
-            this.cbxHocVan.TabIndex = 19;
-            // 
-            // cbxNgoaiNgu
-            // 
-            this.cbxNgoaiNgu.FormattingEnabled = true;
-            this.cbxNgoaiNgu.Location = new System.Drawing.Point(297, 304);
-            this.cbxNgoaiNgu.Name = "cbxNgoaiNgu";
-            this.cbxNgoaiNgu.Size = new System.Drawing.Size(220, 21);
-            this.cbxNgoaiNgu.TabIndex = 18;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -368,55 +319,6 @@
             this.txtNgay.Size = new System.Drawing.Size(51, 20);
             this.txtNgay.TabIndex = 2;
             this.txtNgay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
-            this.btnSave.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
-            this.btnSave.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnSave.BgrColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
-            this.btnSave.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
-            this.btnSave.ImageMouseDown = null;
-            this.btnSave.ImageMouseEnter = null;
-            this.btnSave.ImageMouseLeave = null;
-            this.btnSave.ImgMargin = 3;
-            this.btnSave.ImgSize = new System.Drawing.Size(18, 18);
-            this.btnSave.Location = new System.Drawing.Point(297, 409);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(220, 30);
-            this.btnSave.TabIndex = 20;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnSave.TextColorMouseDown = System.Drawing.Color.Empty;
-            this.btnSave.TextColorMouseEnter = System.Drawing.Color.Empty;
-            this.btnSave.TextColorMouseLeave = System.Drawing.Color.White;
-            this.btnSave.UseActived = false;
-            this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseClick);
-            // 
-            // btnAnh
-            // 
-            this.btnAnh.BackColor = System.Drawing.Color.Transparent;
-            this.btnAnh.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
-            this.btnAnh.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnAnh.BgrColorMouseLeave = System.Drawing.Color.Transparent;
-            this.btnAnh.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
-            this.btnAnh.ImageMouseDown = null;
-            this.btnAnh.ImageMouseEnter = null;
-            this.btnAnh.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnAnh.ImageMouseLeave")));
-            this.btnAnh.ImgMargin = 0;
-            this.btnAnh.ImgSize = new System.Drawing.Size(20, 20);
-            this.btnAnh.Location = new System.Drawing.Point(579, 189);
-            this.btnAnh.Name = "btnAnh";
-            this.btnAnh.Size = new System.Drawing.Size(75, 23);
-            this.btnAnh.TabIndex = 0;
-            this.btnAnh.TabStop = false;
-            this.btnAnh.Text = "Choice";
-            this.btnAnh.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnAnh.TextColorMouseDown = System.Drawing.Color.Empty;
-            this.btnAnh.TextColorMouseEnter = System.Drawing.Color.Empty;
-            this.btnAnh.TextColorMouseLeave = System.Drawing.Color.Black;
-            this.btnAnh.UseActived = false;
-            this.btnAnh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAnh_MouseClick);
             // 
             // ptrAnh
             // 
@@ -491,6 +393,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(220, 20);
             this.txtSDT.TabIndex = 9;
+            this.txtSDT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
             // 
             // label4
             // 
@@ -638,6 +541,104 @@
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã nhân viên";
+            // 
+            // cbxChucVu
+            // 
+            this.cbxChucVu.FormattingEnabled = true;
+            this.cbxChucVu.Location = new System.Drawing.Point(297, 137);
+            this.cbxChucVu.Name = "cbxChucVu";
+            this.cbxChucVu.Size = new System.Drawing.Size(220, 21);
+            this.cbxChucVu.TabIndex = 11;
+            // 
+            // cbxHocVan
+            // 
+            this.cbxHocVan.FormattingEnabled = true;
+            this.cbxHocVan.Location = new System.Drawing.Point(297, 364);
+            this.cbxHocVan.Name = "cbxHocVan";
+            this.cbxHocVan.Size = new System.Drawing.Size(220, 21);
+            this.cbxHocVan.TabIndex = 19;
+            // 
+            // cbxNgoaiNgu
+            // 
+            this.cbxNgoaiNgu.FormattingEnabled = true;
+            this.cbxNgoaiNgu.Location = new System.Drawing.Point(297, 304);
+            this.cbxNgoaiNgu.Name = "cbxNgoaiNgu";
+            this.cbxNgoaiNgu.Size = new System.Drawing.Size(220, 21);
+            this.cbxNgoaiNgu.TabIndex = 18;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
+            this.btnSave.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnSave.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnSave.BgrColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
+            this.btnSave.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
+            this.btnSave.ImageMouseDown = null;
+            this.btnSave.ImageMouseEnter = null;
+            this.btnSave.ImageMouseLeave = null;
+            this.btnSave.ImgMargin = 3;
+            this.btnSave.ImgSize = new System.Drawing.Size(18, 18);
+            this.btnSave.Location = new System.Drawing.Point(297, 409);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(220, 30);
+            this.btnSave.TabIndex = 20;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnSave.TextColorMouseDown = System.Drawing.Color.Empty;
+            this.btnSave.TextColorMouseEnter = System.Drawing.Color.Empty;
+            this.btnSave.TextColorMouseLeave = System.Drawing.Color.White;
+            this.btnSave.UseActived = false;
+            this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseClick);
+            // 
+            // btnAnh
+            // 
+            this.btnAnh.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnh.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnAnh.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnAnh.BgrColorMouseLeave = System.Drawing.Color.Transparent;
+            this.btnAnh.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
+            this.btnAnh.ImageMouseDown = null;
+            this.btnAnh.ImageMouseEnter = null;
+            this.btnAnh.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnAnh.ImageMouseLeave")));
+            this.btnAnh.ImgMargin = 0;
+            this.btnAnh.ImgSize = new System.Drawing.Size(20, 20);
+            this.btnAnh.Location = new System.Drawing.Point(579, 189);
+            this.btnAnh.Name = "btnAnh";
+            this.btnAnh.Size = new System.Drawing.Size(75, 23);
+            this.btnAnh.TabIndex = 0;
+            this.btnAnh.TabStop = false;
+            this.btnAnh.Text = "Choice";
+            this.btnAnh.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnAnh.TextColorMouseDown = System.Drawing.Color.Empty;
+            this.btnAnh.TextColorMouseEnter = System.Drawing.Color.Empty;
+            this.btnAnh.TextColorMouseLeave = System.Drawing.Color.Black;
+            this.btnAnh.UseActived = false;
+            this.btnAnh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAnh_MouseClick);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
+            this.btnBack.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnBack.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnBack.BgrColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBack.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
+            this.btnBack.ImageMouseDown = null;
+            this.btnBack.ImageMouseEnter = null;
+            this.btnBack.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnBack.ImageMouseLeave")));
+            this.btnBack.ImgMargin = 0;
+            this.btnBack.ImgSize = new System.Drawing.Size(23, 23);
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(61, 30);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.btnBack.TextColorMouseDown = System.Drawing.Color.Empty;
+            this.btnBack.TextColorMouseEnter = System.Drawing.Color.Empty;
+            this.btnBack.TextColorMouseLeave = System.Drawing.Color.White;
+            this.btnBack.UseActived = false;
+            this.btnBack.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBack_MouseClick);
             // 
             // UCThemSuaNV
             // 

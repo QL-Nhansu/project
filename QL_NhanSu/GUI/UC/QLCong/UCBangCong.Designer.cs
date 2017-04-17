@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTool = new System.Windows.Forms.Panel();
             this.labNam = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labThang = new System.Windows.Forms.Label();
-            this.cbxView = new GUI.Class.cbxNoneChangeText();
-            this.labView = new System.Windows.Forms.Label();
             this.line1 = new GUI.Class.pnlLine();
             this.dgvBC = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +67,8 @@
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtThang = new System.Windows.Forms.TextBox();
+            this.txtNam = new System.Windows.Forms.TextBox();
             this.pnlTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBC)).BeginInit();
             this.SuspendLayout();
@@ -76,11 +76,11 @@
             // pnlTool
             // 
             this.pnlTool.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlTool.Controls.Add(this.txtNam);
+            this.pnlTool.Controls.Add(this.txtThang);
             this.pnlTool.Controls.Add(this.labNam);
             this.pnlTool.Controls.Add(this.label1);
             this.pnlTool.Controls.Add(this.labThang);
-            this.pnlTool.Controls.Add(this.cbxView);
-            this.pnlTool.Controls.Add(this.labView);
             this.pnlTool.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTool.Location = new System.Drawing.Point(0, 0);
             this.pnlTool.Name = "pnlTool";
@@ -90,7 +90,7 @@
             // labNam
             // 
             this.labNam.AutoSize = true;
-            this.labNam.Location = new System.Drawing.Point(250, 8);
+            this.labNam.Location = new System.Drawing.Point(230, 9);
             this.labNam.Name = "labNam";
             this.labNam.Size = new System.Drawing.Size(29, 13);
             this.labNam.TabIndex = 7;
@@ -108,35 +108,11 @@
             // labThang
             // 
             this.labThang.AutoSize = true;
-            this.labThang.Location = new System.Drawing.Point(176, 8);
+            this.labThang.Location = new System.Drawing.Point(128, 8);
             this.labThang.Name = "labThang";
             this.labThang.Size = new System.Drawing.Size(38, 13);
             this.labThang.TabIndex = 5;
             this.labThang.Text = "Tháng";
-            // 
-            // cbxView
-            // 
-            this.cbxView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxView.FormattingEnabled = true;
-            this.cbxView.Items.AddRange(new object[] {
-            "Phòng ban",
-            "Chức vụ"});
-            this.cbxView.Location = new System.Drawing.Point(634, 5);
-            this.cbxView.Name = "cbxView";
-            this.cbxView.Size = new System.Drawing.Size(121, 21);
-            this.cbxView.TabIndex = 1;
-            this.cbxView.TabStop = false;
-            this.cbxView.SelectedIndexChanged += new System.EventHandler(this.cbxView_SelectedIndexChanged);
-            // 
-            // labView
-            // 
-            this.labView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labView.AutoSize = true;
-            this.labView.Location = new System.Drawing.Point(587, 9);
-            this.labView.Name = "labView";
-            this.labView.Size = new System.Drawing.Size(47, 13);
-            this.labView.TabIndex = 0;
-            this.labView.Text = "ViewTile";
             // 
             // line1
             // 
@@ -153,14 +129,14 @@
             this.dgvBC.AllowUserToResizeRows = false;
             this.dgvBC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBC.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -401,6 +377,21 @@
             this.Column32.MinimumWidth = 30;
             this.Column32.Name = "Column32";
             // 
+            // txtThang
+            // 
+            this.txtThang.Location = new System.Drawing.Point(172, 4);
+            this.txtThang.Name = "txtThang";
+            this.txtThang.Size = new System.Drawing.Size(42, 20);
+            this.txtThang.TabIndex = 8;
+            // 
+            // txtNam
+            // 
+            this.txtNam.Location = new System.Drawing.Point(265, 5);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(61, 20);
+            this.txtNam.TabIndex = 9;
+            this.txtNam.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNam_KeyDown);
+            // 
             // UCBangCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,8 +414,6 @@
         private System.Windows.Forms.Label labNam;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labThang;
-        private Class.cbxNoneChangeText cbxView;
-        private System.Windows.Forms.Label labView;
         private Class.pnlLine line1;
         private System.Windows.Forms.DataGridView dgvBC;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -459,5 +448,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column32;
+        private System.Windows.Forms.TextBox txtNam;
+        private System.Windows.Forms.TextBox txtThang;
     }
 }

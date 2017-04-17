@@ -140,6 +140,12 @@
     <Compile Include="UC\QLNhanSu\UCDSNhanVien.Designer.cs">
       <DependentUpon>UCDSNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCLogin.Designer.cs">
+      <DependentUpon>UCLogin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\QLNhanSu\UCDSNhanVien.resx">
       <DependentUpon>UCDSNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCLogin.resx">
+      <DependentUpon>UCLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
