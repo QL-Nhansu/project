@@ -30,9 +30,9 @@ namespace DAL
                 new SqlParameter("@thang",thang),
                 new SqlParameter("@nam",nam),
                 new SqlParameter("@manhanvien",manhanvien),
-                new SqlParameter("@luongcoban",luongcoban),
-                new SqlParameter("@ngaydilam",ngaydilam),
-                new SqlParameter("@ngaynghicoluong",ngaynghicoluong)
+                new SqlParameter("@luongcoban",(luongcoban>0)?(object)luongcoban:DBNull.Value),
+                new SqlParameter("@ngaydilam",(ngaydilam!=null && ngaydilam.Trim()!="")?(object)ngaydilam:DBNull.Value),
+                new SqlParameter("@ngaynghicoluong",(ngaynghicoluong!=null && ngaynghicoluong.Trim()!="")?(object)ngaynghicoluong:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_chamcong", para);
         }
@@ -65,9 +65,9 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                     new SqlParameter("@ma",ma),
-                    new SqlParameter("@ten",ten),
-                    new SqlParameter("@luongcoban",luongcoban),
-                    new SqlParameter("@chuthich",chuthich)
+                    new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                    new SqlParameter("@luongcoban",(luongcoban>0)?(object)luongcoban:DBNull.Value),
+                    new SqlParameter("@chuthich",(chuthich!=null && chuthich.Trim()!="")?(object)chuthich:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_chucdanh", para);
         }
@@ -80,9 +80,9 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                     new SqlParameter("@ma",ma),
-                    new SqlParameter("@ten",ten),
-                    new SqlParameter("@luongcoban",luongcoban),
-                    new SqlParameter("@chuthich",chuthich)
+                    new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                    new SqlParameter("@luongcoban",(luongcoban>0)?(object)luongcoban:DBNull.Value),
+                    new SqlParameter("@chuthich",(chuthich!=null && chuthich.Trim()!="")?(object)chuthich:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_chucdanh", para);
         }
@@ -109,8 +109,8 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@ma",ma),
-                new SqlParameter("@ten",ten),
-                new SqlParameter("@sotien",sotien)
+                new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_KhenThuong", para);
         }
@@ -122,8 +122,8 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@ma",ma),
-                new SqlParameter("@ten",ten),
-                new SqlParameter("@sotien",sotien)
+                new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_khenthuong", para);
         }
@@ -150,8 +150,8 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@ma",ma),
-                new SqlParameter("@ten",ten),
-                new SqlParameter("@sotien",sotien)
+                new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_kyluat", para);
         }
@@ -163,8 +163,8 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@ma",ma),
-                new SqlParameter("@ten",ten),
-                new SqlParameter("@sotien",sotien)
+                new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_kyluat", para);
         }
@@ -204,8 +204,8 @@ namespace DAL
             string ten, 
             DateTime ngaysinh, 
             int gioitinh, 
-            string cmnd, 
-            DbType anh, 
+            string cmnd,
+            object anh, 
             string dantoc, 
             string tongiao, 
             string sdt,
@@ -220,21 +220,21 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@ma",ma),
-                new SqlParameter("@ten",ten),
-                new SqlParameter("@ngaysinh",ngaysinh),
+                new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                new SqlParameter("@ngaysinh",(ngaysinh.Year!=1000)?(object)ngaysinh:DBNull.Value),
                 new SqlParameter("@gioitinh",gioitinh),
-                new SqlParameter("@cmnd",cmnd),
-                new SqlParameter("@anh",anh),
-                new SqlParameter("@dantoc",dantoc),
-                new SqlParameter("@tongiao",tongiao),
-                new SqlParameter("@sdt",sdt),
-                new SqlParameter("@email",email),
-                new SqlParameter("@ngaykihopdong",ngaykihopdong),
-                new SqlParameter("@ngayhethanhopdong",ngayhethanhopdong),
-                new SqlParameter("@matkhau",matkhau),
-                new SqlParameter("@mangoaingu",mangoaingu),
-                new SqlParameter("@machucdanh",machucdanh),
-                new SqlParameter("@mahocvan",mahocvan)
+                new SqlParameter("@cmnd",(cmnd!=null && cmnd.Trim()!="")?(object)cmnd:DBNull.Value),
+                new SqlParameter("@anh", SqlDbType.Image) { SqlValue = (anh!=null)?anh:DBNull.Value},
+                new SqlParameter("@dantoc",(dantoc!=null && dantoc.Trim()!="")?(object)dantoc:DBNull.Value),
+                new SqlParameter("@tongiao",(tongiao!=null && tongiao.Trim()!="")?(object)tongiao:DBNull.Value),
+                new SqlParameter("@sdt",(sdt!=null && sdt.Trim()!="")?(object)sdt:DBNull.Value),
+                new SqlParameter("@email",(email!=null && email.Trim()!="")?(object)email:DBNull.Value),
+                new SqlParameter("@ngaykihopdong",(ngaykihopdong.Year!=1000)?(object)ngaykihopdong:DBNull.Value),
+                new SqlParameter("@ngayhethanhopdong",(ngayhethanhopdong.Year!=1000)?(object)ngayhethanhopdong:DBNull.Value),
+                new SqlParameter("@matkhau",(matkhau!=null && matkhau.Trim()!="")?(object)matkhau:DBNull.Value),
+                new SqlParameter("@mangoaingu",(mangoaingu!=null && mangoaingu.Trim()!="")?(object)mangoaingu:DBNull.Value),
+                new SqlParameter("@machucdanh",(machucdanh!=null && machucdanh.Trim()!="")?(object)machucdanh:DBNull.Value),
+                new SqlParameter("@mahocvan",(mahocvan!=null && mahocvan.Trim()!="")?(object)mahocvan:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_nhanvien", para);
         }
@@ -244,7 +244,7 @@ namespace DAL
             DateTime ngaysinh,
             int gioitinh,
             string cmnd,
-            DbType anh,
+            object anh,
             string dantoc,
             string tongiao,
             string sdt,
@@ -259,21 +259,21 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                 new SqlParameter("@ma",ma),
-                new SqlParameter("@ten",ten),
-                new SqlParameter("@ngaysinh",ngaysinh),
+                new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                new SqlParameter("@ngaysinh",(ngaysinh.Year!=1000)?(object)ngaysinh:DBNull.Value),
                 new SqlParameter("@gioitinh",gioitinh),
-                new SqlParameter("@cmnd",cmnd),
-                new SqlParameter("@anh",anh),
-                new SqlParameter("@dantoc",dantoc),
-                new SqlParameter("@tongiao",tongiao),
-                new SqlParameter("@sdt",sdt),
-                new SqlParameter("@email",email),
-                new SqlParameter("@ngaykihopdong",ngaykihopdong),
-                new SqlParameter("@ngayhethanhopdong",ngayhethanhopdong),
-                new SqlParameter("@matkhau",matkhau),
-                new SqlParameter("@mangoaingu",mangoaingu),
-                new SqlParameter("@machucdanh",machucdanh),
-                new SqlParameter("@mahocvan",mahocvan)
+                new SqlParameter("@cmnd",(cmnd!=null && cmnd.Trim()!="")?(object)cmnd:DBNull.Value),
+                new SqlParameter("@anh", SqlDbType.Image) { SqlValue = (anh!=null)?anh:DBNull.Value},
+                new SqlParameter("@dantoc",(dantoc!=null && dantoc.Trim()!="")?(object)dantoc:DBNull.Value),
+                new SqlParameter("@tongiao",(tongiao!=null && tongiao.Trim()!="")?(object)tongiao:DBNull.Value),
+                new SqlParameter("@sdt",(sdt!=null && sdt.Trim()!="")?(object)sdt:DBNull.Value),
+                new SqlParameter("@email",(email!=null && email.Trim()!="")?(object)email:DBNull.Value),
+                new SqlParameter("@ngaykihopdong",(ngaykihopdong.Year!=1000)?(object)ngaykihopdong:DBNull.Value),
+                new SqlParameter("@ngayhethanhopdong",(ngayhethanhopdong.Year!=1000)?(object)ngayhethanhopdong:DBNull.Value),
+                new SqlParameter("@matkhau",(matkhau!=null && matkhau.Trim()!="")?(object)matkhau:DBNull.Value),
+                new SqlParameter("@mangoaingu",(mangoaingu!=null && mangoaingu.Trim()!="")?(object)mangoaingu:DBNull.Value),
+                new SqlParameter("@machucdanh",(machucdanh!=null && machucdanh.Trim()!="")?(object)machucdanh:DBNull.Value),
+                new SqlParameter("@mahocvan",(mahocvan!=null && mahocvan.Trim()!="")?(object)mahocvan:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_nhanvien", para);
         }
@@ -299,8 +299,8 @@ namespace DAL
             {
                     new SqlParameter("@manhanvien",manhanvien),
                     new SqlParameter("@maphucap",maphucap),
-                    new SqlParameter("@ngaynhan",ngaynhan),
-                    new SqlParameter("@ngayhethan",ngayhethan)
+                    new SqlParameter("@ngaynhan",(ngaynhan.Year!=1000)?(object)ngaynhan:DBNull.Value),
+                    new SqlParameter("@ngayhethan",(ngayhethan.Year!=1000)?(object)ngayhethan:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_NVPC", para);
         }
@@ -315,8 +315,8 @@ namespace DAL
             {
                     new SqlParameter("@manhanvien",manhanvien),
                     new SqlParameter("@maphucap",maphucap),
-                    new SqlParameter("@ngaynhan",ngaynhan),
-                    new SqlParameter("@ngayhethan",ngayhethan)
+                    new SqlParameter("@ngaynhan",(ngaynhan.Year!=1000)?(object)ngaynhan:DBNull.Value),
+                    new SqlParameter("@ngayhethan",(ngayhethan.Year!=1000)?(object)ngayhethan:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_NVPC", para);
         }
@@ -349,8 +349,8 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                     new SqlParameter("@ma",ma),
-                    new SqlParameter("@ten",ten),
-                    new SqlParameter("@sotien",sotien)
+                    new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                    new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_phucap", para);
         }
@@ -362,8 +362,8 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                     new SqlParameter("@ma",ma),
-                    new SqlParameter("@ten",ten),
-                    new SqlParameter("@sotien",sotien),
+                    new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                    new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_phucap", para);
         }
@@ -388,8 +388,8 @@ namespace DAL
             {
                 new SqlParameter("@manhanvien",manhanvien),
                 new SqlParameter("@makiluat",makiluat),
-                new SqlParameter("@ngay",ngay),
-                new SqlParameter("@sotien",sotien)
+                new SqlParameter("@ngay",(ngay.Year!=1000)?(object)ngay:DBNull.Value),
+                new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_QDKL", para);
         }
@@ -403,8 +403,8 @@ namespace DAL
             {
                 new SqlParameter("@manhanvien",manhanvien),
                 new SqlParameter("@makiluat",makiluat),
-                new SqlParameter("@ngay",ngay),
-                new SqlParameter("@sotien",sotien)
+                new SqlParameter("@ngay",(ngay.Year!=1000)?(object)ngay:DBNull.Value),
+                new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_QDKL", para);
         }
@@ -434,8 +434,8 @@ namespace DAL
             {
                 new SqlParameter("@manhanvien",manhanvien),
                 new SqlParameter("@makhenthuong",makhenthuong),
-                new SqlParameter("@ngay",ngay),
-                new SqlParameter("@sotien",sotien)
+                new SqlParameter("@ngay",(ngay.Year!=1000)?(object)ngay:DBNull.Value),
+                new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_QDKT", para);
         }
@@ -449,8 +449,8 @@ namespace DAL
             {
                 new SqlParameter("@manhanvien",manhanvien),
                 new SqlParameter("@makhenthuong",makhenthuong),
-                new SqlParameter("@ngay",ngay),
-                new SqlParameter("@sotien",sotien)
+                new SqlParameter("@ngay",(ngay.Year!=1000)?(object)ngay:DBNull.Value),
+                new SqlParameter("@sotien",(sotien>0)?(object)sotien:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_QDKT", para);
         }
@@ -481,8 +481,8 @@ namespace DAL
             {
                 new SqlParameter("@manhanvien",manhanvien),
                 new SqlParameter("@maphongban",maphongban),
-                new SqlParameter("@ngaythamgia",ngaythamgia),
-                new SqlParameter("@ngayroidi",ngayroidi)
+                new SqlParameter("@ngaythamgia",(ngaythamgia.Year!=1000)?(object)ngaythamgia:DBNull.Value),
+                new SqlParameter("@ngayroidi",(ngayroidi.Year!=1000)?(object)ngayroidi:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_thamgia", para);
         }
@@ -497,8 +497,8 @@ namespace DAL
             {
                 new SqlParameter("@manhanvien",manhanvien),
                 new SqlParameter("@maphongban",maphongban),
-                new SqlParameter("@ngaythamgia",ngaythamgia),
-                new SqlParameter("@ngayroidi",ngayroidi)
+                new SqlParameter("@ngaythamgia",(ngaythamgia.Year!=1000)?(object)ngaythamgia:DBNull.Value),
+                new SqlParameter("@ngayroidi",(ngayroidi.Year!=1000)?(object)ngayroidi:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_thamgia", para);
         }
@@ -532,8 +532,8 @@ namespace DAL
                 SqlParameter[] para = new SqlParameter[]
                 {
                     new SqlParameter("@ma",ma),
-                    new SqlParameter("@ten",ten),
-                    new SqlParameter("@chuthich",chuthich)
+                    new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                    new SqlParameter("@chuthich",(chuthich!=null && chuthich.Trim()!="")?(object)chuthich:DBNull.Value)
                 };
                 return DBConnect.ExecuteNonQuery("them_hocvan", para);
             }
@@ -547,8 +547,8 @@ namespace DAL
                 SqlParameter[] para = new SqlParameter[]
                 {
                     new SqlParameter("@ma",ma),
-                    new SqlParameter("@ten",ten),
-                    new SqlParameter("@chuthich",chuthich)
+                    new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                    new SqlParameter("@chuthich",(chuthich!=null && chuthich.Trim()!="")?(object)chuthich:DBNull.Value)
                 };
                 return DBConnect.ExecuteNonQuery("sua_hocvan", para);
             }
@@ -579,9 +579,9 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                     new SqlParameter("@ma",ma),
-                    new SqlParameter("@ten",ten),
-                    new SqlParameter("@ngonngu",ngonngu),
-                    new SqlParameter("@chuthich",chuthich)
+                    new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                    new SqlParameter("@ngonngu",(ngonngu!=null && ngonngu.Trim()!="")?(object)ngonngu:DBNull.Value),
+                    new SqlParameter("@chuthich",(chuthich!=null && chuthich.Trim()!="")?(object)chuthich:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_ngoaingu", para);
         }
@@ -594,9 +594,9 @@ namespace DAL
             SqlParameter[] para = new SqlParameter[]
             {
                     new SqlParameter("@ma",ma),
-                    new SqlParameter("@ten",ten),
-                    new SqlParameter("@ngonngu",ngonngu),
-                    new SqlParameter("@chuthich",chuthich)
+                    new SqlParameter("@ten",(ten!=null && ten.Trim()!="")?(object)ten:DBNull.Value),
+                    new SqlParameter("@ngonngu",(ngonngu!=null && ngonngu.Trim()!="")?(object)ngonngu:DBNull.Value),
+                    new SqlParameter("@chuthich",(chuthich!=null && chuthich.Trim()!="")?(object)chuthich:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_ngoaingu", para);
         }
@@ -621,8 +621,8 @@ namespace DAL
             {
                     new SqlParameter("@manhanvien",manhanvien),
                     new SqlParameter("@maphongban",maphongban),
-                    new SqlParameter("@ngaybatdau",ngaybatdau),
-                    new SqlParameter("@ngayketthuc",ngayketthuc)
+                    new SqlParameter("@ngaybatdau",(ngaybatdau.Year!=1000)?(object)ngaybatdau:DBNull.Value),
+                    new SqlParameter("@ngayketthuc",(ngayketthuc.Year!=1000)?(object)ngayketthuc:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("them_truongphong", para);
         }
@@ -636,8 +636,8 @@ namespace DAL
             {
                     new SqlParameter("@manhanvien",manhanvien),
                     new SqlParameter("@maphongban",maphongban),
-                    new SqlParameter("@ngaybatdau",ngaybatdau),
-                    new SqlParameter("@ngayketthuc",ngayketthuc)
+                    new SqlParameter("@ngaybatdau",(ngaybatdau.Year!=1000)?(object)ngaybatdau:DBNull.Value),
+                    new SqlParameter("@ngayketthuc",(ngayketthuc.Year!=1000)?(object)ngayketthuc:DBNull.Value)
             };
             return DBConnect.ExecuteNonQuery("sua_truongphong", para);
         }

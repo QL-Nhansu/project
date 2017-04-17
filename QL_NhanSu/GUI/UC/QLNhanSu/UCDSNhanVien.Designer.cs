@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCDSNhanVien));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTool = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnXoa = new GUI.Class.btnImage();
@@ -43,16 +44,8 @@
             this.chuyểnPhòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xóaNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlLine1 = new GUI.Class.pnlLine();
             this.dgvDSNV = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlLine1 = new GUI.Class.pnlLine();
             this.pnlTool.SuspendLayout();
             this.ctmnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
@@ -86,8 +79,8 @@
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoa.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnXoa.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnXoa.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnXoa.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnXoa.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnXoa.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnXoa.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -112,8 +105,8 @@
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
-            this.btnSua.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnSua.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSua.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnSua.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnSua.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnSua.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSua.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -138,8 +131,8 @@
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
-            this.btnThem.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnThem.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnThem.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnThem.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnThem.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnThem.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -166,13 +159,14 @@
             this.cbxView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxView.FormattingEnabled = true;
             this.cbxView.Items.AddRange(new object[] {
-            "Phòng ban",
-            "Chức vụ"});
+            "Phòng ban, mã nv",
+            "Chức vụ, mã nv"});
             this.cbxView.Location = new System.Drawing.Point(634, 5);
             this.cbxView.Name = "cbxView";
             this.cbxView.Size = new System.Drawing.Size(121, 21);
             this.cbxView.TabIndex = 1;
             this.cbxView.TabStop = false;
+            this.cbxView.SelectedIndexChanged += new System.EventHandler(this.cbxView_SelectedIndexChanged);
             // 
             // labView
             // 
@@ -180,9 +174,9 @@
             this.labView.AutoSize = true;
             this.labView.Location = new System.Drawing.Point(587, 9);
             this.labView.Name = "labView";
-            this.labView.Size = new System.Drawing.Size(47, 13);
+            this.labView.Size = new System.Drawing.Size(40, 13);
             this.labView.TabIndex = 0;
-            this.labView.Text = "ViewTile";
+            this.labView.Text = "Sort by";
             // 
             // ctmnMenu
             // 
@@ -219,16 +213,9 @@
             this.xóaNhânViênToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.xóaNhânViênToolStripMenuItem.Text = "Xóa nhân viên";
             // 
-            // pnlLine1
-            // 
-            this.pnlLine1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLine1.Location = new System.Drawing.Point(0, 30);
-            this.pnlLine1.Name = "pnlLine1";
-            this.pnlLine1.Size = new System.Drawing.Size(758, 6);
-            this.pnlLine1.TabIndex = 1;
-            // 
             // dgvDSNV
             // 
+            this.dgvDSNV.AllowUserToAddRows = false;
             this.dgvDSNV.AllowUserToDeleteRows = false;
             this.dgvDSNV.AllowUserToResizeRows = false;
             this.dgvDSNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -242,79 +229,34 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDSNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column8,
-            this.Column7});
             this.dgvDSNV.ContextMenuStrip = this.ctmnMenu;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSNV.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSNV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSNV.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvDSNV.Location = new System.Drawing.Point(0, 36);
             this.dgvDSNV.MultiSelect = false;
             this.dgvDSNV.Name = "dgvDSNV";
+            this.dgvDSNV.ReadOnly = true;
             this.dgvDSNV.RowHeadersVisible = false;
             this.dgvDSNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSNV.Size = new System.Drawing.Size(758, 467);
             this.dgvDSNV.TabIndex = 2;
             this.dgvDSNV.TabStop = false;
             // 
-            // Column1
+            // pnlLine1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "Mã";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Họ và tên";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column3.HeaderText = "Giới tính";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 77;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "Ngày sinh";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 86;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Email";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "SĐT";
-            this.Column6.Name = "Column6";
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column8.HeaderText = "Phòng Ban";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 93;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Column7.HeaderText = "Hạn hợp đồng";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 110;
+            this.pnlLine1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLine1.Location = new System.Drawing.Point(0, 30);
+            this.pnlLine1.Name = "pnlLine1";
+            this.pnlLine1.Size = new System.Drawing.Size(758, 6);
+            this.pnlLine1.TabIndex = 1;
             // 
             // UCDSNhanVien
             // 
@@ -325,6 +267,8 @@
             this.Controls.Add(this.pnlTool);
             this.Name = "UCDSNhanVien";
             this.Size = new System.Drawing.Size(758, 503);
+            this.Load += new System.EventHandler(this.UCDSNhanVien_Load);
+            this.VisibleChanged += new System.EventHandler(this.UCDSNhanVien_VisibleChanged);
             this.pnlTool.ResumeLayout(false);
             this.pnlTool.PerformLayout();
             this.ctmnMenu.ResumeLayout(false);
@@ -349,13 +293,5 @@
         private Class.pnlLine pnlLine1;
         private System.Windows.Forms.DataGridView dgvDSNV;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

@@ -15,7 +15,7 @@ namespace DTO
         private DateTime ngaysinh;
         private int gioitinh;
         private string cmnd;
-        private DbType anh;
+        private byte[] anh;
         private string dantoc;
         private string tongiao;
         private string sdt;
@@ -92,7 +92,7 @@ namespace DTO
             }
         }
 
-        public DbType Anh
+        public byte[] Anh
         {
             get
             {

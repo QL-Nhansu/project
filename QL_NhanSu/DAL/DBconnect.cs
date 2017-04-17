@@ -54,11 +54,11 @@ namespace DAL
         //thuc hien thu tuc
         public static int ExecuteNonQuery(string proc, SqlParameter[] para)
         {
-            try
-            {
+            //try
+            //{
                 if (conn == null || conn.State == ConnectionState.Closed) Connect();
                 if (conn == null) return 0;
-
+                Connect();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = proc;
@@ -67,13 +67,13 @@ namespace DAL
                     cmd.Parameters.AddRange(para);
 
                 int val = cmd.ExecuteNonQuery();
-                conn.Close();
+                //conn.Close();
                 return val;
-            }
-            catch (SqlException)
-            {
-                return 0;
-            }
+            //}
+            //catch (SqlException)
+            //{
+            //    return 0;
+            //}
         }
     }
 }
