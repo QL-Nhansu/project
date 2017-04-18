@@ -50,8 +50,6 @@
             this.btnKyLuat = new GUI.Class.btnSimple();
             this.pnlLine12 = new GUI.Class.pnlLine();
             this.btnKhenThuong = new GUI.Class.btnSimple();
-            this.pnlLine11 = new GUI.Class.pnlLine();
-            this.btnBHYT = new GUI.Class.btnSimple();
             this.pnlLine10 = new GUI.Class.pnlLine();
             this.btnHocVan = new GUI.Class.btnSimple();
             this.pnlLine9 = new GUI.Class.pnlLine();
@@ -117,6 +115,7 @@
             // txtSearch
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearch.DefaultString = "Search...";
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic);
             this.txtSearch.ForeColor = System.Drawing.Color.DimGray;
             this.txtSearch.Location = new System.Drawing.Point(13, 9);
@@ -322,8 +321,6 @@
             this.pnlMoRong.Controls.Add(this.btnKyLuat);
             this.pnlMoRong.Controls.Add(this.pnlLine12);
             this.pnlMoRong.Controls.Add(this.btnKhenThuong);
-            this.pnlMoRong.Controls.Add(this.pnlLine11);
-            this.pnlMoRong.Controls.Add(this.btnBHYT);
             this.pnlMoRong.Controls.Add(this.pnlLine10);
             this.pnlMoRong.Controls.Add(this.btnHocVan);
             this.pnlMoRong.Controls.Add(this.pnlLine9);
@@ -331,7 +328,7 @@
             this.pnlMoRong.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMoRong.Location = new System.Drawing.Point(0, 248);
             this.pnlMoRong.Name = "pnlMoRong";
-            this.pnlMoRong.Size = new System.Drawing.Size(200, 186);
+            this.pnlMoRong.Size = new System.Drawing.Size(200, 155);
             this.pnlMoRong.TabIndex = 10;
             this.pnlMoRong.Visible = false;
             // 
@@ -339,7 +336,7 @@
             // 
             this.pnlLine14.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlLine14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLine14.Location = new System.Drawing.Point(0, 185);
+            this.pnlLine14.Location = new System.Drawing.Point(0, 154);
             this.pnlLine14.Name = "pnlLine14";
             this.pnlLine14.Size = new System.Drawing.Size(200, 1);
             this.pnlLine14.TabIndex = 14;
@@ -354,7 +351,7 @@
             this.btnPhuCap.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPhuCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhuCap.ForeColor = System.Drawing.Color.Black;
-            this.btnPhuCap.Location = new System.Drawing.Point(0, 155);
+            this.btnPhuCap.Location = new System.Drawing.Point(0, 124);
             this.btnPhuCap.Name = "btnPhuCap";
             this.btnPhuCap.Size = new System.Drawing.Size(200, 30);
             this.btnPhuCap.TabIndex = 13;
@@ -367,7 +364,7 @@
             // 
             this.pnlLine13.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlLine13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLine13.Location = new System.Drawing.Point(0, 154);
+            this.pnlLine13.Location = new System.Drawing.Point(0, 123);
             this.pnlLine13.Name = "pnlLine13";
             this.pnlLine13.Size = new System.Drawing.Size(200, 1);
             this.pnlLine13.TabIndex = 12;
@@ -382,7 +379,7 @@
             this.btnKyLuat.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKyLuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKyLuat.ForeColor = System.Drawing.Color.Black;
-            this.btnKyLuat.Location = new System.Drawing.Point(0, 124);
+            this.btnKyLuat.Location = new System.Drawing.Point(0, 93);
             this.btnKyLuat.Name = "btnKyLuat";
             this.btnKyLuat.Size = new System.Drawing.Size(200, 30);
             this.btnKyLuat.TabIndex = 11;
@@ -395,7 +392,7 @@
             // 
             this.pnlLine12.BackColor = System.Drawing.Color.Gainsboro;
             this.pnlLine12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLine12.Location = new System.Drawing.Point(0, 123);
+            this.pnlLine12.Location = new System.Drawing.Point(0, 92);
             this.pnlLine12.Name = "pnlLine12";
             this.pnlLine12.Size = new System.Drawing.Size(200, 1);
             this.pnlLine12.TabIndex = 10;
@@ -410,7 +407,7 @@
             this.btnKhenThuong.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhenThuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhenThuong.ForeColor = System.Drawing.Color.Black;
-            this.btnKhenThuong.Location = new System.Drawing.Point(0, 93);
+            this.btnKhenThuong.Location = new System.Drawing.Point(0, 62);
             this.btnKhenThuong.Name = "btnKhenThuong";
             this.btnKhenThuong.Size = new System.Drawing.Size(200, 30);
             this.btnKhenThuong.TabIndex = 9;
@@ -418,34 +415,6 @@
             this.btnKhenThuong.Text = "           Khen thưởng";
             this.btnKhenThuong.UseActived = true;
             this.btnKhenThuong.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnKhenThuong_MouseClick);
-            // 
-            // pnlLine11
-            // 
-            this.pnlLine11.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlLine11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLine11.Location = new System.Drawing.Point(0, 92);
-            this.pnlLine11.Name = "pnlLine11";
-            this.pnlLine11.Size = new System.Drawing.Size(200, 1);
-            this.pnlLine11.TabIndex = 8;
-            // 
-            // btnBHYT
-            // 
-            this.btnBHYT.Alignment = System.Drawing.StringAlignment.Near;
-            this.btnBHYT.BackColor = System.Drawing.Color.Transparent;
-            this.btnBHYT.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(224)))), ((int)(((byte)(250)))));
-            this.btnBHYT.ColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(244)))), ((int)(((byte)(191)))));
-            this.btnBHYT.ColorMouseLeave = System.Drawing.Color.Transparent;
-            this.btnBHYT.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBHYT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBHYT.ForeColor = System.Drawing.Color.Black;
-            this.btnBHYT.Location = new System.Drawing.Point(0, 62);
-            this.btnBHYT.Name = "btnBHYT";
-            this.btnBHYT.Size = new System.Drawing.Size(200, 30);
-            this.btnBHYT.TabIndex = 7;
-            this.btnBHYT.TabStop = false;
-            this.btnBHYT.Text = "           Bảo hiểm y tế";
-            this.btnBHYT.UseActived = true;
-            this.btnBHYT.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBHYT_MouseClick);
             // 
             // pnlLine10
             // 
@@ -803,8 +772,6 @@
         private Class.btnSimple btnKyLuat;
         private Class.pnlLine pnlLine12;
         private Class.btnSimple btnKhenThuong;
-        private Class.pnlLine pnlLine11;
-        private Class.btnSimple btnBHYT;
         private Class.pnlLine pnlLine10;
         private Class.btnSimple btnHocVan;
         private Class.pnlLine pnlLine9;

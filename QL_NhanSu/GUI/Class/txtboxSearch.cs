@@ -9,11 +9,19 @@ namespace GUI.Class
 {
     class txtboxSearch : TextBox
     {
+        private string defaultstring = "Search...";
+
+        public String DefaultString
+        {
+            get { return defaultstring; }
+            set { defaultstring = value; Invalidate(); }
+        }
+
         public event EventHandler EventKeyEnter;
         public txtboxSearch() : base()
         {
             this.BorderStyle = BorderStyle.None;
-            this.Text = "Search...";
+            this.Text = defaultstring;
             this.TabStop = false;
             this.Font = new System.Drawing.Font(this.Font.FontFamily, this.Font.Size, System.Drawing.FontStyle.Italic);
             this.ForeColor = System.Drawing.Color.DimGray;
@@ -24,7 +32,7 @@ namespace GUI.Class
             base.OnLostFocus(e);
             if (this.Text == null || this.Text.Trim() == "")
             {
-                this.Text = "Search...";
+                this.Text = defaultstring;
                 this.Font = new System.Drawing.Font(this.Font.FontFamily, this.Font.Size, System.Drawing.FontStyle.Italic);
                 this.ForeColor = System.Drawing.Color.DimGray;
 
@@ -34,7 +42,7 @@ namespace GUI.Class
         protected override void OnGotFocus(EventArgs e)
         {
             base.OnGotFocus(e);
-            if (this.Text == "Search...")
+            if (this.Text == defaultstring)
             {
                 this.Text = "";
                 this.Font = new System.Drawing.Font(this.Font.FontFamily, this.Font.Size, System.Drawing.FontStyle.Regular);

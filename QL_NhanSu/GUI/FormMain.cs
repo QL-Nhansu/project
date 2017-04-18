@@ -224,15 +224,6 @@ namespace GUI
             }
         }
 
-        private void btnBHYT_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                RefreshBtn(btnBHYT);
-                btnBHYTClick();
-            }
-        }
-
         private void btnKhenThuong_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -287,7 +278,14 @@ namespace GUI
 
         private void btnLoginClick()
         {
-
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.UCLogin()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = RenderBody.Width - 16,
+                Height = RenderBody.Height - 16,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
         }
 
         private void btnChucVuClick()
@@ -360,11 +358,6 @@ namespace GUI
                 Height = RenderBody.Height - 16,
                 Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
             });
-        }
-
-        private void btnBHYTClick()
-        {
-            ClearChildrenControl();
         }
 
         private void btnKhenThuongClick()

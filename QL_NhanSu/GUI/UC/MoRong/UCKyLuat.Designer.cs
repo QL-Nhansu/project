@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCKyLuat));
             this.dgvKL = new System.Windows.Forms.DataGridView();
             this.pnlInput = new System.Windows.Forms.Panel();
@@ -47,9 +47,6 @@
             this.btnSua = new GUI.Class.btnImage();
             this.btnThem = new GUI.Class.btnImage();
             this.line1 = new GUI.Class.pnlLine();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKL)).BeginInit();
             this.pnlInput.SuspendLayout();
             this.pnlTool.SuspendLayout();
@@ -57,28 +54,26 @@
             // 
             // dgvKL
             // 
+            this.dgvKL.AllowUserToAddRows = false;
             this.dgvKL.AllowUserToDeleteRows = false;
             this.dgvKL.AllowUserToResizeRows = false;
             this.dgvKL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKL.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvKL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
             this.dgvKL.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKL.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvKL.Location = new System.Drawing.Point(0, 182);
             this.dgvKL.MultiSelect = false;
             this.dgvKL.Name = "dgvKL";
+            this.dgvKL.ReadOnly = true;
             this.dgvKL.RowHeadersVisible = false;
             this.dgvKL.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKL.Size = new System.Drawing.Size(758, 321);
@@ -136,6 +131,7 @@
             this.btnSave.TabStop = false;
             this.btnSave.Text = "Thêm";
             this.btnSave.UseActived = false;
+            this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseClick);
             // 
             // txtST
             // 
@@ -173,6 +169,7 @@
             // 
             // txtMa
             // 
+            this.txtMa.Enabled = false;
             this.txtMa.Location = new System.Drawing.Point(24, 40);
             this.txtMa.MaximumSize = new System.Drawing.Size(250, 20);
             this.txtMa.Name = "txtMa";
@@ -223,8 +220,8 @@
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoa.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnXoa.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnXoa.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnXoa.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnXoa.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnXoa.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnXoa.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -249,8 +246,8 @@
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
-            this.btnSua.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnSua.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSua.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnSua.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnSua.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnSua.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSua.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -275,8 +272,8 @@
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
-            this.btnThem.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnThem.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnThem.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnThem.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnThem.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnThem.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -307,21 +304,6 @@
             this.line1.Size = new System.Drawing.Size(758, 6);
             this.line1.TabIndex = 19;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên kỉ luật";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số tiền";
-            this.Column3.Name = "Column3";
-            // 
             // UCKyLuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +314,7 @@
             this.Controls.Add(this.pnlTool);
             this.Name = "UCKyLuat";
             this.Size = new System.Drawing.Size(758, 503);
+            this.Load += new System.EventHandler(this.UCKyLuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKL)).EndInit();
             this.pnlInput.ResumeLayout(false);
             this.pnlInput.PerformLayout();
@@ -360,8 +343,5 @@
         private Class.btnImage btnSua;
         private Class.btnImage btnThem;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

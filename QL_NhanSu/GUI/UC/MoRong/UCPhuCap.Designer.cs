@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCPhuCap));
-            this.dgvKL = new System.Windows.Forms.DataGridView();
+            this.dgvPC = new System.Windows.Forms.DataGridView();
             this.pnlInput = new System.Windows.Forms.Panel();
             this.btnKT = new GUI.Class.btnSimple();
             this.btnSave = new GUI.Class.btnSimple();
@@ -47,20 +47,18 @@
             this.btnXoa = new GUI.Class.btnImage();
             this.btnSua = new GUI.Class.btnImage();
             this.btnThem = new GUI.Class.btnImage();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPC)).BeginInit();
             this.pnlInput.SuspendLayout();
             this.pnlTool.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvKL
+            // dgvPC
             // 
-            this.dgvKL.AllowUserToDeleteRows = false;
-            this.dgvKL.AllowUserToResizeRows = false;
-            this.dgvKL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvKL.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvPC.AllowUserToAddRows = false;
+            this.dgvPC.AllowUserToDeleteRows = false;
+            this.dgvPC.AllowUserToResizeRows = false;
+            this.dgvPC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPC.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -68,22 +66,19 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKL.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvKL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKL.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dgvKL.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvKL.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgvKL.Location = new System.Drawing.Point(0, 182);
-            this.dgvKL.MultiSelect = false;
-            this.dgvKL.Name = "dgvKL";
-            this.dgvKL.RowHeadersVisible = false;
-            this.dgvKL.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKL.Size = new System.Drawing.Size(758, 321);
-            this.dgvKL.TabIndex = 25;
-            this.dgvKL.TabStop = false;
+            this.dgvPC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPC.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dgvPC.Location = new System.Drawing.Point(0, 182);
+            this.dgvPC.MultiSelect = false;
+            this.dgvPC.Name = "dgvPC";
+            this.dgvPC.ReadOnly = true;
+            this.dgvPC.RowHeadersVisible = false;
+            this.dgvPC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPC.Size = new System.Drawing.Size(758, 321);
+            this.dgvPC.TabIndex = 25;
+            this.dgvPC.TabStop = false;
             // 
             // pnlInput
             // 
@@ -136,6 +131,7 @@
             this.btnSave.TabStop = false;
             this.btnSave.Text = "Thêm";
             this.btnSave.UseActived = false;
+            this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseClick);
             // 
             // txtST
             // 
@@ -173,6 +169,7 @@
             // 
             // txtMa
             // 
+            this.txtMa.Enabled = false;
             this.txtMa.Location = new System.Drawing.Point(24, 40);
             this.txtMa.MaximumSize = new System.Drawing.Size(250, 20);
             this.txtMa.Name = "txtMa";
@@ -232,8 +229,8 @@
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Transparent;
-            this.btnXoa.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnXoa.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnXoa.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnXoa.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnXoa.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnXoa.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnXoa.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -258,8 +255,8 @@
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.Transparent;
-            this.btnSua.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnSua.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnSua.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnSua.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnSua.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnSua.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnSua.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -284,8 +281,8 @@
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.Transparent;
-            this.btnThem.BgrColorMouseDown = System.Drawing.Color.Green;
-            this.btnThem.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnThem.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnThem.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnThem.BgrColorMouseLeave = System.Drawing.Color.Transparent;
             this.btnThem.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnThem.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
@@ -307,32 +304,18 @@
             this.btnThem.UseActived = true;
             this.btnThem.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnThem_MouseClick);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên phụ cấp";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số tiền";
-            this.Column3.Name = "Column3";
-            // 
             // UCPhuCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvKL);
+            this.Controls.Add(this.dgvPC);
             this.Controls.Add(this.pnlInput);
             this.Controls.Add(this.line1);
             this.Controls.Add(this.pnlTool);
             this.Name = "UCPhuCap";
             this.Size = new System.Drawing.Size(758, 503);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKL)).EndInit();
+            this.Load += new System.EventHandler(this.UCPhuCap_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPC)).EndInit();
             this.pnlInput.ResumeLayout(false);
             this.pnlInput.PerformLayout();
             this.pnlTool.ResumeLayout(false);
@@ -343,7 +326,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvKL;
+        private System.Windows.Forms.DataGridView dgvPC;
         private System.Windows.Forms.Panel pnlInput;
         private Class.btnSimple btnKT;
         private Class.btnSimple btnSave;
@@ -360,8 +343,5 @@
         private Class.btnImage btnSua;
         private Class.btnImage btnThem;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

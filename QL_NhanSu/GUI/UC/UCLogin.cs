@@ -16,5 +16,10 @@ namespace GUI.UC
         {
             InitializeComponent();
         }
+
+        private void pnlLogin_LocationChanged(object sender, EventArgs e)
+        {
+            this.Refresh();
+        }
     }
 }
