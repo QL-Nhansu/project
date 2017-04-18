@@ -170,5 +170,107 @@ namespace GUI.UC.QLNhanSu
                 }
             }
         }
+
+        private void chuyenPhongBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(new ChuyenPhongBan().ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show(ChuyenPhongBan.StringText);
+            }
+        }
+
+        private void suaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMain.stackControl.Push(this);
+            this.Visible = false;
+            UCThemSuaNV.chucnang = UCThemSuaNV.ChucNang.Sua;
+            UCThemSuaNV.manv = (string)dgvDSNV.CurrentRow.Cells[0].Value;
+            this.Parent.Controls.Add(new UCThemSuaNV()
+            {
+                Location = new Point(8, 8),
+                Width = this.Width,
+                Height = this.Height,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
+        }
+
+        private void xoaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đã xóa " + DTO.NhanVien.Xoa((string)dgvDSNV.CurrentRow.Cells[0].Value).ToString() + " nhân viên", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadData();
+            btnSua.Actived = false;
+        }
+    }
+
+    class ChuyenPhongBan:Form
+    {
+        public static string StringText;
+        public ChuyenPhongBan() : base()
+        {
+            InitializeComponent();
+            this.Load += ChuyenPhongBan_Load;
+            
+        }
+
+        private void ChuyenPhongBan_Load(object sender, EventArgs e)
+        {
+            DataTable data = DTO.PhongBan.Get_PhongBan();
+            string[] str = data.AsEnumerable().Select(s => s.Field<string>("ma")).ToArray<string>();
+            AutoCompleteStringCollection collect = new AutoCompleteStringCollection();
+            collect.AddRange(str);
+
+            textBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            textBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            textBox.AutoCompleteCustomSource = collect;
+        }
+
+        private void ChuyenPhongBan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void InitializeComponent()
+        {
+            textBox = new TextBox();
+            SuspendLayout();
+            // 
+            // textBox
+            // 
+            textBox.Location = new Point(12, 28);
+            textBox.Name = "ComboBox";
+            textBox.Size = new Size(365, 20);
+            textBox.TabIndex = 0;
+            textBox.KeyDown += TextBox_KeyDown;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(6F, 13F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(392, 72);
+            Controls.Add(this.textBox);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Nhập mã phòng ban";
+            ResumeLayout(false);
+            PerformLayout();
+
+        }
+
+        private void TextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+                StringText = textBox.Text;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+        private TextBox textBox;
     }
 }

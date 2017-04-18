@@ -1,4 +1,3 @@
-
 create database [NhanSu]
 go
 use [NhanSu]

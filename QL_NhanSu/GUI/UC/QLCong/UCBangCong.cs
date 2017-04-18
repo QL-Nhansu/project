@@ -13,22 +13,17 @@ namespace GUI.UC.QLCong
     public partial class UCBangCong : UserControl
     {
         DataTable data;
+        DateTime date;
         public UCBangCong()
         {
             InitializeComponent();
         }
 
-        private void cbxView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNam_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
-                data = DTO.ChamCong.Get_BangChamCong(int.Parse(txtThang.Text), int.Parse(txtNam.Text));
-
+                FillData();
             }
             if ((e.KeyValue < 48 || e.KeyValue > 57) && e.KeyData != Keys.Back)
             {
@@ -38,10 +33,34 @@ namespace GUI.UC.QLCong
         }
         private void FillData()
         {
-            foreach(DataRow row in data.Rows)
+            data = DTO.ChamCong.Get_BangChamCong(int.Parse(txtThang.Text), int.Parse(txtNam.Text));
+            date = new DateTime(int.Parse(txtNam.Text), int.Parse(txtThang.Text), 1);
+
+            dgvBC.Rows.Clear();
+            int songay = DateTime.DaysInMonth(date.Year, date.Month);
+            string ngaylam = "", ngaynghicoluong = "";
+
+            for (int index = 0; index < data.Rows.Count; index++)
             {
-                
+                dgvBC.Rows.Add(data.Rows[index].ItemArray[2], data.Rows[index].ItemArray[3]);
+                ngaylam = data.Rows[index].ItemArray[4].ToString();
+                ngaynghicoluong = data.Rows[index].ItemArray[5].ToString();
+                for (int i = 1; i <= songay; i++)
+                {
+                    if ((ngaylam != null && ngaylam.Contains(" " + i + " ")) || (ngaynghicoluong != null && ngaynghicoluong.Contains(" " + i + " ")))
+                    {
+                        dgvBC.Rows[index].Cells[i + 1].Value = "X";
+                    }
+                    else dgvBC.Rows[index].Cells[i + 1].Value = "O";
+                }
             }
+        }
+
+        private void UCBangCong_Load(object sender, EventArgs e)
+        {
+            txtThang.Text = DateTime.Today.Month.ToString();
+            txtNam.Text = DateTime.Today.Year.ToString();
+            FillData();
         }
     }
 }

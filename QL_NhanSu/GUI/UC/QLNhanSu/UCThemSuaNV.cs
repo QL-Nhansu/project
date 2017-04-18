@@ -79,7 +79,12 @@ namespace GUI.UC.QLNhanSu
             {
                 Control ctrl = FormMain.stackControl.Pop();
                 ctrl.Dispose();
-                FormMain.stackControl.Pop().Visible = true;
+                if (FormMain.stackControl.Count > 0)
+                {
+                    ctrl = FormMain.stackControl.Pop();
+                    ctrl.Visible = true;
+                    FormMain.stackControl.Push(ctrl);
+                }
             }
         }
 
