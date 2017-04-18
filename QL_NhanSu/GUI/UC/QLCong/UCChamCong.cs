@@ -62,21 +62,22 @@ namespace GUI.UC.QLCong
                         chamcong.Luongcoban = (row.ItemArray[7].ToString() != "") ? decimal.Parse(row.ItemArray[7].ToString()) : -1; ;
                     }
                 }
+
                 switch (e.ColumnIndex)
                 {
                     case 5:
-                        chamcong.Ngaydilam += " " + date.Day;
-                        chamcong.Ngaynghicoluong = chamcong.Ngaynghicoluong.Replace(" " + date.Day, "");
+                        chamcong.Ngaydilam += " " + date.Day + " ";
+                        chamcong.Ngaynghicoluong = chamcong.Ngaynghicoluong.Replace(" " + date.Day + " ", "");
                         chamcong.Sua();
                         break;
                     case 6:
-                        chamcong.Ngaydilam = chamcong.Ngaydilam.Replace(" " + date.Day, "");
-                        chamcong.Ngaynghicoluong = chamcong.Ngaynghicoluong.Replace(" " + date.Day, "");
+                        chamcong.Ngaydilam = chamcong.Ngaydilam.Replace(" " + date.Day + " ", "");
+                        chamcong.Ngaynghicoluong = chamcong.Ngaynghicoluong.Replace(" " + date.Day + " ", "");
                         chamcong.Sua();
                         break;
                     case 7:
-                        chamcong.Ngaydilam = chamcong.Ngaydilam.Replace(" " + date.Day, "");
-                        chamcong.Ngaynghicoluong += " " + date.Day;
+                        chamcong.Ngaydilam = chamcong.Ngaydilam.Replace(" " + date.Day + " ", "");
+                        chamcong.Ngaynghicoluong += " " + date.Day + " ";
                         chamcong.Sua();
                         break;
                     default:

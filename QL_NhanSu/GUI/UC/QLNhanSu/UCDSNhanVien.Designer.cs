@@ -40,10 +40,10 @@
             this.cbxView = new GUI.Class.cbxNoneChangeText();
             this.labView = new System.Windows.Forms.Label();
             this.ctmnMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.xemHồSơChiTiếtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chuyểnPhòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xemHoSoChiTietToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chuyenPhongBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvDSNV = new System.Windows.Forms.DataGridView();
             this.pnlLine1 = new GUI.Class.pnlLine();
             this.pnlTool.SuspendLayout();
@@ -181,37 +181,40 @@
             // ctmnMenu
             // 
             this.ctmnMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xemHồSơChiTiếtToolStripMenuItem,
-            this.chuyểnPhòngBanToolStripMenuItem,
-            this.sửaToolStripMenuItem,
-            this.xóaNhânViênToolStripMenuItem});
+            this.xemHoSoChiTietToolStripMenuItem,
+            this.chuyenPhongBanToolStripMenuItem,
+            this.suaToolStripMenuItem,
+            this.xoaToolStripMenuItem});
             this.ctmnMenu.Name = "contextMenuStrip1";
             this.ctmnMenu.Size = new System.Drawing.Size(177, 92);
             // 
-            // xemHồSơChiTiếtToolStripMenuItem
+            // xemHoSoChiTietToolStripMenuItem
             // 
-            this.xemHồSơChiTiếtToolStripMenuItem.Name = "xemHồSơChiTiếtToolStripMenuItem";
-            this.xemHồSơChiTiếtToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.xemHồSơChiTiếtToolStripMenuItem.Text = "Xem hồ sơ chi tiết";
-            this.xemHồSơChiTiếtToolStripMenuItem.Click += new System.EventHandler(this.xemHoSoChiTietToolStripMenuItem_Click);
+            this.xemHoSoChiTietToolStripMenuItem.Name = "xemHoSoChiTietToolStripMenuItem";
+            this.xemHoSoChiTietToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.xemHoSoChiTietToolStripMenuItem.Text = "Xem hồ sơ chi tiết";
+            this.xemHoSoChiTietToolStripMenuItem.Click += new System.EventHandler(this.xemHoSoChiTietToolStripMenuItem_Click);
             // 
-            // chuyểnPhòngBanToolStripMenuItem
+            // chuyenPhongBanToolStripMenuItem
             // 
-            this.chuyểnPhòngBanToolStripMenuItem.Name = "chuyểnPhòngBanToolStripMenuItem";
-            this.chuyểnPhòngBanToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.chuyểnPhòngBanToolStripMenuItem.Text = "Chuyển phòng ban";
+            this.chuyenPhongBanToolStripMenuItem.Name = "chuyenPhongBanToolStripMenuItem";
+            this.chuyenPhongBanToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.chuyenPhongBanToolStripMenuItem.Text = "Chuyển phòng ban";
+            this.chuyenPhongBanToolStripMenuItem.Click += new System.EventHandler(this.chuyenPhongBanToolStripMenuItem_Click);
             // 
-            // sửaToolStripMenuItem
+            // suaToolStripMenuItem
             // 
-            this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
-            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.sửaToolStripMenuItem.Text = "Sửa nhân viên";
+            this.suaToolStripMenuItem.Name = "suaToolStripMenuItem";
+            this.suaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.suaToolStripMenuItem.Text = "Sửa nhân viên";
+            this.suaToolStripMenuItem.Click += new System.EventHandler(this.suaToolStripMenuItem_Click);
             // 
-            // xóaNhânViênToolStripMenuItem
+            // xoaToolStripMenuItem
             // 
-            this.xóaNhânViênToolStripMenuItem.Name = "xóaNhânViênToolStripMenuItem";
-            this.xóaNhânViênToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.xóaNhânViênToolStripMenuItem.Text = "Xóa nhân viên";
+            this.xoaToolStripMenuItem.Name = "xoaToolStripMenuItem";
+            this.xoaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.xoaToolStripMenuItem.Text = "Xóa nhân viên";
+            this.xoaToolStripMenuItem.Click += new System.EventHandler(this.xoaToolStripMenuItem_Click);
             // 
             // dgvDSNV
             // 
@@ -234,8 +237,8 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDSNV.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSNV.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -286,10 +289,10 @@
         private Class.cbxNoneChangeText cbxView;
         private System.Windows.Forms.Label labView;
         private System.Windows.Forms.ContextMenuStrip ctmnMenu;
-        private System.Windows.Forms.ToolStripMenuItem xemHồSơChiTiếtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chuyểnPhòngBanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sửaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xóaNhânViênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xemHoSoChiTietToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chuyenPhongBanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xoaToolStripMenuItem;
         private Class.pnlLine pnlLine1;
         private System.Windows.Forms.DataGridView dgvDSNV;
         private System.Windows.Forms.Label label1;

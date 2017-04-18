@@ -274,6 +274,10 @@ namespace GUI
                 ctrl = stackControl.Pop();
                 if (ctrl != null) ctrl.Dispose();
             }
+            foreach(Control ctr in RenderBody.Controls)
+            {
+                ctr.Dispose();
+            }
         }
 
         private void btnLoginClick()
@@ -398,6 +402,18 @@ namespace GUI
 
         #endregion
 
+        private void txtSearch_EventKeyEnter(object sender, System.EventArgs e)
+        {
+            UC.QLNhanSu.UCXemNV.manv = txtSearch.Text;
+            ClearChildrenControl();
+            RenderBody.Controls.Add(new UC.QLNhanSu.UCXemNV()
+            {
+                Location = new System.Drawing.Point(8, 8),
+                Width = this.Width,
+                Height = this.Height,
+                Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            });
+        }
     }
 
 }

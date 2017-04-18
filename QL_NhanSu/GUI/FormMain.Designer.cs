@@ -124,6 +124,7 @@
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TabStop = false;
             this.txtSearch.Text = "Search...";
+            this.txtSearch.EventKeyEnter += new System.EventHandler(this.txtSearch_EventKeyEnter);
             // 
             // btnSearch
             // 

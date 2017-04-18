@@ -1,13 +1,12 @@
-﻿
---chamcong
+﻿--chamcong
 create proc them_chamcong
 as
 begin
 	declare @date date
 	set @date = GETDATE()
-	insert into chamcong 
+	insert into chamcong
 	select	DATEPART(mm,@date), DATEPART(yyyy,@date), nhanvien.ma, chucdanh.luongcoban, null, null
-	from	nhanvien left join chucdanh on nhanvien.ma = chucdanh.ma
+	from	nhanvien left join chucdanh on nhanvien.chucdanhma = chucdanh.ma
 	where not exists 
 	(	select * from chamcong 
 		where	chamcong.nhanvienma = nhanvien.ma and
@@ -655,5 +654,12 @@ create proc get_phucap
 as begin
 	select ma as N'Mã', ten as N'Tên phụ cấp', sotien as N'Số tiền'
 	from phucap
+end
+go
+
+create proc get_phongban
+as begin
+	select ma, ten
+	from phongban
 end
 go

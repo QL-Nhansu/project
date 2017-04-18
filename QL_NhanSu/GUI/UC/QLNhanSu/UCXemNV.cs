@@ -25,6 +25,7 @@ namespace GUI.UC.QLNhanSu
             {
                 if (tb.Rows[0].ItemArray[0] != DBNull.Value)
                     ptrAnh.Image = Image.FromStream(new System.IO.MemoryStream((byte[])tb.Rows[0].ItemArray[0]));
+                txtMa.Text = (tb.Rows[0].ItemArray[2] != DBNull.Value) ? (string)tb.Rows[0].ItemArray[1] : "";
                 txtHT.Text = (tb.Rows[0].ItemArray[2] != DBNull.Value) ? (string)tb.Rows[0].ItemArray[2] : "";
                 if (tb.Rows[0].ItemArray[3] != DBNull.Value)
                     txtNS.Text = ((DateTime)tb.Rows[0].ItemArray[3]).ToShortDateString();
@@ -53,7 +54,12 @@ namespace GUI.UC.QLNhanSu
             {
                 Control ctrl = FormMain.stackControl.Pop();
                 ctrl.Dispose();
-                FormMain.stackControl.Pop().Visible = true;
+                if (FormMain.stackControl.Count > 0)
+                {
+                    ctrl = FormMain.stackControl.Pop();
+                    ctrl.Visible = true;
+                    FormMain.stackControl.Push(ctrl);
+                }
             }
         }
     }

@@ -655,5 +655,12 @@ namespace DAL
             return DBConnect.ExecuteNonQuery("xoa_truongphong", para);
         }
         #endregion
+
+        #region PhongBan
+        public static DataTable get_phongban()
+        {
+            return DBConnect.GetData("get_phongban");
+        }
+        #endregion
     }
 }

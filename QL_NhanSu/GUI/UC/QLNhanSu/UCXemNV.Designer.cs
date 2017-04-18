@@ -211,8 +211,8 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLSLV.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLSLV.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -259,8 +259,8 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvKhenThuong.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvKhenThuong.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -307,8 +307,8 @@
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvKyLuat.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvKyLuat.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -360,9 +360,8 @@
             this.txtNHHHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNHHHD.Location = new System.Drawing.Point(455, 6);
             this.txtNHHHD.Name = "txtNHHHD";
-            this.txtNHHHD.Size = new System.Drawing.Size(56, 16);
+            this.txtNHHHD.Size = new System.Drawing.Size(0, 16);
             this.txtNHHHD.TabIndex = 13;
-            this.txtNHHHD.Text = "txtnhhhd";
             // 
             // txtNKHD
             // 
@@ -370,9 +369,8 @@
             this.txtNKHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNKHD.Location = new System.Drawing.Point(157, 6);
             this.txtNKHD.Name = "txtNKHD";
-            this.txtNKHD.Size = new System.Drawing.Size(49, 16);
+            this.txtNKHD.Size = new System.Drawing.Size(0, 16);
             this.txtNKHD.TabIndex = 12;
-            this.txtNKHD.Text = "txtnkhd";
             // 
             // labNHHHD
             // 
@@ -414,9 +412,8 @@
             this.txtNN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNN.Location = new System.Drawing.Point(455, 6);
             this.txtNN.Name = "txtNN";
-            this.txtNN.Size = new System.Drawing.Size(34, 16);
+            this.txtNN.Size = new System.Drawing.Size(0, 16);
             this.txtNN.TabIndex = 11;
-            this.txtNN.Text = "txtnn";
             // 
             // txtHV
             // 
@@ -424,9 +421,8 @@
             this.txtHV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHV.Location = new System.Drawing.Point(157, 6);
             this.txtHV.Name = "txtHV";
-            this.txtHV.Size = new System.Drawing.Size(34, 16);
+            this.txtHV.Size = new System.Drawing.Size(0, 16);
             this.txtHV.TabIndex = 10;
-            this.txtHV.Text = "txthv";
             // 
             // labNN
             // 
@@ -468,9 +464,8 @@
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(455, 6);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(53, 16);
+            this.txtEmail.Size = new System.Drawing.Size(0, 16);
             this.txtEmail.TabIndex = 10;
-            this.txtEmail.Text = "txtemail";
             // 
             // txtSDT
             // 
@@ -478,9 +473,8 @@
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(157, 6);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(38, 16);
+            this.txtSDT.Size = new System.Drawing.Size(0, 16);
             this.txtSDT.TabIndex = 9;
-            this.txtSDT.Text = "txtsdt";
             // 
             // labEmail
             // 
@@ -522,9 +516,8 @@
             this.txtTG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTG.Location = new System.Drawing.Point(455, 6);
             this.txtTG.Name = "txtTG";
-            this.txtTG.Size = new System.Drawing.Size(31, 16);
+            this.txtTG.Size = new System.Drawing.Size(0, 16);
             this.txtTG.TabIndex = 7;
-            this.txtTG.Text = "txttg";
             // 
             // txtDT
             // 
@@ -532,9 +525,8 @@
             this.txtDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDT.Location = new System.Drawing.Point(157, 6);
             this.txtDT.Name = "txtDT";
-            this.txtDT.Size = new System.Drawing.Size(31, 16);
+            this.txtDT.Size = new System.Drawing.Size(0, 16);
             this.txtDT.TabIndex = 8;
-            this.txtDT.Text = "txtdt";
             // 
             // labTG
             // 
@@ -576,9 +568,8 @@
             this.txtCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCV.Location = new System.Drawing.Point(455, 6);
             this.txtCV.Name = "txtCV";
-            this.txtCV.Size = new System.Drawing.Size(34, 16);
+            this.txtCV.Size = new System.Drawing.Size(0, 16);
             this.txtCV.TabIndex = 8;
-            this.txtCV.Text = "txtcv";
             // 
             // labCV
             // 
@@ -596,9 +587,8 @@
             this.txtCMT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCMT.Location = new System.Drawing.Point(157, 6);
             this.txtCMT.Name = "txtCMT";
-            this.txtCMT.Size = new System.Drawing.Size(41, 16);
+            this.txtCMT.Size = new System.Drawing.Size(0, 16);
             this.txtCMT.TabIndex = 6;
-            this.txtCMT.Text = "txtcmt";
             // 
             // labCMT
             // 
@@ -630,9 +620,8 @@
             this.txtGT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGT.Location = new System.Drawing.Point(455, 5);
             this.txtGT.Name = "txtGT";
-            this.txtGT.Size = new System.Drawing.Size(31, 16);
+            this.txtGT.Size = new System.Drawing.Size(0, 16);
             this.txtGT.TabIndex = 6;
-            this.txtGT.Text = "txtgt";
             // 
             // txtNS
             // 
@@ -640,9 +629,8 @@
             this.txtNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNS.Location = new System.Drawing.Point(157, 5);
             this.txtNS.Name = "txtNS";
-            this.txtNS.Size = new System.Drawing.Size(34, 16);
+            this.txtNS.Size = new System.Drawing.Size(0, 16);
             this.txtNS.TabIndex = 5;
-            this.txtNS.Text = "txtns";
             // 
             // labNS
             // 
@@ -684,9 +672,8 @@
             this.txtHT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHT.Location = new System.Drawing.Point(455, 33);
             this.txtHT.Name = "txtHT";
-            this.txtHT.Size = new System.Drawing.Size(30, 16);
+            this.txtHT.Size = new System.Drawing.Size(0, 16);
             this.txtHT.TabIndex = 6;
-            this.txtHT.Text = "txtht";
             // 
             // labHT
             // 
@@ -704,9 +691,8 @@
             this.txtMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMa.Location = new System.Drawing.Point(157, 33);
             this.txtMa.Name = "txtMa";
-            this.txtMa.Size = new System.Drawing.Size(39, 16);
+            this.txtMa.Size = new System.Drawing.Size(0, 16);
             this.txtMa.TabIndex = 4;
-            this.txtMa.Text = "txtma";
             // 
             // labMa
             // 
