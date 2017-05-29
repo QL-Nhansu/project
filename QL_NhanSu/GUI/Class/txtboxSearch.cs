@@ -9,8 +9,8 @@ namespace GUI.Class
 {
     class txtboxSearch : TextBox
     {
-        // private string defaultstring = "Search...";
-        private string defaultstring;
+        private string defaultstring = "Search...";
+
         public String DefaultString
         {
             get { return defaultstring; }

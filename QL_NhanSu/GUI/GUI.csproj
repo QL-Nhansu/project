@@ -146,12 +146,6 @@
     <Compile Include="UC\UCLogin.Designer.cs">
       <DependentUpon>UCLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UC_Login.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\UC_Login.designer.cs">
-      <DependentUpon>UC_Login.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,7 +157,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UC\MoRong\UCKhenThuong.resx">
       <DependentUpon>UCKhenThuong.cs</DependentUpon>
@@ -201,9 +194,6 @@
     <EmbeddedResource Include="UC\UCLogin.resx">
       <DependentUpon>UCLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UC_Login.resx">
-      <DependentUpon>UC_Login.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -217,9 +207,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images.jpg" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{e20177d3-8a8d-4aed-979a-f4f7325c98da}</Project>

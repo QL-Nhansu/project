@@ -8,7 +8,7 @@ namespace GUI
     {
         Mouse_Position mouse_point = Mouse_Position.None;
         public static Stack<Control> stackControl = new Stack<Control>();
-
+        private bool active = false;
         public FormMain()
         {
             DTO.Connect.SetConnectString(Application.StartupPath.Replace(@"bin\Debug", @"data\NhanSu.mdf"));
@@ -255,9 +255,7 @@ namespace GUI
         {
             if (e.Button == MouseButtons.Left)
             {
-                // btnLoginClick()
-                
-                
+                btnLoginClick();
             }
         }
 
@@ -285,7 +283,7 @@ namespace GUI
         private void btnLoginClick()
         {
             ClearChildrenControl();
-            RenderBody.Controls.Add(new UC.Login.UC_Login()
+            RenderBody.Controls.Add(new UC.UCLogin()
             {
                 Location = new System.Drawing.Point(8, 8),
                 Width = RenderBody.Width - 16,
@@ -415,75 +413,6 @@ namespace GUI
                 Height = this.Height,
                 Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
             });
-        }
-
-        public void check ( bool check) // check = true;
-        {
-            btnSearch.Enabled = check;
-            btnMenu.Enabled = check;
-            btnQLNhanSu.Enabled = check;
-            btnChucVu.Enabled = check;
-            btnDSNV.Enabled = check;
-            btnQLCong.Enabled = check;
-            btnMoRong.Enabled = check;
-        }
-        public bool check1 = false;
-       private void FormMain_Load(object sender, System.EventArgs e)
-       
-        {
-            
-            //btnQLNhanSu.Visible = false;
-            //check(check1);
-           // RenderBody.Controls.Add(new UC.Login.UC_Login() {
-           //     Location = new System.Drawing.Point(8, 8),
-           //     Width = this.Width,
-           //     Height = this.Height,
-           //     Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
-           // });
-
-           // UC.Login.UC_Login uc = new UC.Login.UC_Login();
-           // //uc.btnSignIn_Load(sender, e);
-           // uc.myCheck = new UC.Login.UC_Login.Check(check(check1));
-
-           // check(check1);
-           //// uc.Dispose();
-
-
-
-        }
-
-        private void btnSignIn_MouseClick(object sender, MouseEventArgs e)
-        {
-            bool check1;
-            if (txtUsername.Text == "" || txtPassword.Text == "")
-            {
-                check1 = false;
-                check(check1);
-                erpSignIn.SetError(btnSignIn, "Chưa nhập tài khoản hoặc mật khẩu");
-                // return check1;
-                // myCheck = new Check(check1);
-            }
-            else if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
-            {
-                erpSignIn.Clear();
-                lblTryAgain.Visible = false;
-                check1 = true;
-                check(check1);
-                // myCheck(check1);
-                // this.Dispose();
-                pnlLogin.Dispose();
-                btnLogin.Visible = false;
-                // return check1;
-            }
-            else
-            {
-                check1 = false;
-                erpSignIn.Clear();
-                lblTryAgain.Visible = true;
-                check(check1);
-              //  myCheck(check1);
-                //  return check1;
-            }
         }
     }
 
