@@ -17,6 +17,9 @@ namespace GUI.UC.QLCong
         public UCBangCong()
         {
             InitializeComponent();
+            string temp = DateTime.Today.Year.ToString();
+            comboBox1.Items.Add(temp);
+            comboBox1.Text = temp;
         }
 
         private void txtNam_KeyDown(object sender, KeyEventArgs e)
@@ -33,8 +36,8 @@ namespace GUI.UC.QLCong
         }
         private void FillData()
         {
-            data = DTO.ChamCong.Get_BangChamCong(int.Parse(txtThang.Text), int.Parse(txtNam.Text));
-            date = new DateTime(int.Parse(txtNam.Text), int.Parse(txtThang.Text), 1);
+            data = DTO.ChamCong.Get_BangChamCong(int.Parse(cbb_thang.Text), int.Parse(comboBox1.Text));
+            date = new DateTime(int.Parse(comboBox1.Text), int.Parse(cbb_thang.Text), 1);
 
             dgvBC.Rows.Clear();
             int songay = DateTime.DaysInMonth(date.Year, date.Month);
@@ -66,8 +69,13 @@ namespace GUI.UC.QLCong
 
         private void UCBangCong_Load(object sender, EventArgs e)
         {
-            txtThang.Text = DateTime.Today.Month.ToString();
-            txtNam.Text = DateTime.Today.Year.ToString();
+            cbb_thang.Text = DateTime.Today.Month.ToString();
+            FillData();
+        }
+
+        private void cbb_thang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //comboBox1.Items.Add("2017");
             FillData();
         }
     }
