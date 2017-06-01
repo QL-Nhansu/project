@@ -23,7 +23,7 @@ namespace GUI.UC.QLCong
 
         private void UCChamCong_Load(object sender, EventArgs e)
         {
-            data = DTO.ChamCong.Get_ChamCongNhanVien();
+            data = DTO.ChamCong.Get_ChamCongNhanVien(DateTime.Today.Month, DateTime.Today.Year);
             cbxSort.SelectedIndex = 0;
         }
 

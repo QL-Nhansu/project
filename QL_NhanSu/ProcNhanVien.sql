@@ -545,7 +545,7 @@ begin
 end
 go
 
-create proc get_chamcongnv
+create proc get_chamcongnv(@thang int, @nam int)
 as
 begin
 	execute them_chamcong
@@ -558,6 +558,7 @@ begin
 			left join thamgia on nhanvien.ma = thamgia.nhanvienma and thamgia.ngayroidi is null
 			left join phongban on thamgia.phongbanma = phongban.ma 
 			left join chucdanh on nhanvien.chucdanhma = chucdanh.ma
+	where	chamcong.thang = @thang and chamcong.nam = @nam
 end
 go
 

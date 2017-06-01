@@ -13,9 +13,9 @@ namespace DAL
         {
             return DBConnect.GetData("get_bangchamcong " + "'" + thang + "','" + nam + "'");
         }
-        public static DataTable get_chamcongnv()
+        public static DataTable get_chamcongnv(int thang, int nam)
         {
-            return DBConnect.GetData("get_chamcongnv");
+            return DBConnect.GetData("get_chamcongnv " + "'" + thang + "','" + nam + "'");
         }
         public static int sua_chamcong(
             int thang,

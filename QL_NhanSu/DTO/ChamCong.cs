@@ -99,9 +99,9 @@ namespace DTO
         {
             return DATA.get_bangchamcong(thang, nam);
         }
-        public static DataTable Get_ChamCongNhanVien()
+        public static DataTable Get_ChamCongNhanVien(int thang, int nam)
         {
-            return DATA.get_chamcongnv();
+            return DATA.get_chamcongnv(thang, nam);
         }
         public int Sua()
         {

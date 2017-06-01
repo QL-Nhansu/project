@@ -29,7 +29,39 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTool = new System.Windows.Forms.Panel();
             this.txtNam = new System.Windows.Forms.TextBox();
             this.txtThang = new System.Windows.Forms.TextBox();
@@ -37,6 +69,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labThang = new System.Windows.Forms.Label();
             this.dgvBC = new System.Windows.Forms.DataGridView();
+            this.line1 = new GUI.Class.pnlLine();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +103,7 @@
             this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.line1 = new GUI.Class.pnlLine();
+            this.Column34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTool.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBC)).BeginInit();
             this.SuspendLayout();
@@ -141,7 +174,7 @@
             this.dgvBC.AllowUserToResizeRows = false;
             this.dgvBC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBC.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -183,15 +216,16 @@
             this.Column30,
             this.Column31,
             this.Column32,
-            this.Column33});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBC.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column33,
+            this.Column34});
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBC.DefaultCellStyle = dataGridViewCellStyle34;
             this.dgvBC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBC.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvBC.Location = new System.Drawing.Point(0, 36);
@@ -203,6 +237,15 @@
             this.dgvBC.Size = new System.Drawing.Size(758, 467);
             this.dgvBC.TabIndex = 13;
             this.dgvBC.TabStop = false;
+            // 
+            // line1
+            // 
+            this.line1.BackColor = System.Drawing.Color.White;
+            this.line1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.line1.Location = new System.Drawing.Point(0, 30);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(758, 6);
+            this.line1.TabIndex = 11;
             // 
             // Column1
             // 
@@ -223,6 +266,8 @@
             // 
             // Column3
             // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column3.HeaderText = "1";
             this.Column3.MinimumWidth = 30;
             this.Column3.Name = "Column3";
@@ -230,6 +275,8 @@
             // 
             // Column4
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column4.HeaderText = "2";
             this.Column4.MinimumWidth = 30;
             this.Column4.Name = "Column4";
@@ -237,6 +284,8 @@
             // 
             // Column5
             // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column5.HeaderText = "3";
             this.Column5.MinimumWidth = 30;
             this.Column5.Name = "Column5";
@@ -244,6 +293,8 @@
             // 
             // Column6
             // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column6.HeaderText = "4";
             this.Column6.MinimumWidth = 30;
             this.Column6.Name = "Column6";
@@ -251,6 +302,8 @@
             // 
             // Column7
             // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column7.HeaderText = "5";
             this.Column7.MinimumWidth = 30;
             this.Column7.Name = "Column7";
@@ -258,6 +311,8 @@
             // 
             // Column8
             // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column8.HeaderText = "6";
             this.Column8.MinimumWidth = 30;
             this.Column8.Name = "Column8";
@@ -265,6 +320,8 @@
             // 
             // Column9
             // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column9.HeaderText = "7";
             this.Column9.MinimumWidth = 30;
             this.Column9.Name = "Column9";
@@ -272,6 +329,8 @@
             // 
             // Column10
             // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column10.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column10.HeaderText = "8";
             this.Column10.MinimumWidth = 30;
             this.Column10.Name = "Column10";
@@ -279,6 +338,8 @@
             // 
             // Column11
             // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column11.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column11.HeaderText = "9";
             this.Column11.MinimumWidth = 30;
             this.Column11.Name = "Column11";
@@ -286,6 +347,8 @@
             // 
             // Column12
             // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column12.DefaultCellStyle = dataGridViewCellStyle11;
             this.Column12.HeaderText = "10";
             this.Column12.MinimumWidth = 30;
             this.Column12.Name = "Column12";
@@ -293,6 +356,8 @@
             // 
             // Column13
             // 
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle12;
             this.Column13.HeaderText = "11";
             this.Column13.MinimumWidth = 30;
             this.Column13.Name = "Column13";
@@ -300,6 +365,8 @@
             // 
             // Column14
             // 
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column14.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column14.HeaderText = "12";
             this.Column14.MinimumWidth = 30;
             this.Column14.Name = "Column14";
@@ -307,6 +374,8 @@
             // 
             // Column15
             // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column15.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column15.HeaderText = "13";
             this.Column15.MinimumWidth = 30;
             this.Column15.Name = "Column15";
@@ -314,6 +383,8 @@
             // 
             // Column16
             // 
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column16.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column16.HeaderText = "14";
             this.Column16.MinimumWidth = 30;
             this.Column16.Name = "Column16";
@@ -321,6 +392,8 @@
             // 
             // Column17
             // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column17.DefaultCellStyle = dataGridViewCellStyle16;
             this.Column17.HeaderText = "15";
             this.Column17.MinimumWidth = 30;
             this.Column17.Name = "Column17";
@@ -328,6 +401,8 @@
             // 
             // Column18
             // 
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column18.DefaultCellStyle = dataGridViewCellStyle17;
             this.Column18.HeaderText = "16";
             this.Column18.MinimumWidth = 30;
             this.Column18.Name = "Column18";
@@ -335,6 +410,8 @@
             // 
             // Column19
             // 
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column19.DefaultCellStyle = dataGridViewCellStyle18;
             this.Column19.HeaderText = "17";
             this.Column19.MinimumWidth = 30;
             this.Column19.Name = "Column19";
@@ -342,6 +419,8 @@
             // 
             // Column20
             // 
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column20.DefaultCellStyle = dataGridViewCellStyle19;
             this.Column20.HeaderText = "18";
             this.Column20.MinimumWidth = 30;
             this.Column20.Name = "Column20";
@@ -349,6 +428,8 @@
             // 
             // Column21
             // 
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column21.DefaultCellStyle = dataGridViewCellStyle20;
             this.Column21.HeaderText = "19";
             this.Column21.MinimumWidth = 30;
             this.Column21.Name = "Column21";
@@ -356,6 +437,8 @@
             // 
             // Column22
             // 
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column22.DefaultCellStyle = dataGridViewCellStyle21;
             this.Column22.HeaderText = "20";
             this.Column22.MinimumWidth = 30;
             this.Column22.Name = "Column22";
@@ -363,6 +446,8 @@
             // 
             // Column23
             // 
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column23.DefaultCellStyle = dataGridViewCellStyle22;
             this.Column23.HeaderText = "21";
             this.Column23.MinimumWidth = 30;
             this.Column23.Name = "Column23";
@@ -370,6 +455,8 @@
             // 
             // Column24
             // 
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column24.DefaultCellStyle = dataGridViewCellStyle23;
             this.Column24.HeaderText = "22";
             this.Column24.MinimumWidth = 30;
             this.Column24.Name = "Column24";
@@ -377,6 +464,8 @@
             // 
             // Column25
             // 
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column25.DefaultCellStyle = dataGridViewCellStyle24;
             this.Column25.HeaderText = "23";
             this.Column25.MinimumWidth = 30;
             this.Column25.Name = "Column25";
@@ -384,6 +473,8 @@
             // 
             // Column26
             // 
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column26.DefaultCellStyle = dataGridViewCellStyle25;
             this.Column26.HeaderText = "24";
             this.Column26.MinimumWidth = 30;
             this.Column26.Name = "Column26";
@@ -391,6 +482,8 @@
             // 
             // Column27
             // 
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column27.DefaultCellStyle = dataGridViewCellStyle26;
             this.Column27.HeaderText = "25";
             this.Column27.MinimumWidth = 30;
             this.Column27.Name = "Column27";
@@ -398,6 +491,8 @@
             // 
             // Column28
             // 
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column28.DefaultCellStyle = dataGridViewCellStyle27;
             this.Column28.HeaderText = "26";
             this.Column28.MinimumWidth = 30;
             this.Column28.Name = "Column28";
@@ -405,6 +500,8 @@
             // 
             // Column29
             // 
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column29.DefaultCellStyle = dataGridViewCellStyle28;
             this.Column29.HeaderText = "27";
             this.Column29.MinimumWidth = 30;
             this.Column29.Name = "Column29";
@@ -412,6 +509,8 @@
             // 
             // Column30
             // 
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column30.DefaultCellStyle = dataGridViewCellStyle29;
             this.Column30.HeaderText = "28";
             this.Column30.MinimumWidth = 30;
             this.Column30.Name = "Column30";
@@ -419,6 +518,8 @@
             // 
             // Column31
             // 
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column31.DefaultCellStyle = dataGridViewCellStyle30;
             this.Column31.HeaderText = "29";
             this.Column31.MinimumWidth = 30;
             this.Column31.Name = "Column31";
@@ -426,6 +527,8 @@
             // 
             // Column32
             // 
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column32.DefaultCellStyle = dataGridViewCellStyle31;
             this.Column32.HeaderText = "30";
             this.Column32.MinimumWidth = 30;
             this.Column32.Name = "Column32";
@@ -433,19 +536,24 @@
             // 
             // Column33
             // 
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column33.DefaultCellStyle = dataGridViewCellStyle32;
             this.Column33.HeaderText = "31";
             this.Column33.MinimumWidth = 30;
             this.Column33.Name = "Column33";
             this.Column33.ReadOnly = true;
             // 
-            // line1
+            // Column34
             // 
-            this.line1.BackColor = System.Drawing.Color.White;
-            this.line1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.line1.Location = new System.Drawing.Point(0, 30);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(758, 6);
-            this.line1.TabIndex = 11;
+            this.Column34.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column34.DefaultCellStyle = dataGridViewCellStyle33;
+            this.Column34.FillWeight = 98F;
+            this.Column34.HeaderText = "Số công";
+            this.Column34.MinimumWidth = 98;
+            this.Column34.Name = "Column34";
+            this.Column34.ReadOnly = true;
+            this.Column34.Width = 98;
             // 
             // UCBangCong
             // 
@@ -507,5 +615,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column32;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column34;
     }
 }

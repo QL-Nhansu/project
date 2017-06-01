@@ -30,24 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCThemSuaNV));
             this.pnlTool = new System.Windows.Forms.Panel();
+            this.btnBack = new GUI.Class.btnImage();
             this.layout = new System.Windows.Forms.TableLayoutPanel();
             this.pnlBody = new System.Windows.Forms.Panel();
+            this.cbxChucVu = new GUI.Class.cbxNoneChangeText();
             this.label20 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtNamHHD = new System.Windows.Forms.TextBox();
-            this.txtThangHHD = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtNgayHHD = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtNamKHD = new System.Windows.Forms.TextBox();
-            this.txtThangKHD = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtNgayKHD = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtNam = new System.Windows.Forms.TextBox();
-            this.txtThang = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtNgay = new System.Windows.Forms.TextBox();
+            this.cbxHocVan = new GUI.Class.cbxNoneChangeText();
+            this.cbxNgoaiNgu = new GUI.Class.cbxNoneChangeText();
+            this.btnSave = new GUI.Class.btnImage();
+            this.btnAnh = new GUI.Class.btnImage();
             this.ptrAnh = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,9 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtTG = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtDT = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCMT = new System.Windows.Forms.TextBox();
@@ -72,12 +61,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbxChucVu = new GUI.Class.cbxNoneChangeText();
-            this.cbxHocVan = new GUI.Class.cbxNoneChangeText();
-            this.cbxNgoaiNgu = new GUI.Class.cbxNoneChangeText();
-            this.btnSave = new GUI.Class.btnImage();
-            this.btnAnh = new GUI.Class.btnImage();
-            this.btnBack = new GUI.Class.btnImage();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayKHD = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayHHHD = new System.Windows.Forms.DateTimePicker();
+            this.txtDT = new GUI.Class.cbxNoneChangeText();
+            this.txtTG = new GUI.Class.cbxNoneChangeText();
             this.pnlTool.SuspendLayout();
             this.layout.SuspendLayout();
             this.pnlBody.SuspendLayout();
@@ -93,6 +81,31 @@
             this.pnlTool.Name = "pnlTool";
             this.pnlTool.Size = new System.Drawing.Size(758, 30);
             this.pnlTool.TabIndex = 0;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
+            this.btnBack.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnBack.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnBack.BgrColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
+            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBack.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
+            this.btnBack.ImageMouseDown = null;
+            this.btnBack.ImageMouseEnter = null;
+            this.btnBack.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnBack.ImageMouseLeave")));
+            this.btnBack.ImgMargin = 0;
+            this.btnBack.ImgSize = new System.Drawing.Size(23, 23);
+            this.btnBack.Location = new System.Drawing.Point(0, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(61, 30);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Back";
+            this.btnBack.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.btnBack.TextColorMouseDown = System.Drawing.Color.Empty;
+            this.btnBack.TextColorMouseEnter = System.Drawing.Color.Empty;
+            this.btnBack.TextColorMouseLeave = System.Drawing.Color.White;
+            this.btnBack.UseActived = false;
+            this.btnBack.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBack_MouseClick);
             // 
             // layout
             // 
@@ -116,25 +129,15 @@
             // pnlBody
             // 
             this.pnlBody.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlBody.Controls.Add(this.txtTG);
+            this.pnlBody.Controls.Add(this.txtDT);
+            this.pnlBody.Controls.Add(this.dtpNgayHHHD);
+            this.pnlBody.Controls.Add(this.dtpNgayKHD);
+            this.pnlBody.Controls.Add(this.dtpNgaySinh);
             this.pnlBody.Controls.Add(this.cbxChucVu);
             this.pnlBody.Controls.Add(this.label20);
-            this.pnlBody.Controls.Add(this.label18);
-            this.pnlBody.Controls.Add(this.txtNamHHD);
-            this.pnlBody.Controls.Add(this.txtThangHHD);
-            this.pnlBody.Controls.Add(this.label19);
-            this.pnlBody.Controls.Add(this.txtNgayHHD);
-            this.pnlBody.Controls.Add(this.label16);
-            this.pnlBody.Controls.Add(this.txtNamKHD);
-            this.pnlBody.Controls.Add(this.txtThangKHD);
-            this.pnlBody.Controls.Add(this.label17);
-            this.pnlBody.Controls.Add(this.txtNgayKHD);
             this.pnlBody.Controls.Add(this.cbxHocVan);
             this.pnlBody.Controls.Add(this.cbxNgoaiNgu);
-            this.pnlBody.Controls.Add(this.label15);
-            this.pnlBody.Controls.Add(this.txtNam);
-            this.pnlBody.Controls.Add(this.txtThang);
-            this.pnlBody.Controls.Add(this.label14);
-            this.pnlBody.Controls.Add(this.txtNgay);
             this.pnlBody.Controls.Add(this.btnSave);
             this.pnlBody.Controls.Add(this.btnAnh);
             this.pnlBody.Controls.Add(this.ptrAnh);
@@ -148,9 +151,7 @@
             this.pnlBody.Controls.Add(this.label4);
             this.pnlBody.Controls.Add(this.txtMK);
             this.pnlBody.Controls.Add(this.label13);
-            this.pnlBody.Controls.Add(this.txtTG);
             this.pnlBody.Controls.Add(this.label8);
-            this.pnlBody.Controls.Add(this.txtDT);
             this.pnlBody.Controls.Add(this.label7);
             this.pnlBody.Controls.Add(this.label6);
             this.pnlBody.Controls.Add(this.txtCMT);
@@ -167,6 +168,14 @@
             this.pnlBody.Size = new System.Drawing.Size(694, 467);
             this.pnlBody.TabIndex = 3;
             // 
+            // cbxChucVu
+            // 
+            this.cbxChucVu.FormattingEnabled = true;
+            this.cbxChucVu.Location = new System.Drawing.Point(297, 137);
+            this.cbxChucVu.Name = "cbxChucVu";
+            this.cbxChucVu.Size = new System.Drawing.Size(220, 21);
+            this.cbxChucVu.TabIndex = 11;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -176,149 +185,70 @@
             this.label20.TabIndex = 96;
             this.label20.Text = "Chức vụ";
             // 
-            // label18
+            // cbxHocVan
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(429, 249);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(12, 13);
-            this.label18.TabIndex = 94;
-            this.label18.Text = "/";
+            this.cbxHocVan.FormattingEnabled = true;
+            this.cbxHocVan.Location = new System.Drawing.Point(297, 364);
+            this.cbxHocVan.Name = "cbxHocVan";
+            this.cbxHocVan.Size = new System.Drawing.Size(220, 21);
+            this.cbxHocVan.TabIndex = 19;
             // 
-            // txtNamHHD
+            // cbxNgoaiNgu
             // 
-            this.txtNamHHD.Location = new System.Drawing.Point(447, 246);
-            this.txtNamHHD.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtNamHHD.MaxLength = 4;
-            this.txtNamHHD.Name = "txtNamHHD";
-            this.txtNamHHD.Size = new System.Drawing.Size(70, 20);
-            this.txtNamHHD.TabIndex = 17;
-            this.txtNamHHD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
+            this.cbxNgoaiNgu.FormattingEnabled = true;
+            this.cbxNgoaiNgu.Location = new System.Drawing.Point(297, 304);
+            this.cbxNgoaiNgu.Name = "cbxNgoaiNgu";
+            this.cbxNgoaiNgu.Size = new System.Drawing.Size(220, 21);
+            this.cbxNgoaiNgu.TabIndex = 18;
             // 
-            // txtThangHHD
+            // btnSave
             // 
-            this.txtThangHHD.Location = new System.Drawing.Point(372, 246);
-            this.txtThangHHD.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtThangHHD.MaxLength = 2;
-            this.txtThangHHD.Name = "txtThangHHD";
-            this.txtThangHHD.Size = new System.Drawing.Size(51, 20);
-            this.txtThangHHD.TabIndex = 16;
-            this.txtThangHHD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
+            this.btnSave.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnSave.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnSave.BgrColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
+            this.btnSave.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
+            this.btnSave.ImageMouseDown = null;
+            this.btnSave.ImageMouseEnter = null;
+            this.btnSave.ImageMouseLeave = null;
+            this.btnSave.ImgMargin = 3;
+            this.btnSave.ImgSize = new System.Drawing.Size(18, 18);
+            this.btnSave.Location = new System.Drawing.Point(297, 409);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(220, 30);
+            this.btnSave.TabIndex = 20;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnSave.TextColorMouseDown = System.Drawing.Color.Empty;
+            this.btnSave.TextColorMouseEnter = System.Drawing.Color.Empty;
+            this.btnSave.TextColorMouseLeave = System.Drawing.Color.White;
+            this.btnSave.UseActived = false;
+            this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseClick);
             // 
-            // label19
+            // btnAnh
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(354, 249);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(12, 13);
-            this.label19.TabIndex = 95;
-            this.label19.Text = "/";
-            // 
-            // txtNgayHHD
-            // 
-            this.txtNgayHHD.Location = new System.Drawing.Point(297, 246);
-            this.txtNgayHHD.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtNgayHHD.MaxLength = 2;
-            this.txtNgayHHD.Name = "txtNgayHHD";
-            this.txtNgayHHD.Size = new System.Drawing.Size(51, 20);
-            this.txtNgayHHD.TabIndex = 15;
-            this.txtNgayHHD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(429, 188);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(12, 13);
-            this.label16.TabIndex = 89;
-            this.label16.Text = "/";
-            // 
-            // txtNamKHD
-            // 
-            this.txtNamKHD.Location = new System.Drawing.Point(447, 185);
-            this.txtNamKHD.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtNamKHD.MaxLength = 4;
-            this.txtNamKHD.Name = "txtNamKHD";
-            this.txtNamKHD.Size = new System.Drawing.Size(70, 20);
-            this.txtNamKHD.TabIndex = 14;
-            this.txtNamKHD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
-            // 
-            // txtThangKHD
-            // 
-            this.txtThangKHD.Location = new System.Drawing.Point(372, 185);
-            this.txtThangKHD.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtThangKHD.MaxLength = 2;
-            this.txtThangKHD.Name = "txtThangKHD";
-            this.txtThangKHD.Size = new System.Drawing.Size(51, 20);
-            this.txtThangKHD.TabIndex = 13;
-            this.txtThangKHD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(354, 188);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(12, 13);
-            this.label17.TabIndex = 90;
-            this.label17.Text = "/";
-            // 
-            // txtNgayKHD
-            // 
-            this.txtNgayKHD.Location = new System.Drawing.Point(297, 185);
-            this.txtNgayKHD.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtNgayKHD.MaxLength = 2;
-            this.txtNgayKHD.Name = "txtNgayKHD";
-            this.txtNgayKHD.Size = new System.Drawing.Size(51, 20);
-            this.txtNgayKHD.TabIndex = 12;
-            this.txtNgayKHD.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(162, 188);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(12, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "/";
-            // 
-            // txtNam
-            // 
-            this.txtNam.Location = new System.Drawing.Point(180, 185);
-            this.txtNam.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtNam.MaxLength = 4;
-            this.txtNam.Name = "txtNam";
-            this.txtNam.Size = new System.Drawing.Size(70, 20);
-            this.txtNam.TabIndex = 4;
-            this.txtNam.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
-            // 
-            // txtThang
-            // 
-            this.txtThang.Location = new System.Drawing.Point(105, 185);
-            this.txtThang.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtThang.MaxLength = 2;
-            this.txtThang.Name = "txtThang";
-            this.txtThang.Size = new System.Drawing.Size(51, 20);
-            this.txtThang.TabIndex = 3;
-            this.txtThang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(87, 188);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(12, 13);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "/";
-            // 
-            // txtNgay
-            // 
-            this.txtNgay.Location = new System.Drawing.Point(30, 185);
-            this.txtNgay.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtNgay.MaxLength = 2;
-            this.txtNgay.Name = "txtNgay";
-            this.txtNgay.Size = new System.Drawing.Size(51, 20);
-            this.txtNgay.TabIndex = 2;
-            this.txtNgay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMT_KeyDown);
+            this.btnAnh.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnh.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
+            this.btnAnh.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnAnh.BgrColorMouseLeave = System.Drawing.Color.Transparent;
+            this.btnAnh.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
+            this.btnAnh.ImageMouseDown = null;
+            this.btnAnh.ImageMouseEnter = null;
+            this.btnAnh.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnAnh.ImageMouseLeave")));
+            this.btnAnh.ImgMargin = 0;
+            this.btnAnh.ImgSize = new System.Drawing.Size(20, 20);
+            this.btnAnh.Location = new System.Drawing.Point(579, 189);
+            this.btnAnh.Name = "btnAnh";
+            this.btnAnh.Size = new System.Drawing.Size(75, 23);
+            this.btnAnh.TabIndex = 0;
+            this.btnAnh.TabStop = false;
+            this.btnAnh.Text = "Choice";
+            this.btnAnh.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnAnh.TextColorMouseDown = System.Drawing.Color.Empty;
+            this.btnAnh.TextColorMouseEnter = System.Drawing.Color.Empty;
+            this.btnAnh.TextColorMouseLeave = System.Drawing.Color.Black;
+            this.btnAnh.UseActived = false;
+            this.btnAnh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAnh_MouseClick);
             // 
             // ptrAnh
             // 
@@ -422,15 +352,6 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Mật khẩu";
             // 
-            // txtTG
-            // 
-            this.txtTG.Location = new System.Drawing.Point(30, 364);
-            this.txtTG.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtTG.MaxLength = 20;
-            this.txtTG.Name = "txtTG";
-            this.txtTG.Size = new System.Drawing.Size(220, 20);
-            this.txtTG.TabIndex = 7;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -439,15 +360,6 @@
             this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 0;
             this.label8.Text = "Tôn giáo";
-            // 
-            // txtDT
-            // 
-            this.txtDT.Location = new System.Drawing.Point(30, 304);
-            this.txtDT.MaximumSize = new System.Drawing.Size(250, 20);
-            this.txtDT.MaxLength = 20;
-            this.txtDT.Name = "txtDT";
-            this.txtDT.Size = new System.Drawing.Size(220, 20);
-            this.txtDT.TabIndex = 6;
             // 
             // label7
             // 
@@ -542,103 +454,113 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã nhân viên";
             // 
-            // cbxChucVu
+            // dtpNgaySinh
             // 
-            this.cbxChucVu.FormattingEnabled = true;
-            this.cbxChucVu.Location = new System.Drawing.Point(297, 137);
-            this.cbxChucVu.Name = "cbxChucVu";
-            this.cbxChucVu.Size = new System.Drawing.Size(220, 21);
-            this.cbxChucVu.TabIndex = 11;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(30, 185);
+            this.dtpNgaySinh.MinDate = new System.DateTime(1966, 1, 1, 0, 0, 0, 0);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(220, 20);
+            this.dtpNgaySinh.TabIndex = 2;
             // 
-            // cbxHocVan
+            // dtpNgayKHD
             // 
-            this.cbxHocVan.FormattingEnabled = true;
-            this.cbxHocVan.Location = new System.Drawing.Point(297, 364);
-            this.cbxHocVan.Name = "cbxHocVan";
-            this.cbxHocVan.Size = new System.Drawing.Size(220, 21);
-            this.cbxHocVan.TabIndex = 19;
+            this.dtpNgayKHD.Location = new System.Drawing.Point(297, 185);
+            this.dtpNgayKHD.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayKHD.Name = "dtpNgayKHD";
+            this.dtpNgayKHD.Size = new System.Drawing.Size(220, 20);
+            this.dtpNgayKHD.TabIndex = 12;
             // 
-            // cbxNgoaiNgu
+            // dtpNgayHHHD
             // 
-            this.cbxNgoaiNgu.FormattingEnabled = true;
-            this.cbxNgoaiNgu.Location = new System.Drawing.Point(297, 304);
-            this.cbxNgoaiNgu.Name = "cbxNgoaiNgu";
-            this.cbxNgoaiNgu.Size = new System.Drawing.Size(220, 21);
-            this.cbxNgoaiNgu.TabIndex = 18;
+            this.dtpNgayHHHD.Location = new System.Drawing.Point(297, 246);
+            this.dtpNgayHHHD.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.dtpNgayHHHD.Name = "dtpNgayHHHD";
+            this.dtpNgayHHHD.Size = new System.Drawing.Size(220, 20);
+            this.dtpNgayHHHD.TabIndex = 15;
             // 
-            // btnSave
+            // txtDT
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
-            this.btnSave.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
-            this.btnSave.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnSave.BgrColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
-            this.btnSave.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
-            this.btnSave.ImageMouseDown = null;
-            this.btnSave.ImageMouseEnter = null;
-            this.btnSave.ImageMouseLeave = null;
-            this.btnSave.ImgMargin = 3;
-            this.btnSave.ImgSize = new System.Drawing.Size(18, 18);
-            this.btnSave.Location = new System.Drawing.Point(297, 409);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(220, 30);
-            this.btnSave.TabIndex = 20;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnSave.TextColorMouseDown = System.Drawing.Color.Empty;
-            this.btnSave.TextColorMouseEnter = System.Drawing.Color.Empty;
-            this.btnSave.TextColorMouseLeave = System.Drawing.Color.White;
-            this.btnSave.UseActived = false;
-            this.btnSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnSave_MouseClick);
+            this.txtDT.FormattingEnabled = true;
+            this.txtDT.Items.AddRange(new object[] {
+            "Kinh",
+            "Tày",
+            "Thái",
+            "Mường",
+            "Khơ Me",
+            "H\'Mông",
+            "Nùng",
+            "Hoa",
+            "Dao",
+            "Gia Rai",
+            "Ê Đê",
+            "Ba Na",
+            "Xơ Đăng",
+            "Sán Chay",
+            "Cơ Ho",
+            "Chăm",
+            "Sán Dìu",
+            "Hrê",
+            "Ra Glai",
+            "M\'Nông",
+            "X’Tiêng",
+            "Bru - Vân Kiều",
+            "Thổ",
+            "Khơ Mú",
+            "Cơ Tu",
+            "Giáy",
+            "Giẻ Triêng",
+            "Tà Ôi",
+            "Mạ",
+            "Co",
+            "Chơ Ro",
+            "Xinh Mun",
+            "Hà Nhì",
+            "Chu Ru",
+            "Lào",
+            "Kháng",
+            "La Chí",
+            "Phú Lá",
+            "La Hủ",
+            "La Ha",
+            "Pà Thẻn",
+            "Chứt",
+            "Lự",
+            "Lô Lô",
+            "Mảng",
+            "Cờ Lao",
+            "Bố Y",
+            "Cống",
+            "Ngái",
+            "Si La",
+            "Pu Péo",
+            "Rơ măm",
+            "Brâu",
+            "Ơ Đu"});
+            this.txtDT.Location = new System.Drawing.Point(30, 304);
+            this.txtDT.Name = "txtDT";
+            this.txtDT.Size = new System.Drawing.Size(220, 21);
+            this.txtDT.TabIndex = 97;
             // 
-            // btnAnh
+            // txtTG
             // 
-            this.btnAnh.BackColor = System.Drawing.Color.Transparent;
-            this.btnAnh.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
-            this.btnAnh.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnAnh.BgrColorMouseLeave = System.Drawing.Color.Transparent;
-            this.btnAnh.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
-            this.btnAnh.ImageMouseDown = null;
-            this.btnAnh.ImageMouseEnter = null;
-            this.btnAnh.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnAnh.ImageMouseLeave")));
-            this.btnAnh.ImgMargin = 0;
-            this.btnAnh.ImgSize = new System.Drawing.Size(20, 20);
-            this.btnAnh.Location = new System.Drawing.Point(579, 189);
-            this.btnAnh.Name = "btnAnh";
-            this.btnAnh.Size = new System.Drawing.Size(75, 23);
-            this.btnAnh.TabIndex = 0;
-            this.btnAnh.TabStop = false;
-            this.btnAnh.Text = "Choice";
-            this.btnAnh.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnAnh.TextColorMouseDown = System.Drawing.Color.Empty;
-            this.btnAnh.TextColorMouseEnter = System.Drawing.Color.Empty;
-            this.btnAnh.TextColorMouseLeave = System.Drawing.Color.Black;
-            this.btnAnh.UseActived = false;
-            this.btnAnh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAnh_MouseClick);
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
-            this.btnBack.BgrColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(71)))), ((int)(((byte)(127)))));
-            this.btnBack.BgrColorMouseEnter = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnBack.BgrColorMouseLeave = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(107)))), ((int)(((byte)(191)))));
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnBack.ImageAlignment = GUI.Class.btnImage.Image_Alignment.LeftText;
-            this.btnBack.ImageMouseDown = null;
-            this.btnBack.ImageMouseEnter = null;
-            this.btnBack.ImageMouseLeave = ((System.Drawing.Image)(resources.GetObject("btnBack.ImageMouseLeave")));
-            this.btnBack.ImgMargin = 0;
-            this.btnBack.ImgSize = new System.Drawing.Size(23, 23);
-            this.btnBack.Location = new System.Drawing.Point(0, 0);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(61, 30);
-            this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.btnBack.TextColorMouseDown = System.Drawing.Color.Empty;
-            this.btnBack.TextColorMouseEnter = System.Drawing.Color.Empty;
-            this.btnBack.TextColorMouseLeave = System.Drawing.Color.White;
-            this.btnBack.UseActived = false;
-            this.btnBack.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBack_MouseClick);
+            this.txtTG.FormattingEnabled = true;
+            this.txtTG.Items.AddRange(new object[] {
+            "Không",
+            "Phật giáo",
+            "Công giáo",
+            "Cao Đài",
+            "Hòa Hảo",
+            "Tin Lành",
+            "Hồi Giáo",
+            "Bà La Môn",
+            "Đạo Tứ ấn hiếu nghĩa",
+            "Bửu sơn Kỳ hương",
+            "Minh Sư Đạo",
+            "Minh Lý Đạo"});
+            this.txtTG.Location = new System.Drawing.Point(31, 364);
+            this.txtTG.Name = "txtTG";
+            this.txtTG.Size = new System.Drawing.Size(220, 21);
+            this.txtTG.TabIndex = 98;
             // 
             // UCThemSuaNV
             // 
@@ -664,23 +586,8 @@
         private Class.btnImage btnBack;
         private System.Windows.Forms.TableLayoutPanel layout;
         private System.Windows.Forms.Panel pnlBody;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtNamHHD;
-        private System.Windows.Forms.TextBox txtThangHHD;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txtNgayHHD;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtNamKHD;
-        private System.Windows.Forms.TextBox txtThangKHD;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtNgayKHD;
         private Class.cbxNoneChangeText cbxHocVan;
         private Class.cbxNoneChangeText cbxNgoaiNgu;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtNam;
-        private System.Windows.Forms.TextBox txtThang;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtNgay;
         private Class.btnImage btnSave;
         private Class.btnImage btnAnh;
         private System.Windows.Forms.PictureBox ptrAnh;
@@ -694,9 +601,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtTG;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtDT;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCMT;
@@ -709,5 +614,10 @@
         private System.Windows.Forms.Label label1;
         private Class.cbxNoneChangeText cbxChucVu;
         private System.Windows.Forms.Label label20;
+        private Class.cbxNoneChangeText txtTG;
+        private Class.cbxNoneChangeText txtDT;
+        private System.Windows.Forms.DateTimePicker dtpNgayHHHD;
+        private System.Windows.Forms.DateTimePicker dtpNgayKHD;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
     }
 }

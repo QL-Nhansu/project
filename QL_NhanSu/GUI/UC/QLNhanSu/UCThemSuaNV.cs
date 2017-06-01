@@ -42,12 +42,7 @@ namespace GUI.UC.QLNhanSu
                 if (tb.Rows[0].ItemArray[0] != DBNull.Value)
                     ptrAnh.Image = Image.FromStream(new System.IO.MemoryStream((byte[])tb.Rows[0].ItemArray[0]));
                 txtHT.Text = (string)tb.Rows[0].ItemArray[2];
-                if (tb.Rows[0].ItemArray[3] != DBNull.Value)
-                {
-                    txtNgay.Text = ((DateTime)tb.Rows[0].ItemArray[3]).Day.ToString();
-                    txtThang.Text = ((DateTime)tb.Rows[0].ItemArray[3]).Month.ToString();
-                    txtNam.Text = ((DateTime)tb.Rows[0].ItemArray[3]).Year.ToString();
-                }
+                dtpNgaySinh.Value = (DateTime)tb.Rows[0].ItemArray[3];
                 rdbNu.Checked = ((string)tb.Rows[0].ItemArray[4] == "Nữ");
                 rdbNam.Checked = !rdbNu.Checked;
                 txtCMT.Text = (string)tb.Rows[0].ItemArray[5];
@@ -58,18 +53,13 @@ namespace GUI.UC.QLNhanSu
                 txtEmail.Text = (tb.Rows[0].ItemArray[10] != DBNull.Value) ? (string)tb.Rows[0].ItemArray[10] : "";
                 cbxHocVan.Text = (tb.Rows[0].ItemArray[11] != DBNull.Value) ? (string)tb.Rows[0].ItemArray[11] : "";
                 cbxNgoaiNgu.Text = (tb.Rows[0].ItemArray[12] != DBNull.Value) ? (string)tb.Rows[0].ItemArray[12] : "";
-                if (tb.Rows[0].ItemArray[13] != DBNull.Value)
-                {
-                    txtNgayKHD.Text = ((DateTime)tb.Rows[0].ItemArray[13]).Day.ToString();
-                    txtThangKHD.Text = ((DateTime)tb.Rows[0].ItemArray[13]).Month.ToString();
-                    txtNamKHD.Text = ((DateTime)tb.Rows[0].ItemArray[13]).Year.ToString();
-                }
-                if (tb.Rows[0].ItemArray[14] != DBNull.Value)
-                {
-                    txtNgayHHD.Text = ((DateTime)tb.Rows[0].ItemArray[14]).Day.ToString();
-                    txtThangHHD.Text = ((DateTime)tb.Rows[0].ItemArray[14]).Month.ToString();
-                    txtNamHHD.Text = ((DateTime)tb.Rows[0].ItemArray[14]).Year.ToString();
-                }
+                dtpNgayKHD.Value = (DateTime)tb.Rows[0].ItemArray[13];
+                dtpNgayHHHD.Value = (DateTime)tb.Rows[0].ItemArray[14];
+            }
+            else
+            {
+                txtDT.Text = "Kinh";
+                txtTG.Text = "Không";
             }
         }
 
@@ -119,21 +109,15 @@ namespace GUI.UC.QLNhanSu
                 nhanvien.Ma = txtMa.Text;
                 nhanvien.Ten = txtHT.Text;
                 nhanvien.Gioitinh = rdbNam.Checked ? 1 : 0;
-                if (txtNam.Text != null && txtNam.Text.Trim() != "" && txtThang.Text != null && txtThang.Text.Trim() != "" && txtNgay.Text != null && txtNgay.Text.Trim() != "")
-                    nhanvien.Ngaysinh = new DateTime(int.Parse(txtNam.Text), int.Parse(txtThang.Text), int.Parse(txtNgay.Text));
-                else nhanvien.Ngaysinh = new DateTime(1000, 1, 1);
+                nhanvien.Ngaysinh = dtpNgaySinh.Value;
                 nhanvien.Cmnd = txtCMT.Text;
                 nhanvien.Dantoc = txtDT.Text;
                 nhanvien.Tongiao = txtTG.Text;
                 nhanvien.Matkhau = txtMK.Text;
                 nhanvien.Sdt = txtSDT.Text;
                 nhanvien.Email = txtEmail.Text;
-                if (txtNamKHD.Text != null && txtNamKHD.Text.Trim() != "" && txtThangKHD.Text != null && txtThangKHD.Text.Trim() != "" && txtNgayKHD.Text != null && txtNgayKHD.Text.Trim() != "")
-                    nhanvien.Ngaykihopdong = new DateTime(int.Parse(txtNamKHD.Text), int.Parse(txtThangKHD.Text), int.Parse(txtNgayKHD.Text));
-                else nhanvien.Ngaykihopdong = new DateTime(1000, 1, 1);
-                if (txtNamHHD.Text != null && txtNamHHD.Text.Trim() != "" && txtThangHHD.Text != null && txtThangHHD.Text.Trim() != "" && txtNgayHHD.Text != null && txtNgayHHD.Text.Trim() != "")
-                    nhanvien.Ngayhethanhopdong = new DateTime(int.Parse(txtNamHHD.Text), int.Parse(txtThangHHD.Text), int.Parse(txtNgayHHD.Text));
-                else nhanvien.Ngayhethanhopdong = new DateTime(1000, 1, 1);
+                nhanvien.Ngaykihopdong = dtpNgayKHD.Value;
+                nhanvien.Ngayhethanhopdong = dtpNgayHHHD.Value;
                 nhanvien.Mangoaingu = (string)cbxNgoaiNgu.SelectedValue;
                 nhanvien.Mahocvan = (string)cbxHocVan.SelectedValue;
                 nhanvien.Machucdanh = (string)cbxChucVu.SelectedValue;

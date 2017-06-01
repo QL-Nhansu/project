@@ -38,6 +38,12 @@ namespace GUI.UC.QLCong
 
             dgvBC.Rows.Clear();
             int songay = DateTime.DaysInMonth(date.Year, date.Month);
+
+            for (int i = songay+1; i <= 31; i++)
+            {
+                dgvBC.Columns[i + 1].Visible = false;
+            }
+
             string ngaylam = "", ngaynghicoluong = "";
 
             for (int index = 0; index < data.Rows.Count; index++)
@@ -45,11 +51,13 @@ namespace GUI.UC.QLCong
                 dgvBC.Rows.Add(data.Rows[index].ItemArray[2], data.Rows[index].ItemArray[3]);
                 ngaylam = data.Rows[index].ItemArray[4].ToString();
                 ngaynghicoluong = data.Rows[index].ItemArray[5].ToString();
+                dgvBC.Rows[index].Cells[33].Value = 0;
                 for (int i = 1; i <= songay; i++)
                 {
                     if ((ngaylam != null && ngaylam.Contains(" " + i + " ")) || (ngaynghicoluong != null && ngaynghicoluong.Contains(" " + i + " ")))
                     {
                         dgvBC.Rows[index].Cells[i + 1].Value = "X";
+                        dgvBC.Rows[index].Cells[33].Value = (int)dgvBC.Rows[index].Cells[33].Value + 1;
                     }
                     else dgvBC.Rows[index].Cells[i + 1].Value = "O";
                 }
